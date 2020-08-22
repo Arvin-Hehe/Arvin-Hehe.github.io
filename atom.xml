@@ -3,11 +3,11 @@
   <title>Arvin</title>
   
   
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://arvin-hehe.github.io/"/>
   <updated>2020-08-22T03:05:13.470Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://arvin-hehe.github.io/</id>
   
   <author>
     <name>Arvin He</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/08/22/hello-world/"/>
-    <id>http://yoursite.com/2020/08/22/hello-world/</id>
+    <link href="https://arvin-hehe.github.io/2020/08/22/hello-world/"/>
+    <id>https://arvin-hehe.github.io/2020/08/22/hello-world/</id>
     <published>2020-08-22T03:05:13.470Z</published>
     <updated>2020-08-22T03:05:13.470Z</updated>
     
