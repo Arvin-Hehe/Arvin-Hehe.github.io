@@ -268,7 +268,7 @@ mark {
 }
 /* rgb(77, 192, 48)  #0f9d58 */
 .bg-color {
-    background-image: linear-gradient(to right, #dcd0c0 0%, #836e53 100%);
+    background-image: linear-gradient(to right, #d4c2ab 0%, #b89e7c 100%);
 }
 
 .text-color {
@@ -279,12 +279,13 @@ mark {
     color: #fff;
 }
 
+/* #4cbf30 0%, #0f9d58 */
 .progress-bar {
     height: 4px;
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #f49255 0%, #fb5655 100%);
     opacity: 0.8;
 }
 
@@ -1421,7 +1422,7 @@ thead {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #0f9d58;
+    background: #dcd0c0;
 }
 
 @media only screen and (min-width: 900px) {
