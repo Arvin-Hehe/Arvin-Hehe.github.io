@@ -266,9 +266,9 @@ mark {
 .container .row {
     margin-bottom: 0;
 }
-
+/* rgb(77, 192, 48)  #0f9d58 */
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #dcd0c0 0%, #836e53 100%);
 }
 
 .text-color {
@@ -620,7 +620,7 @@ header .go-back i {
     font-size: 2.5rem;
     font-weight: 400;
 }
-
+/*
 @-webkit-keyframes rainbow {
 
     0%,
@@ -712,7 +712,7 @@ header .go-back i {
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
 }
-
+ */
 .index-card {
     margin-top: -10px;
     padding-top: 20px;
