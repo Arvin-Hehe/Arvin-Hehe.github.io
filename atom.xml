@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-08-22T03:05:13.470Z</updated>
+  <updated>2020-08-23T05:21:15.305Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一次提交测试</title>
+    <link href="https://arvin-hehe.github.io/di-yi-ci-ti-jiao-ce-shi.html"/>
+    <id>https://arvin-hehe.github.io/di-yi-ci-ti-jiao-ce-shi.html</id>
+    <published>2020-08-23T04:54:59.000Z</published>
+    <updated>2020-08-23T05:21:15.305Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;第一次提交测试&quot;&gt;&lt;a href=&quot;#第一次提交测试&quot; class=&quot;headerlink&quot; title=&quot;第一次提交测试&quot;&gt;&lt;/a&gt;第一次提交测试&lt;/h2&gt;&lt;p&gt;博客创建好了，总是要测一下管不管用的。&lt;/p&gt;
+&lt;h3 id=&quot;试试小标题&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://arvin-hehe.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://arvin-hehe.github.io/tags/Hexo/"/>
+    
+    <category term="Markdown" scheme="https://arvin-hehe.github.io/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
