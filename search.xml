@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>将Microsoft E5账号的1T Onedrive空间升级为5T</title>
+      <link href="/jiang-microsoft-e5-zhang-hao-de-1t-onedrive-kong-jian-sheng-ji-wei-5t.html"/>
+      <url>/jiang-microsoft-e5-zhang-hao-de-1t-onedrive-kong-jian-sheng-ji-wei-5t.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、摘要："><a href="#一、摘要：" class="headerlink" title="一、摘要："></a>一、摘要：</h3><p>我们在注册了微软开发者账户以后，通常是会为我们的Onedrive分配5T的可用空间的。但是当我们打开Onedrive以后，看到的却只有1T。这时候，我们该怎么办呢，下边告诉你。</p><h3 id="二、将Onedrive-1T空间恢复到5T"><a href="#二、将Onedrive-1T空间恢复到5T" class="headerlink" title="二、将Onedrive 1T空间恢复到5T"></a>二、将Onedrive 1T空间恢复到5T</h3><h4 id="第一步：在管理后台修改"><a href="#第一步：在管理后台修改" class="headerlink" title="第一步：在管理后台修改"></a>第一步：在管理后台修改</h4><ol><li><p>登录我们的开发者账号（<a href="https://www.office.com/?auth=2">点我登录</a>），进入到如下图所示界面，然后依次点击管理-&gt;所有管理中心，然后在右边界面找到Onedrive，点击。</p><p><img src="http://qfi3qioyd.hn-bkt.clouddn.com/office.png"></p><p><img src="http://qfi3qioyd.hn-bkt.clouddn.com/administrator.png"></p></li><li><p>进入到下图所示界面，点击<code>storage</code> 或者存储，然后修改默认大小保存即可。</p><p><img src="http://qfi3qioyd.hn-bkt.clouddn.com/storage.png"></p></li></ol><h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><ol><li><p>下载<code>SharePoint Online Management Shell</code>（<a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=35588">点我进入下载页面</a>）,根据自己的系统选择需要下载的版本。下载下来以后安装。安装好以后，在开始菜单最近安装里边会显示这个软件，然后打开。</p></li><li><p>接下来输入下面的代码：</p><pre class="line-numbers language-powershell"><code class="language-powershell">Connect<span class="token operator">-</span>SPOService <span class="token operator">-</span>Url https:<span class="token operator">/</span><span class="token operator">/</span>&lt;orgnam e><span class="token operator">-</span>admin<span class="token punctuation">.</span>sharepoint<span class="token punctuation">.</span>com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>==注意==：（1）代码中的<code>&lt;orgnam e&gt;</code>是注册账号的组织名字。</p><p>​                  （2）<code>&lt;orgnam e&gt;</code>可以从登录Onedrive以后的页面地址栏中获取。</p><p>​                                例如：我登录后的地址是<code>https://arvinhe-my.sharepoint.com/personal/arvin_arvin_onmicrosoft_com/_layouts/15/onedrive.aspx</code>，其中<code>-my.sharepoint</code>前面的<code>arvinhe</code>便是。</p></li><li><p>执行命令以后，会跳出一个登录界面，输入自己的账户密码登录即可。</p></li><li><p>登录了以后，继续执行下边的命令。</p><pre class="line-numbers language-powershell"><code class="language-powershell"><span class="token function">Set</span><span class="token operator">-</span>SPOSite <span class="token operator">-</span>Identity https:<span class="token operator">/</span><span class="token operator">/</span>arvinhe<span class="token operator">-</span>my<span class="token punctuation">.</span>sharepoint<span class="token punctuation">.</span>com<span class="token operator">/</span>personal<span class="token operator">/</span>arvin_arvin_onmicrosoft_com <span class="token operator">-</span>StorageQuota 5242880<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>==注意==：其中有两处地方需要改</p><p>（1）<code>-my.sharepoint</code></p><p>（2）<code>arvin_arvin_onmicrosoft_com</code>，其中的<code>@</code>和<code>.</code>都要用<code>_</code>替代的。</p><p>​        这两个地方与你已登录Onedrive（也就是要修改容量的Onedrive）的页面地址栏中的地址的前边大半部分是一样的，照着那个填就行了，参考第2小步给出的我的个人登录后的地址，把自己的填上就好了。</p></li><li><p>执行命令。退出Onedrive客户端，然后重新登陆，可以看到容量已经变了。</p></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Onedrive </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Onedrive </tag>
+            
+            <tag> E5 </tag>
+            
+            <tag> 扩容 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一次提交测试</title>
       <link href="/di-yi-ci-ti-jiao-ce-shi.html"/>
       <url>/di-yi-ci-ti-jiao-ce-shi.html</url>
