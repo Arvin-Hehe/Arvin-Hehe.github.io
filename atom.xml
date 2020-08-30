@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-08-29T10:23:55.121Z</updated>
+  <updated>2020-08-30T11:15:13.880Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Office E5自动订阅</title>
+    <link href="https://arvin-hehe.github.io/office-e5-zi-dong-ding-yue.html"/>
+    <id>https://arvin-hehe.github.io/office-e5-zi-dong-ding-yue.html</id>
+    <published>2020-08-30T08:11:39.000Z</published>
+    <updated>2020-08-30T11:15:13.880Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、-摘要&quot;&gt;&lt;a href=&quot;#一、-摘要&quot; class=&quot;headerlink&quot; title=&quot;一、 摘要&quot;&gt;&lt;/a&gt;一、 摘要&lt;/h3&gt;&lt;p&gt;之前注册的office</summary>
+        
+      
+    
+    
+    
+    <category term="office E5" scheme="https://arvin-hehe.github.io/categories/office-E5/"/>
+    
+    
+    <category term="Office" scheme="https://arvin-hehe.github.io/tags/Office/"/>
+    
+    <category term="E5" scheme="https://arvin-hehe.github.io/tags/E5/"/>
+    
+    <category term="续订" scheme="https://arvin-hehe.github.io/tags/%E7%BB%AD%E8%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>将Microsoft E5账号的1T Onedrive空间升级为5T</title>
@@ -37,9 +66,9 @@
     <category term="Onedrive" scheme="https://arvin-hehe.github.io/categories/Onedrive/"/>
     
     
-    <category term="Onedrive" scheme="https://arvin-hehe.github.io/tags/Onedrive/"/>
-    
     <category term="E5" scheme="https://arvin-hehe.github.io/tags/E5/"/>
+    
+    <category term="Onedrive" scheme="https://arvin-hehe.github.io/tags/Onedrive/"/>
     
     <category term="扩容" scheme="https://arvin-hehe.github.io/tags/%E6%89%A9%E5%AE%B9/"/>
     
@@ -78,7 +107,7 @@
     <link href="https://arvin-hehe.github.io/hello-world.html"/>
     <id>https://arvin-hehe.github.io/hello-world.html</id>
     <published>2020-08-22T03:05:13.470Z</published>
-    <updated>2020-08-22T03:05:13.470Z</updated>
+    <updated>2020-08-30T08:14:56.970Z</updated>
     
     
       
