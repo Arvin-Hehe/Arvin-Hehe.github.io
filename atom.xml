@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-08-30T13:00:16.550Z</updated>
+  <updated>2020-09-04T13:55:10.060Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用OneDrive备份电脑上的任意目录</title>
+    <link href="https://arvin-hehe.github.io/shi-yong-onedrive-bei-fen-dian-nao-shang-de-ren-yi-mu-lu.html"/>
+    <id>https://arvin-hehe.github.io/shi-yong-onedrive-bei-fen-dian-nao-shang-de-ren-yi-mu-lu.html</id>
+    <published>2020-09-04T12:59:54.000Z</published>
+    <updated>2020-09-04T13:55:10.060Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Onedrive" scheme="https://arvin-hehe.github.io/categories/Onedrive/"/>
+    
+    
+    <category term="Onedrive" scheme="https://arvin-hehe.github.io/tags/Onedrive/"/>
+    
+    <category term="备份" scheme="https://arvin-hehe.github.io/tags/%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>Office E5自动订阅</title>
