@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>二叉树的先序遍历、中序遍历和后序遍历</title>
+      <link href="/preorder-traversal-middleorder-and-postorder-of-binary-tree.html"/>
+      <url>/preorder-traversal-middleorder-and-postorder-of-binary-tree.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 二叉树 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 二叉树 </tag>
+            
+            <tag> 先序遍历 </tag>
+            
+            <tag> 中序遍历 </tag>
+            
+            <tag> 后序遍历 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用OneDrive备份电脑上的任意目录</title>
       <link href="/use-onedrive-to-back-up-any-directory-on-your-computer.html"/>
       <url>/use-onedrive-to-back-up-any-directory-on-your-computer.html</url>
