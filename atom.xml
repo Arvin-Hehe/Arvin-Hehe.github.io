@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-09-11T03:42:43.874Z</updated>
+  <updated>2020-09-12T04:12:34.499Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -17,22 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vscode中配置代码静态检查工具pylint</title>
+    <link href="https://arvin-hehe.github.io/configure-code-static-checking-tool-pylint-in-vscode.html"/>
+    <id>https://arvin-hehe.github.io/configure-code-static-checking-tool-pylint-in-vscode.html</id>
+    <published>2020-09-12T03:57:55.000Z</published>
+    <updated>2020-09-12T04:12:34.499Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;刚开始使用VScode编写python代码时，总是会收到&lt;code&gt;Linter pylint is not</summary>
+        
+      
+    
+    
+    
+    <category term="VScode" scheme="https://arvin-hehe.github.io/categories/VScode/"/>
+    
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="vscode" scheme="https://arvin-hehe.github.io/tags/vscode/"/>
+    
+    <category term="pylint" scheme="https://arvin-hehe.github.io/tags/pylint/"/>
+    
+  </entry>
+  
+  <entry>
     <title>二叉树的先序遍历、中序遍历和后序遍历</title>
     <link href="https://arvin-hehe.github.io/preorder-traversal-middleorder-and-postorder-of-binary-tree.html"/>
     <id>https://arvin-hehe.github.io/preorder-traversal-middleorder-and-postorder-of-binary-tree.html</id>
     <published>2020-09-10T15:42:10.000Z</published>
-    <updated>2020-09-11T03:42:43.874Z</updated>
+    <updated>2020-09-11T11:58:41.678Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       </summary>
+    <summary type="html">&lt;h3 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot;</summary>
         
       
     

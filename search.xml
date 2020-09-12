@@ -4,11 +4,40 @@
   
     
     <entry>
+      <title>vscode中配置代码静态检查工具pylint</title>
+      <link href="/configure-code-static-checking-tool-pylint-in-vscode.html"/>
+      <url>/configure-code-static-checking-tool-pylint-in-vscode.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>刚开始使用VScode编写python代码时，总是会收到<code>Linter pylint is not installed</code>的提示，下边记录关于VScode配置代码静态检查工具和代码格式化工具。</strong></p><p><strong>关于如何配置点进去看这篇文章吧（<a href="https://blog.csdn.net/sunxb10/article/details/80984243">点我跳转</a>）</strong></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> VScode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> vscode </tag>
+            
+            <tag> pylint </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>二叉树的先序遍历、中序遍历和后序遍历</title>
       <link href="/preorder-traversal-middleorder-and-postorder-of-binary-tree.html"/>
       <url>/preorder-traversal-middleorder-and-postorder-of-binary-tree.html</url>
       
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>二叉树是一种非常重要的数据机构，对树节点的访问方式包括了深度优先遍历（DFS）和广度优先遍历（BFS）。其中深度优先遍历包括了先序遍历、中序遍历和后序遍历，广度优先遍历也就是层次遍历。下边只讲深度优先遍历的这三种。</p><h3 id="二、三种遍历方式的区别"><a href="#二、三种遍历方式的区别" class="headerlink" title="二、三种遍历方式的区别"></a>二、三种遍历方式的区别</h3><p><strong>先上张二叉搜索树（Binary Search Tree）图</strong></p><img src="https://pic.leetcode-cn.com/46d010607b947a903de5ce23fcbf9cbb905b36c3f2442d68459872203dee057f.png" width="50%" height="50%"><h4 id="1-先序遍历"><a href="#1-先序遍历" class="headerlink" title="1. 先序遍历"></a>1. 先序遍历</h4><ul><li><p><strong>遍历方式：根节点 -&gt; 左子树 -&gt; 右子树</strong></p></li><li><p><strong>遍历结果：5214367</strong></p></li></ul><h4 id="2-中序遍历"><a href="#2-中序遍历" class="headerlink" title="2. 中序遍历"></a>2. 中序遍历</h4><ul><li><strong>遍历方式：左子树 -&gt; 根节点 -&gt; 右子树</strong></li><li><strong>遍历结果：1234567</strong></li></ul><h4 id="3-后序遍历"><a href="#3-后序遍历" class="headerlink" title="3. 后序遍历"></a>3. 后序遍历</h4><ul><li><strong>遍历方式：左子树 -&gt; 右子树 -&gt; 根节点</strong></li><li><strong>遍历结果：1342765</strong></li></ul><h3 id="三、Python实现"><a href="#三、Python实现" class="headerlink" title="三、Python实现"></a>三、Python实现</h3><p><strong>二叉树的实现代码</strong></p><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x        self<span class="token punctuation">.</span>left <span class="token operator">=</span> None        self<span class="token punctuation">.</span>right <span class="token operator">=</span> None<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="1-先序遍历-1"><a href="#1-先序遍历-1" class="headerlink" title="1. 先序遍历"></a>1. 先序遍历</h4><h5 id="（1）-递归实现"><a href="#（1）-递归实现" class="headerlink" title="（1） 递归实现"></a>（1） 递归实现</h5><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">preorder</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> p<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token triple-quoted-string string">"""        :type p: TreeNode        """</span>        result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>    <span class="token keyword">def</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
