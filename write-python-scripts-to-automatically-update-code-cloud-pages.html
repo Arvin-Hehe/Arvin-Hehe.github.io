@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Arvin">
+    <meta name="keywords" content="python,selenium,码云,pages,自动更新">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>Hello World | Arvin</title>
+    <title>编写python脚本实现自动更新码云pages | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper4.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">编写python脚本实现自动更新码云pages</h1>
                 </div>
             </div>
         </div>
@@ -441,12 +441,37 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/selenium/">
+                                <span class="chip bg-color">selenium</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%A0%81%E4%BA%91/">
+                                <span class="chip bg-color">码云</span>
+                            </a>
+                        
+                            <a href="/tags/pages/">
+                                <span class="chip bg-color">pages</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -455,21 +480,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-22
+                    2020-09-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-11
+                    2020-09-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    125
+                    486
                 </div>
                 
 
@@ -486,15 +511,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>使用码云的pages部署hexo静态博客以后，每次写完都要去手动更新，实在是麻烦。当然只要开会员，这个问题根本不叫问题。但是，对于一个自身白嫖党而言，不可能的，这辈子也不可能的。</p>
+<p>所以，只能自力更生、艰苦奋斗了。</p>
+<h3 id="二、想法"><a href="#二、想法" class="headerlink" title="二、想法"></a>二、想法</h3><p>利用<strong>selenium</strong>编写python脚本，实现模拟登录更新，这样就不用了每次都自己登录码云，然后手动更新了。</p>
+<h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">import</span> ChromeOptions
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support<span class="token punctuation">.</span>ui <span class="token keyword">import</span> WebDriverWait
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support <span class="token keyword">import</span> expected_conditions <span class="token keyword">as</span> EC
+
+<span class="token comment" spellcheck="true"># 基本信息</span>
+username <span class="token operator">=</span> <span class="token string">'xxxx'</span>  <span class="token comment" spellcheck="true"># 账号</span>
+password <span class="token operator">=</span> <span class="token string">'xxxx'</span>     <span class="token comment" spellcheck="true"># 密码</span>
+pickname <span class="token operator">=</span> <span class="token string">'xxxx'</span>   <span class="token comment" spellcheck="true"># 用户名</span>
+repo <span class="token operator">=</span> <span class="token string">'xxxx'</span>       <span class="token comment" spellcheck="true"># 仓库名</span>
+driver <span class="token operator">=</span> r<span class="token string">'D:\Desktop\chromedriver.exe'</span>     <span class="token comment" spellcheck="true"># 谷歌驱动的路径</span>
+
+options <span class="token operator">=</span> ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true"># 不显示界面</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--start-maximized"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 窗口最大化</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--disable-plugins"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 禁止扩展</span>
+chrome <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span>driver<span class="token punctuation">,</span> options<span class="token operator">=</span>options<span class="token punctuation">)</span>
+chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/login'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 输入用户名、密码，登录</span>
+username_input <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_login"</span><span class="token punctuation">)</span>
+password_input<span class="token operator">=</span>  chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_password"</span><span class="token punctuation">)</span>
+login_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_name<span class="token punctuation">(</span><span class="token string">"commit"</span><span class="token punctuation">)</span>
+
+username_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>username<span class="token punctuation">)</span>
+password_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
+login_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 等待页面加载完成</span>
+WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"ml-1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 跳转到page页面</span>
+chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/'</span> <span class="token operator">+</span> pickname <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> repo <span class="token operator">+</span> <span class="token string">'/pages'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 等待页面加载完成</span>
+WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"update_deploy"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 执行js代码，使页面向下滚动</span>
+chrome<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span><span class="token string">"window.scrollTo(100, document.body.scrollHeight);"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 点击更新按钮</span>
+update_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_class_name<span class="token punctuation">(</span><span class="token string">"update_deploy"</span><span class="token punctuation">)</span>
+update_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 点击确认框</span>
+alert <span class="token operator">=</span> chrome<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>alert
+alert<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'gitee pages 更新成功'</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+chrome<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、后续目标"><a href="#四、后续目标" class="headerlink" title="四、后续目标"></a>四、后续目标</h3><p>目前基本目标已经可以实现，不过每次还需要手动执行脚本，拉胯<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8">😢</span>。所以，接下来试着将脚本放到GitHub action上边去，实时监控码云仓库变化，实现实时更新。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -538,7 +608,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/hello-world.html">https://arvin-hehe.github.io/hello-world.html</a>
+                    <a href="https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html">https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -575,7 +645,23 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/selenium/">
+                                    <span class="chip bg-color">selenium</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%A0%81%E4%BA%91/">
+                                    <span class="chip bg-color">码云</span>
+                                </a>
+                            
+                                <a href="/tags/pages/">
+                                    <span class="chip bg-color">pages</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -878,62 +964,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/submit-the-test-for-first-time.html">
+                <a href="/write-python-scripts-to-automatically-update-code-cloud-pages.html">
                     <div class="card-image">
                         
-                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/win10.jpg" class="responsive-img" alt="第一次提交测试">
+                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper4.png" class="responsive-img" alt="编写python脚本实现自动更新码云pages">
                         
-                        <span class="card-title">第一次提交测试</span>
+                        <span class="card-title">编写python脚本实现自动更新码云pages</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一次提交测试博客创建好了，总是要测一下管不管用的。
-试试小标题
-测试
-
-
-测试
-测试
-测试
-
-
-
-def test():
-    print('这是一个测试')
-一大段文字试试圣诞节的会计师房价快速的房价快速的健康恢复的健康和手机号链接哈
+                            使用码云的pages部署hexo静态博客以后，每次写完都要去手动更新，实在是麻烦。当然只要开会员，这个问题根本不叫问题。但是，对于一个自身白嫖党而言，不可能的，这辈子也不可能的。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/selenium/">
+                        <span class="chip bg-color">selenium</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%81%E4%BA%91/">
+                        <span class="chip bg-color">码云</span>
+                    </a>
+                    
+                    <a href="/tags/pages/">
+                        <span class="chip bg-color">pages</span>
                     </a>
                     
                 </div>
@@ -944,37 +1027,55 @@ def test():
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/hello-world.html">
+                <a href="/configure-code-static-checking-tool-pylint-in-vscode.html">
                     <div class="card-image">
                         
+                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper3.jpg" class="responsive-img" alt="vscode中配置代码静态检查工具pylint">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">vscode中配置代码静态检查工具pylint</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            刚开始使用VScode编写python代码时，总是会收到‘Linter pylint is not installed’的提示，下边记录关于VScode配置代码静态检查工具。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Arvin He
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/VScode/" class="post-category">
+                                    VScode
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/vscode/">
+                        <span class="chip bg-color">vscode</span>
+                    </a>
+                    
+                    <a href="/tags/pylint/">
+                        <span class="chip bg-color">pylint</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
