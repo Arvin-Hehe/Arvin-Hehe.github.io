@@ -137,35 +137,14 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/tags/Onedrive/</loc>
+    <loc>https://arvin-hehe.github.io/tags/vscode/</loc>
     <lastmod>2020-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/tags/%E5%A4%87%E4%BB%BD/</loc>
-    <lastmod>2020-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/tags/%E6%89%A9%E5%AE%B9/</loc>
-    <lastmod>2020-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/tags/Hexo/</loc>
-    <lastmod>2020-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/tags/Markdown/</loc>
+    <loc>https://arvin-hehe.github.io/tags/pylint/</loc>
     <lastmod>2020-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -214,14 +193,35 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/tags/vscode/</loc>
+    <loc>https://arvin-hehe.github.io/tags/Onedrive/</loc>
     <lastmod>2020-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/tags/pylint/</loc>
+    <loc>https://arvin-hehe.github.io/tags/%E5%A4%87%E4%BB%BD/</loc>
+    <lastmod>2020-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/%E6%89%A9%E5%AE%B9/</loc>
+    <lastmod>2020-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/Hexo/</loc>
+    <lastmod>2020-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/Markdown/</loc>
     <lastmod>2020-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -258,20 +258,6 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/categories/Onedrive/</loc>
-    <lastmod>2020-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/categories/Hexo/</loc>
-    <lastmod>2020-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://arvin-hehe.github.io/categories/VScode/</loc>
     <lastmod>2020-09-18</lastmod>
     <changefreq>daily</changefreq>
@@ -280,6 +266,20 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/categories/Python/</loc>
+    <lastmod>2020-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/categories/Onedrive/</loc>
+    <lastmod>2020-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/categories/Hexo/</loc>
     <lastmod>2020-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
