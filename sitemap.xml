@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://arvin-hehe.github.io/404-sum-of-left-leaves.html</loc>
+    
+    <lastmod>2020-09-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html</loc>
     
     <lastmod>2020-09-18</lastmod>
@@ -248,6 +255,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/leetcode/</loc>
+    <lastmod>2020-09-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -280,6 +294,13 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/categories/Hexo/</loc>
+    <lastmod>2020-09-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/categories/LeetCode/</loc>
     <lastmod>2020-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

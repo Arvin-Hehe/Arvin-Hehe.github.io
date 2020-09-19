@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vscode,pylint,python,yapf">
+    <meta name="keywords" content="leetcode,python,二叉树">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>vscode中配置代码静态检查工具pylint | Arvin</title>
+    <title>404. 左叶子之和 | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vscode中配置代码静态检查工具pylint</h1>
+                    <h1 class="description center-align post-title">404. 左叶子之和</h1>
                 </div>
             </div>
         </div>
@@ -456,16 +456,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/vscode/">
-                                <span class="chip bg-color">vscode</span>
-                            </a>
-                        
-                            <a href="/tags/pylint/">
-                                <span class="chip bg-color">pylint</span>
-                            </a>
-                        
                             <a href="/tags/python/">
                                 <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                <span class="chip bg-color">二叉树</span>
+                            </a>
+                        
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
                             </a>
                         
                     </div>
@@ -476,8 +476,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/VScode/" class="post-category">
-                                VScode
+                            <a href="/categories/LeetCode/" class="post-category">
+                                LeetCode
                             </a>
                         
                     </div>
@@ -489,21 +489,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2020-09-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2020-09-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    120
+                    367
                 </div>
                 
 
@@ -520,8 +520,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>刚开始使用VScode编写python代码时，总是会收到<code>Linter pylint is not installed</code>的提示，下边记录关于VScode配置代码静态检查工具和代码格式化工具。</strong></p>
-<p><strong>关于如何配置点进去看这篇文章吧（<a target="_blank" rel="noopener" href="https://blog.csdn.net/sunxb10/article/details/80984243">点我跳转</a>）</strong></p>
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>计算给定二叉树的所有左叶子之和</strong></p>
+<p>示例：</p>
+<pre><code>    3
+   / \
+  9  20
+    /  \
+   15   7
+
+在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24</code></pre>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><ul>
+<li><p>看到题目中的<code>二叉树</code>时，首先想到要用深度优先遍历或者广度优先遍历</p>
+</li>
+<li><p>接下来往下看<code>左叶子之和</code>，然后就想到了先序遍历、中序遍历、后序遍历。</p>
+</li>
+<li><p>题目中要求只计算左叶子之和，所以就考虑使用这三种遍历的非递归方式</p>
+<p><strong>所以最后，还是选择使用的后序遍历的非递归实现</strong></p>
+</li>
+</ul>
+<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1、先序遍历"><a href="#1、先序遍历" class="headerlink" title="1、先序遍历"></a>1、先序遍历</h4><p>后续补上</p>
+<h4 id="2、中序遍历"><a href="#2、中序遍历" class="headerlink" title="2、中序遍历"></a>2、中序遍历</h4><p>后续补上</p>
+<h4 id="3、后序遍历"><a href="#3、后序遍历" class="headerlink" title="3、后序遍历"></a>3、后序遍历</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for a binary tree node</span>
+<span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> None
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> None
+
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">sumOfLeftLeaves</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        :type root: TreeNode
+        :rtype: int
+        """</span>
+        <span class="token comment" spellcheck="true"># 首先判断root如果为None，返回值为0</span>
+        <span class="token keyword">if</span> <span class="token operator">not</span> root<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">0</span>
+
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment" spellcheck="true"># 保存左叶子节点的值</span>
+            result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token comment" spellcheck="true"># 临时保存节点的栈</span>
+            stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+            <span class="token keyword">while</span> stack<span class="token punctuation">:</span>
+                root <span class="token operator">=</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> root<span class="token punctuation">.</span>left<span class="token punctuation">:</span>
+                    stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+                    <span class="token comment" spellcheck="true"># 左子树节点为叶子结点</span>
+                    <span class="token keyword">if</span> <span class="token operator">not</span> root<span class="token punctuation">.</span>left<span class="token punctuation">.</span>left <span class="token operator">and</span> <span class="token operator">not</span> root<span class="token punctuation">.</span>left<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+                 <span class="token keyword">if</span> root<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                    stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+             <span class="token keyword">return</span> sum<span class="token punctuation">(</span>result<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -565,7 +617,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/configure-code-static-checking-tool-pylint-in-vscode.html">https://arvin-hehe.github.io/configure-code-static-checking-tool-pylint-in-vscode.html</a>
+                    <a href="https://arvin-hehe.github.io/404-sum-of-left-leaves.html">https://arvin-hehe.github.io/404-sum-of-left-leaves.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -603,16 +655,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/vscode/">
-                                    <span class="chip bg-color">vscode</span>
-                                </a>
-                            
-                                <a href="/tags/pylint/">
-                                    <span class="chip bg-color">pylint</span>
-                                </a>
-                            
                                 <a href="/tags/python/">
                                     <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                    <span class="chip bg-color">二叉树</span>
+                                </a>
+                            
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
                                 </a>
                             
                         </div>
@@ -917,9 +969,67 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/404-sum-of-left-leaves.html">
+                    <div class="card-image">
+                        
+                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper5.jpg" class="responsive-img" alt="404. 左叶子之和">
+                        
+                        <span class="card-title">404. 左叶子之和</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Leetcode 第404题：计算给定二叉树的所有左叶子之和
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/write-python-scripts-to-automatically-update-code-cloud-pages.html">
                     <div class="card-image">
@@ -936,9 +1046,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -968,74 +1078,6 @@
                     
                     <a href="/tags/pages/">
                         <span class="chip bg-color">pages</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/preorder-traversal-middleorder-and-postorder-of-binary-tree.html">
-                    <div class="card-image">
-                        
-                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper2.png" class="responsive-img" alt="二叉树的先序遍历、中序遍历和后序遍历">
-                        
-                        <span class="card-title">二叉树的先序遍历、中序遍历和后序遍历</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            用python实现二叉树的先序遍历、中序遍历以及后序遍历。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-10
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                        <span class="chip bg-color">二叉树</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86/">
-                        <span class="chip bg-color">先序遍历</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/">
-                        <span class="chip bg-color">中序遍历</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/">
-                        <span class="chip bg-color">后序遍历</span>
                     </a>
                     
                 </div>
