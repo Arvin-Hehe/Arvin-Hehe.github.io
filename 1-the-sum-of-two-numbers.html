@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一次提交测试, Arvin">
+    <meta name="keywords" content="leetcode,python,哈希表,数组,两数之和">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>第一次提交测试 | Arvin</title>
+    <title>1. 两数之和 | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qfi3qioyd.hn-bkt.clouddn.com/win10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一次提交测试</h1>
+                    <h1 class="description center-align post-title">1. 两数之和</h1>
                 </div>
             </div>
         </div>
@@ -456,12 +456,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">数组</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                                <span class="chip bg-color">哈希表</span>
                             </a>
                         
                     </div>
@@ -472,8 +480,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
+                            <a href="/categories/LeetCode/" class="post-category">
+                                LeetCode
                             </a>
                         
                     </div>
@@ -485,21 +493,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-23
+                    2020-09-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-11
+                    2020-09-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    185
+                    586
                 </div>
                 
 
@@ -516,24 +524,92 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第一次提交测试"><a href="#第一次提交测试" class="headerlink" title="第一次提交测试"></a>第一次提交测试</h2><p>博客创建好了，总是要测一下管不管用的。</p>
-<h3 id="试试小标题"><a href="#试试小标题" class="headerlink" title="试试小标题"></a>试试小标题</h3><blockquote>
-<p>测试</p>
-</blockquote>
-<ul>
-<li>测试<ol>
-<li>测试</li>
-<li>测试</li>
-</ol>
-</li>
-</ul>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'这是一个测试'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>一大段文字试试圣诞节的会计师房价快速的房价快速的健康恢复的健康和手机号链接哈金凤凰俩hi卢浮宫胡 返回的啊胡打算复读灰色空间发哈地方拉黑 路烦得很</p>
-<h3 id="内嵌视频试试"><a href="#内嵌视频试试" class="headerlink" title="内嵌视频试试"></a>内嵌视频试试</h3><h4 id="1-哔哩哔哩测试"><a href="#1-哔哩哔哩测试" class="headerlink" title="1. 哔哩哔哩测试"></a>1. 哔哩哔哩测试</h4><iframe src="//player.bilibili.com/player.html?aid=796819302&amp;bvid=BV18C4y1t7dR&amp;cid=227090990&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="400px"> </iframe>
-#### 2. YouTube测试
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给定一个整数数组<code>nums</code>和一个目标值<code>target</code>,请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。</strong></p>
+<p><strong>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</strong></p>
+<p>示例：</p>
+<pre><code>给定 nums = [2, 7, 11, 15], target = 9
 
-<iframe width="560" height="400" src="https://www.youtube.com/embed/jaoqxAjpSUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]</code></pre>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-第一种思路"><a href="#1-第一种思路" class="headerlink" title="1. 第一种思路"></a>1. 第一种思路</h4><p>这种方法比较粗暴并且很笨了。首先用目标值减去数组中的第一个（下标为0）的元素，然后判断差值是否在数组剩余元素num[1:]中。如果在，得到结果；如果不在，然后再用目标值减去第二个元素，判断差值是否在数组num[2：]…..。就这样直至得到结果。</p>
+<h4 id="2-第二种思路"><a href="#2-第二种思路" class="headerlink" title="2. 第二种思路"></a>2. 第二种思路</h4><p>利用哈希表，数组中的元素的值与对应的下标作为键值映射。然后用目标值依次与数组中的元素做差，然后差值作键在哈希表中获取对应的下标，返回最终结果。</p>
+<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-第一种思路-1"><a href="#1-第一种思路-1" class="headerlink" title="1. 第一种思路"></a>1. 第一种思路</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            diff <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            <span class="token keyword">if</span> diff <span class="token keyword">in</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                <span class="token comment" spellcheck="true"># 获取第二个数在切片数组中的下标</span>
+                index <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span>index<span class="token punctuation">(</span>diff<span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> index <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+        <span class="token comment" spellcheck="true"># 下边用try...except写的</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            diff <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            <span class="token comment" spellcheck="true"># 不再用if判断diff是否在数组中</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                <span class="token comment" spellcheck="true"># 获取第二个数在切片数组中的下标</span>
+                index <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span>index<span class="token punctuation">(</span>diff<span class="token punctuation">)</span>
+            <span class="token keyword">except</span><span class="token punctuation">:</span>
+                <span class="token keyword">pass</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> index <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-第二种思路-1"><a href="#2-第二种思路-1" class="headerlink" title="2. 第二种思路"></a>2. 第二种思路</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """</span>
+        hashmap <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            diff <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            <span class="token keyword">if</span> hashmap<span class="token punctuation">.</span>get<span class="token punctuation">(</span>diff<span class="token punctuation">)</span> <span class="token keyword">is</span> <span class="token operator">not</span> None<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token punctuation">[</span>hashmap<span class="token punctuation">.</span>get<span class="token punctuation">(</span>diff<span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span>
+               <span class="token keyword">else</span><span class="token punctuation">:</span>
+                hashmap<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> i
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、结果"><a href="#四、结果" class="headerlink" title="四、结果"></a>四、结果</h3><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">运行时间</th>
+<th align="center">击败</th>
+<th align="center">内存消耗</th>
+<th align="center">击败</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">第一种：if…in..</td>
+<td align="center">680ms</td>
+<td align="center">49%</td>
+<td align="center">13.1MB</td>
+<td align="center">79%</td>
+</tr>
+<tr>
+<td align="center">第一种：try…except…</td>
+<td align="center">752ms</td>
+<td align="center">49.54%</td>
+<td align="center">13.1MB</td>
+<td align="center">90.42%（疑惑）</td>
+</tr>
+<tr>
+<td align="center">第二种</td>
+<td align="center">16ms</td>
+<td align="center">99.20%</td>
+<td align="center">13.5MB</td>
+<td align="center">31.53%</td>
+</tr>
+</tbody></table>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -577,7 +653,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/submit-the-test-for-first-time.html">https://arvin-hehe.github.io/submit-the-test-for-first-time.html</a>
+                    <a href="https://arvin-hehe.github.io/1-the-sum-of-two-numbers.html">https://arvin-hehe.github.io/1-the-sum-of-two-numbers.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -615,12 +691,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">数组</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                                    <span class="chip bg-color">哈希表</span>
                                 </a>
                             
                         </div>
@@ -925,53 +1009,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/upgrade-1t-onedrive-space-of-microsoft-e5-account-to-5t.html">
+                <a href="/1-the-sum-of-two-numbers.html">
                     <div class="card-image">
                         
-                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/onedrive.jpg" class="responsive-img" alt="将Microsoft E5账号的1T Onedrive空间升级为5T">
+                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper7.jpg" class="responsive-img" alt="1. 两数之和">
                         
-                        <span class="card-title">将Microsoft E5账号的1T Onedrive空间升级为5T</span>
+                        <span class="card-title">1. 两数之和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我们在注册了微软开发者账户以后，通常是会为我们的Onedrive分配5T的可用空间的。但是当我们打开Onedrive以后，看到的却只有1T。这时候，我们该怎么办呢，下边告诉你。
+                            给定一个整数数组nums和一个目标值target,请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Onedrive/" class="post-category">
-                                    Onedrive
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/E5/">
-                        <span class="chip bg-color">E5</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E6%89%A9%E5%AE%B9/">
-                        <span class="chip bg-color">扩容</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/onedrive/">
-                        <span class="chip bg-color">onedrive</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                        <span class="chip bg-color">哈希表</span>
                     </a>
                     
                 </div>
@@ -985,32 +1075,51 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/hello-world.html">
+                <a href="/404-sum-of-left-leaves.html">
                     <div class="card-image">
                         
+                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper5.jpg" class="responsive-img" alt="404. 左叶子之和">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">404. 左叶子之和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            Leetcode 第404题：计算给定二叉树的所有左叶子之和
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Arvin He
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
                 </div>
                 
             </div>
