@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-09-20T06:16:18.564Z</updated>
+  <updated>2020-09-21T15:14:05.117Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>78. 子集</title>
+    <link href="https://arvin-hehe.github.io/78-subset.html"/>
+    <id>https://arvin-hehe.github.io/78-subset.html</id>
+    <published>2020-09-20T14:25:45.000Z</published>
+    <updated>2020-09-21T15:14:05.117Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot; title=&quot;一、题目描述&quot;&gt;&lt;/a&gt;一、题目描述&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;给定一组&lt;code&gt;不含重复元素&lt;/code&gt;的整数数组</summary>
+        
+      
+    
+    
+    
+    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
+    
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="数组" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="位运算" scheme="https://arvin-hehe.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+    <category term="回溯算法" scheme="https://arvin-hehe.github.io/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>1. 两数之和</title>

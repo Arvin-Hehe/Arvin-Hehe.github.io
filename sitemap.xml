@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://arvin-hehe.github.io/78-subset.html</loc>
+    
+    <lastmod>2020-09-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://arvin-hehe.github.io/1-the-sum-of-two-numbers.html</loc>
     
     <lastmod>2020-09-20</lastmod>
@@ -285,6 +292,20 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/tags/onedrive/</loc>
+    <lastmod>2020-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
+    <lastmod>2020-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
