@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://arvin-hehe.github.io/538-convert-binary-search-tree-to-accumulative.html</loc>
+    <lastmod>2020-09-22</lastmod>
+  </url>
+  <url>
     <loc>https://arvin-hehe.github.io/78-subset.html</loc>
-    <lastmod>2020-09-21</lastmod>
+    <lastmod>2020-09-22</lastmod>
   </url>
   <url>
     <loc>https://arvin-hehe.github.io/1-the-sum-of-two-numbers.html</loc>
