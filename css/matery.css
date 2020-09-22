@@ -1881,8 +1881,9 @@ footer .copy-right {
 }
 
 #searchInput{
-    border-radius: 10px;
-    box-shadow: 0 0 0px 1000px #f8f8f8 inset
+    border-radius: 5px;
+    padding-left: 10px;
+    box-shadow: #f8f8f8a6 inset
 }
 
 #searchModal {
