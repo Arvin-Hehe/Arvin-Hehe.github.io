@@ -1880,6 +1880,11 @@ footer .copy-right {
     font-size: 1.2rem;
 }
 
+.search-input{
+    border-radius: 10px;
+    box-shadow: 0 0 0px 1000px #f8f8f8 inset
+}
+
 #searchModal {
     min-height: 500px;
     width: 80%;
