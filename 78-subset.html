@@ -511,7 +511,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.4k
                 </div>
                 
 
@@ -647,7 +647,87 @@
 <td align="center">49.16%</td>
 </tr>
 </tbody></table>
-<h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><h4 id="4-迭代（在题解中发现的一种方法）"><a href="#4-迭代（在题解中发现的一种方法）" class="headerlink" title="4. 迭代（在题解中发现的一种方法）"></a>4. 迭代（在题解中发现的一种方法）</h4><h5 id="（1）描述-2"><a href="#（1）描述-2" class="headerlink" title="（1）描述"></a>（1）描述</h5><p>以示例中的[1, 2, 3]为例：</p>
+<h4 id="3-位运算"><a href="#3-位运算" class="headerlink" title="3. 位运算"></a>3. 位运算</h4><h5 id="（1）描述-2"><a href="#（1）描述-2" class="headerlink" title="（1）描述"></a>（1）描述</h5><p>直接上图：</p>
+<table>
+<thead>
+<tr>
+<th align="center">0/1序列</th>
+<th align="center">子集</th>
+<th align="center">0/1序列对应的二进制数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">000</td>
+<td align="center">[]</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">001</td>
+<td align="center">[3]</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">010</td>
+<td align="center">[2]</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">011</td>
+<td align="center">[2,3]</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td align="center">[1]</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td align="center">[1,3]</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td align="center">[1,2]</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td align="center">[1,2,3]</td>
+<td align="center">7</td>
+</tr>
+</tbody></table>
+<p>0 表示不在当前对应位置的元素不在子集中；1 表示在子集中。</p>
+<h5 id="（2）代码实现-2"><a href="#（2）代码实现-2" class="headerlink" title="（2）代码实现"></a>（2）代码实现</h5><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">subsets</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+        n <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> length
+
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> i <span class="token operator">>></span> j <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="（3）表现-2"><a href="#（3）表现-2" class="headerlink" title="（3）表现"></a>（3）表现</h5><table>
+<thead>
+<tr>
+<th align="center">运行时间</th>
+<th align="center">击败</th>
+<th align="center">内存消耗</th>
+<th align="center">击败</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">44ms</td>
+<td align="center">49.72%</td>
+<td align="center">13.2MB</td>
+<td align="center">98.84%</td>
+</tr>
+</tbody></table>
+<h4 id="4-迭代（在题解中发现的一种方法）"><a href="#4-迭代（在题解中发现的一种方法）" class="headerlink" title="4. 迭代（在题解中发现的一种方法）"></a>4. 迭代（在题解中发现的一种方法）</h4><h5 id="（1）描述-3"><a href="#（1）描述-3" class="headerlink" title="（1）描述"></a>（1）描述</h5><p>以示例中的[1, 2, 3]为例：</p>
 <p>子集结果为：[[], [1], [1, 2], [1, 3], [2], [2, 3], [3], [1, 2, 3]]</p>
 <p><strong>分析：</strong>（下边分析 = 表示等号，不代表赋值）</p>
 <ul>
@@ -656,7 +736,7 @@
 <li>然后用子集 [[], [1]] 中的元素分别与 [2] 相加得到 [2]、[1, 2]，然后将结果再添加到子集中，结果为 [[], [1], [2], [1, 2]]。往下 [3] 类推….</li>
 <li>最后可得出完整的子集数组</li>
 </ul>
-<h5 id="（2）代码实现-2"><a href="#（2）代码实现-2" class="headerlink" title="（2）代码实现"></a>（2）代码实现</h5><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<h5 id="（2）代码实现-3"><a href="#（2）代码实现-3" class="headerlink" title="（2）代码实现"></a>（2）代码实现</h5><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">subsets</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">"""
         :type nums: List[int]
@@ -666,7 +746,7 @@
         <span class="token keyword">for</span> i <span class="token keyword">in</span> nums<span class="token punctuation">:</span>
             result <span class="token operator">=</span> result <span class="token operator">+</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> num <span class="token keyword">for</span> num <span class="token keyword">in</span> result<span class="token punctuation">]</span>
         <span class="token keyword">return</span> result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="（3）表现-2"><a href="#（3）表现-2" class="headerlink" title="（3）表现"></a>（3）表现</h5><table>
+<h5 id="（3）表现-3"><a href="#（3）表现-3" class="headerlink" title="（3）表现"></a>（3）表现</h5><table>
 <thead>
 <tr>
 <th align="center">运行时间</th>
@@ -1152,7 +1232,7 @@
                 <a href="/1-the-sum-of-two-numbers.html">
                     <div class="card-image">
                         
-                        <img src="http://qfi3qioyd.hn-bkt.clouddn.com/wallpaper7.jpg" class="responsive-img" alt="1. 两数之和">
+                        <img src="http://qiniuimg.heyulong.top/wallpaper7.jpg" class="responsive-img" alt="1. 两数之和">
                         
                         <span class="card-title">1. 两数之和</span>
                     </div>
@@ -1439,7 +1519,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.7k</span>&nbsp;字
+                class="white-color">6.8k</span>&nbsp;字
             
             
             
