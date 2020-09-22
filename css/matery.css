@@ -1883,7 +1883,7 @@ footer .copy-right {
 #searchInput{
     border-radius: 5px;
     padding-left: 10px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 
 #searchModal {
