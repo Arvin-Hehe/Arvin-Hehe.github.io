@@ -1913,11 +1913,11 @@ footer .copy-right {
 }
 
 .search-result-list li {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #b3a0be;   /* #e5e5e5*/
     padding: 15px 10px 5px 10px;    /*15px 0 5px 0;*/
-    background: hsla(0, 0%, 100%, .4);
-    -webkit-backdrop-filter: blur(15px);    
-    backdrop-filter: blur(15px);
+    background: hsla(0, 0%, 100%, .2);
+    -webkit-backdrop-filter: blur(1px);    
+    backdrop-filter: blur(1px);
     margin-bottom: 5px;
     border-radius: 5px;
 }
