@@ -1927,13 +1927,11 @@ footer .copy-right {
     padding: 1px 5px 1px 4px;
     border-radius: 2px;
     color: #e96900;
+    background-color: #f2f2f2;
     font-style: normal;
     white-space: pre-wrap;
 }
 
-.search-keyword{
-    background-color: #f2f2f2;
-}
 
 /*回到顶部按钮样式*/
 .top-scroll {
