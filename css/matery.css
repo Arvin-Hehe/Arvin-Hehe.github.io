@@ -1883,7 +1883,7 @@ footer .copy-right {
 #searchModal {
     min-height: 500px;
     width: 80%;
-    z-index: 1;
+    /* z-index: 1; */
 }
 /* 自己添加毛玻璃效果 */
 #searchModal::after {
@@ -1893,7 +1893,7 @@ footer .copy-right {
     -ms-filter: blur(20px);
     -o-filter: blur(20px);
     filter: blur(20px);
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 #searchModal .search-header .title {
