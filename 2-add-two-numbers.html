@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode,python,哈希表,数组,两数之和">
+    <meta name="keywords" content="python,leetcode,链表,数学,两数之和">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>1. 两数之和 | Arvin</title>
+    <title>2. 两数相加 | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniuimg.heyulong.top/wallpaper7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniuimg.heyulong.top/wallpaper6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">1. 两数之和</h1>
+                    <h1 class="description center-align post-title">2. 两数相加</h1>
                 </div>
             </div>
         </div>
@@ -464,12 +464,12 @@
                                 <span class="chip bg-color">leetcode</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                <span class="chip bg-color">数组</span>
+                            <a href="/tags/%E9%93%BE%E8%A1%A8/">
+                                <span class="chip bg-color">链表</span>
                             </a>
                         
-                            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                                <span class="chip bg-color">哈希表</span>
+                            <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                <span class="chip bg-color">数学</span>
                             </a>
                         
                     </div>
@@ -493,21 +493,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-19
+                    2020-09-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-22
+                    2020-09-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    586
+                    333
                 </div>
                 
 
@@ -524,90 +524,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给定一个整数数组<code>nums</code>和一个目标值<code>target</code>,请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。</strong></p>
-<p><strong>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</strong></p>
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给出两个<code>非空</code> 的链表用来表示两个<code>非负</code>的整数。其中，它们各自的位数是按照 <code>逆序</code>的方式存储的，并且它们的每个节点只能存储<code>一位</code> 数字。</strong></p>
+<p><strong>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</strong></p>
+<p><strong>您可以假设除了数字0之外，这两个数都不会以0开头。</strong></p>
 <p>示例：</p>
-<pre><code>给定 nums = [2, 7, 11, 15], target = 9
+<pre><code>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+输出：7 -&gt; 0 -&gt; 8
+原因：342 + 465 = 807</code></pre>
+<h3 id="二、思路-amp-代码实现"><a href="#二、思路-amp-代码实现" class="headerlink" title="二、思路 &amp; 代码实现"></a>二、思路 &amp; 代码实现</h3><h4 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h4><p>没什么特殊方法，一个一个遍历。</p>
+<h4 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2. 代码实现"></a>2. 代码实现</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for singly-linked list.</span>
+<span class="token comment" spellcheck="true"># class ListNode:</span>
+<span class="token comment" spellcheck="true">#     def __init__(self, x):</span>
+<span class="token comment" spellcheck="true">#         self.val = x</span>
+<span class="token comment" spellcheck="true">#         self.next = None</span>
 
-因为 nums[0] + nums[1] = 2 + 7 = 9
-所以返回 [0, 1]</code></pre>
-<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-第一种思路"><a href="#1-第一种思路" class="headerlink" title="1. 第一种思路"></a>1. 第一种思路</h4><p>这种方法比较粗暴并且很笨了。首先用目标值减去数组中的第一个（下标为0）的元素，然后判断差值是否在数组剩余元素num[1:]中。如果在，得到结果；如果不在，然后再用目标值减去第二个元素，判断差值是否在数组num[2：]…..。就这样直至得到结果。</p>
-<h4 id="2-第二种思路"><a href="#2-第二种思路" class="headerlink" title="2. 第二种思路"></a>2. 第二种思路</h4><p>利用哈希表，数组中的元素的值与对应的下标作为键值映射。然后用目标值依次与数组中的元素做差，然后差值作键在哈希表中获取对应的下标，返回最终结果。</p>
-<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-第一种思路-1"><a href="#1-第一种思路-1" class="headerlink" title="1. 第一种思路"></a>1. 第一种思路</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """</span>
-        length <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            diff <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-            <span class="token keyword">if</span> diff <span class="token keyword">in</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token comment" spellcheck="true"># 获取第二个数在切片数组中的下标</span>
-                index <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span>index<span class="token punctuation">(</span>diff<span class="token punctuation">)</span>
-                <span class="token keyword">return</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> index <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
-        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">addTwoNumbers</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> l1<span class="token punctuation">:</span> ListNode<span class="token punctuation">,</span> l2<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true"># 创建链表头结点</span>
+        new_list <span class="token operator">=</span> cur <span class="token operator">=</span> ListNode<span class="token punctuation">(</span>None<span class="token punctuation">)</span>
+        sums <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">while</span> l1 <span class="token operator">or</span> l2 <span class="token operator">or</span> sums<span class="token punctuation">:</span>
+            sums <span class="token operator">+=</span> <span class="token punctuation">(</span>l1<span class="token punctuation">.</span>val <span class="token keyword">if</span> l1 <span class="token keyword">else</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>l2<span class="token punctuation">.</span>val <span class="token keyword">if</span> l2 <span class="token keyword">else</span> <span class="token number">0</span><span class="token punctuation">)</span>
 
-        <span class="token comment" spellcheck="true"># 下边用try...except写的</span>
-        length <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            diff <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-            <span class="token comment" spellcheck="true"># 不再用if判断diff是否在数组中</span>
-            <span class="token keyword">try</span><span class="token punctuation">:</span>
-                <span class="token comment" spellcheck="true"># 获取第二个数在切片数组中的下标</span>
-                index <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span>index<span class="token punctuation">(</span>diff<span class="token punctuation">)</span>
-            <span class="token keyword">except</span><span class="token punctuation">:</span>
-                <span class="token keyword">pass</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token punctuation">[</span>i<span class="token punctuation">,</span> index <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
-        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="2-第二种思路-1"><a href="#2-第二种思路-1" class="headerlink" title="2. 第二种思路"></a>2. 第二种思路</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """</span>
-        hashmap <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
-        length <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            diff <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-            <span class="token keyword">if</span> hashmap<span class="token punctuation">.</span>get<span class="token punctuation">(</span>diff<span class="token punctuation">)</span> <span class="token keyword">is</span> <span class="token operator">not</span> None<span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token punctuation">[</span>hashmap<span class="token punctuation">.</span>get<span class="token punctuation">(</span>diff<span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span>
-               <span class="token keyword">else</span><span class="token punctuation">:</span>
-                hashmap<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> i
-        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="四、结果"><a href="#四、结果" class="headerlink" title="四、结果"></a>四、结果</h3><table>
+            cur<span class="token punctuation">.</span>next <span class="token operator">=</span> ListNode<span class="token punctuation">(</span>None<span class="token punctuation">)</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next
+            sums<span class="token punctuation">,</span> cur<span class="token punctuation">.</span>val <span class="token operator">=</span> divmod<span class="token punctuation">(</span>sums<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+
+            l1 <span class="token operator">=</span> l1<span class="token punctuation">.</span>next <span class="token keyword">if</span> l1 <span class="token keyword">else</span> None
+            l2 <span class="token operator">=</span> l2<span class="token punctuation">.</span>next <span class="token keyword">if</span> l2 <span class="token keyword">else</span> None
+         <span class="token keyword">return</span> new_list<span class="token punctuation">.</span>next<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="三、表现"><a href="#三、表现" class="headerlink" title="三、表现"></a>三、表现</h3><table>
 <thead>
 <tr>
-<th align="center">方法</th>
 <th align="center">运行时间</th>
-<th align="center">击败</th>
+<th align="center">表现</th>
 <th align="center">内存消耗</th>
-<th align="center">击败</th>
+<th align="center">表现</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">第一种：if…in..</td>
-<td align="center">680ms</td>
-<td align="center">49%</td>
-<td align="center">13.1MB</td>
-<td align="center">79%</td>
-</tr>
-<tr>
-<td align="center">第一种：try…except…</td>
-<td align="center">752ms</td>
-<td align="center">49.54%</td>
-<td align="center">13.1MB</td>
-<td align="center">90.42%（疑惑）</td>
-</tr>
-<tr>
-<td align="center">第二种</td>
-<td align="center">16ms</td>
-<td align="center">99.20%</td>
-<td align="center">13.5MB</td>
-<td align="center">31.53%</td>
+<td align="center">88ms</td>
+<td align="center">20.49%</td>
+<td align="center">13.3MB</td>
+<td align="center">74.92%</td>
 </tr>
 </tbody></table>
 <script>
@@ -653,7 +612,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/1-the-sum-of-two-numbers.html">https://arvin-hehe.github.io/1-the-sum-of-two-numbers.html</a>
+                    <a href="https://arvin-hehe.github.io/2-add-two-numbers.html">https://arvin-hehe.github.io/2-add-two-numbers.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,12 +658,12 @@
                                     <span class="chip bg-color">leetcode</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                    <span class="chip bg-color">数组</span>
+                                <a href="/tags/%E9%93%BE%E8%A1%A8/">
+                                    <span class="chip bg-color">链表</span>
                                 </a>
                             
-                                <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                                    <span class="chip bg-color">哈希表</span>
+                                <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                    <span class="chip bg-color">数学</span>
                                 </a>
                             
                         </div>
@@ -1009,36 +968,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/78-subset.html">
+                <a href="/2-add-two-numbers.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/wallpaper2.jpg" class="responsive-img" alt="78. 子集">
+                        <img src="http://qiniuimg.heyulong.top/wallpaper6.jpg" class="responsive-img" alt="2. 两数相加">
                         
-                        <span class="card-title">78. 子集</span>
+                        <span class="card-title">2. 两数相加</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、题目描述给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
-说明：解集不能包含重复的子集。
-示例：
-输入：nums = [1, 2, 3]
-输出：
-[
-  [3],
-&nbsp; [1],
-&nbsp; [2]
+                            给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方法存储的，并且它们的每个节点只能存储一位数字。如果，我们将这两个数相加起来，则返回一个新的链表来表示它们的和。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1051,6 +1003,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1062,16 +1015,12 @@
                         <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/%E9%93%BE%E8%A1%A8/">
+                        <span class="chip bg-color">链表</span>
                     </a>
                     
-                    <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                        <span class="chip bg-color">位运算</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">回溯算法</span>
+                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
@@ -1085,23 +1034,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/404-sum-of-left-leaves.html">
+                <a href="/617-merging-binary-trees.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/wallpaper5.jpg" class="responsive-img" alt="404. 左叶子之和">
+                        <img src="http://qiniuimg.heyulong.top/wallpaper11.png" class="responsive-img" alt="617. 合并二叉树">
                         
-                        <span class="card-title">404. 左叶子之和</span>
+                        <span class="card-title">617. 合并二叉树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Leetcode 第404题：计算给定二叉树的所有左叶子之和
+                            给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-23
                             </span>
                         <span class="publish-author">
                             
@@ -1128,6 +1077,10 @@
                     
                     <a href="/tags/leetcode/">
                         <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A0%91/">
+                        <span class="chip bg-color">树</span>
                     </a>
                     
                 </div>

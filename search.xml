@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>2. 两数相加</title>
+      <link href="/2-add-two-numbers.html"/>
+      <url>/2-add-two-numbers.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给出两个<code>非空</code> 的链表用来表示两个<code>非负</code>的整数。其中，它们各自的位数是按照 <code>逆序</code>的方式存储的，并且它们的每个节点只能存储<code>一位</code> 数字。</strong></p><p><strong>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</strong></p><p><strong>您可以假设除了数字0之外，这两个数都不会以0开头。</strong></p><p>示例：</p><pre><code>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)输出：7 -&gt; 0 -&gt; 8原因：342 + 465 = 807</code></pre><h3 id="二、思路-amp-代码实现"><a href="#二、思路-amp-代码实现" class="headerlink" title="二、思路 &amp; 代码实现"></a>二、思路 &amp; 代码实现</h3><h4 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h4><p>没什么特殊方法，一个一个遍历。</p><h4 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2. 代码实现"></a>2. 代码实现</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for singly-linked list.</span><span class="token comment" spellcheck="true"># class ListNode:</span><span class="token comment" spellcheck="true">#     def __init__(self, x):</span><span class="token comment" spellcheck="true">#         self.val = x</span><span class="token comment" spellcheck="true">#         self.next = None</span><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">addTwoNumbers</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> l1<span class="token punctuation">:</span> ListNode<span class="token punctuation">,</span> l2<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>        <span class="token comment" spellcheck="true"># 创建链表头结点</span>        new_list <span class="token operator">=</span> cur <span class="token operator">=</span> ListNode<span class="token punctuation">(</span>None<span class="token punctuation">)</span>        sums <span class="token operator">=</span> <span class="token number">0</span>        <span class="token keyword">while</span> l1 <span class="token operator">or</span> l2 <span class="token operator">or</span> sums<span class="token punctuation">:</span>            sums <span class="token operator">+=</span> <span class="token punctuation">(</span>l1<span class="token punctuation">.</span>val <span class="token keyword">if</span> l1 <span class="token keyword">else</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>l2<span class="token punctuation">.</span>val <span class="token keyword">if</span> l2 <span class="token keyword">else</span> <span class="token number">0</span><span class="token punctuation">)</span>            cur<span class="token punctuation">.</span>next <span class="token operator">=</span> ListNode<span class="token punctuation">(</span>None<span class="token punctuation">)</span>            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next            sums<span class="token punctuation">,</span> cur<span class="token punctuation">.</span>val <span class="token operator">=</span> divmod<span class="token punctuation">(</span>sums<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>            l1 <span class="token operator">=</span> l1<span class="token punctuation">.</span>next <span class="token keyword">if</span> l1 <span class="token keyword">else</span> None            l2 <span class="token operator">=</span> l2<span class="token punctuation">.</span>next <span class="token keyword">if</span> l2 <span class="token keyword">else</span> None         <span class="token keyword">return</span> new_list<span class="token punctuation">.</span>next<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="三、表现"><a href="#三、表现" class="headerlink" title="三、表现"></a>三、表现</h3><table><thead><tr><th align="center">运行时间</th><th align="center">表现</th><th align="center">内存消耗</th><th align="center">表现</th></tr></thead><tbody><tr><td align="center">88ms</td><td align="center">20.49%</td><td align="center">13.3MB</td><td align="center">74.92%</td></tr></tbody></table><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 链表 </tag>
+            
+            <tag> 数学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>617. 合并二叉树</title>
       <link href="/617-merging-binary-trees.html"/>
       <url>/617-merging-binary-trees.html</url>
