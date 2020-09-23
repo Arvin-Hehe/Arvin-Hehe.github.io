@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode,python,二叉树,树">
+    <meta name="keywords" content="leetcode,python,树,合并,二叉树">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>404. 左叶子之和 | Arvin</title>
+    <title>617. 合并二叉树 | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniuimg.heyulong.top/wallpaper5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniuimg.heyulong.top/wallpaper11.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">404. 左叶子之和</h1>
+                    <h1 class="description center-align post-title">617. 合并二叉树</h1>
                 </div>
             </div>
         </div>
@@ -468,6 +468,10 @@
                                 <span class="chip bg-color">leetcode</span>
                             </a>
                         
+                            <a href="/tags/%E6%A0%91/">
+                                <span class="chip bg-color">树</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -489,21 +493,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-19
+                    2020-09-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-22
+                    2020-09-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    435
+                    742
                 </div>
                 
 
@@ -520,86 +524,109 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>计算给定二叉树的所有左叶子之和</strong></p>
-<p>示例：</p>
-<pre><code>    3
-   / \
-  9  20
-    /  \
-   15   7
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。</strong></p>
+<p><strong>你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。</strong></p>
+<p>示例 1:</p>
+<pre><code>输入: 
+    Tree 1                     Tree 2                  
+          1                         2                             
+         / \                       / \                            
+        3   2                     1   3                        
+       /                           \   \                      
+      5                             4   7                  
+输出: 
+合并后的树:
+         3
+        / \
+       4   5
+      / \   \ 
+     5   4   7
 
-在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24</code></pre>
-<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><ul>
-<li><p>看到题目中的<code>二叉树</code>时，首先想到要用深度优先遍历或者广度优先遍历</p>
-</li>
-<li><p>接下来往下看<code>左叶子之和</code>，然后就想到了先序遍历、中序遍历、后序遍历。</p>
-</li>
-<li><p>题目中要求只计算左叶子之和，所以就考虑使用这三种遍历的非递归方式</p>
-<p><strong>所以最后，还是选择使用的后序遍历的非递归实现</strong></p>
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/merge-two-binary-trees
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</code></pre>
+<p><strong>注意: 合并必须从两个树的根节点开始。</strong></p>
+<h3 id="二、思路-amp-代码实现"><a href="#二、思路-amp-代码实现" class="headerlink" title="二、思路 &amp; 代码实现"></a>二、思路 &amp; 代码实现</h3><h4 id="（1）思路描述"><a href="#（1）思路描述" class="headerlink" title="（1）思路描述"></a>（1）思路描述</h4><ul>
+<li>首先我选择使用层次遍历的方式来写这道题。</li>
+<li>其次是将 Tree2 合并到 Tree1 上边，作为一颗新的二叉树返回</li>
+<li>方向确定了，接下来就是程序实现的设计了</li>
+<li>首先判断传入函数的 t1 、t2是否为None，t1为None返回t2，t2为None返回t1，都为None返回None。t1和t2都不为None，接着往下走</li>
+<li>定义两个队列<code>dequeue1</code>保存Tree1的层次遍历节点，<code>dequeue2</code>保存Tree2的遍历节点。首先将t1、t2分别添加到dequeue1和dequeue2</li>
+<li>接着循环遍历往下走：<ul>
+<li>进入循环首先实现根节点的值的更新</li>
+<li>接下来每一次遍历对节点左右子树进行判断<ul>
+<li>t1和t2左右子树都存在，则分别添加到队列中</li>
+<li>如果t1的左子树或右子树存在，t2的左子树或右子树不存在。这时是不需要做任何操作的</li>
+<li>如果t2的左子树或右子树存在，t1的左子树或右子树不存在。那么需要将t2的左子树或者右子树添加到t1的</li>
+</ul>
 </li>
 </ul>
-<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1、先序遍历"><a href="#1、先序遍历" class="headerlink" title="1、先序遍历"></a>1、先序遍历</h4><p>后续补上</p>
-<h4 id="2、中序遍历"><a href="#2、中序遍历" class="headerlink" title="2、中序遍历"></a>2、中序遍历</h4><p>后续补上</p>
-<h4 id="3、后序遍历"><a href="#3、后序遍历" class="headerlink" title="3、后序遍历"></a>3、后序遍历</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for a binary tree node</span>
-<span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x
-        self<span class="token punctuation">.</span>left <span class="token operator">=</span> None
-        self<span class="token punctuation">.</span>right <span class="token operator">=</span> None
+</li>
+<li>最后返回t1即可。</li>
+</ul>
+<h4 id="（2）代码实现"><a href="#（2）代码实现" class="headerlink" title="（2）代码实现"></a>（2）代码实现</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for a binary tree node.</span>
+<span class="token comment" spellcheck="true"># class TreeNode:</span>
+<span class="token comment" spellcheck="true">#     def __init__(self, x):</span>
+<span class="token comment" spellcheck="true">#         self.val = x</span>
+<span class="token comment" spellcheck="true">#         self.left = None</span>
+<span class="token comment" spellcheck="true">#         self.right = None</span>
 
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">mergeTrees</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> t1<span class="token punctuation">:</span> TreeNode<span class="token punctuation">,</span> t2<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> TreeNode<span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">'''层次遍历'''</span>
 
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">sumOfLeftLeaves</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        :type root: TreeNode
-        :rtype: int
-        """</span>
-        <span class="token comment" spellcheck="true"># 首先判断root如果为None，返回值为0</span>
-        <span class="token keyword">if</span> <span class="token operator">not</span> root<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token number">0</span>
+        <span class="token comment" spellcheck="true"># 1、首先对t1和t2进行判断</span>
+        <span class="token keyword">if</span> t1 <span class="token operator">and</span> <span class="token operator">not</span> t2<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> t1
+        <span class="token keyword">elif</span> <span class="token operator">not</span> t1 <span class="token operator">and</span> t2<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> t2
+        <span class="token keyword">elif</span> <span class="token operator">not</span> t1 <span class="token operator">and</span> <span class="token operator">not</span> t2<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> 
 
-        <span class="token keyword">else</span><span class="token punctuation">:</span>
-            <span class="token comment" spellcheck="true"># 保存左叶子节点的值</span>
-            result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-            <span class="token comment" spellcheck="true"># 临时保存节点的栈</span>
-            stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-            stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
-            <span class="token keyword">while</span> stack<span class="token punctuation">:</span>
-                root <span class="token operator">=</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
-                <span class="token keyword">if</span> root<span class="token punctuation">.</span>left<span class="token punctuation">:</span>
-                    stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
-                    <span class="token comment" spellcheck="true"># 左子树节点为叶子结点</span>
-                    <span class="token keyword">if</span> <span class="token operator">not</span> root<span class="token punctuation">.</span>left<span class="token punctuation">.</span>left <span class="token operator">and</span> <span class="token operator">not</span> root<span class="token punctuation">.</span>left<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
-                        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
-                 <span class="token keyword">if</span> root<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
-                    stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
-             <span class="token keyword">return</span> sum<span class="token punctuation">(</span>result<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="四、结果"><a href="#四、结果" class="headerlink" title="四、结果"></a>四、结果</h3><h4 id="1、先序遍历-1"><a href="#1、先序遍历-1" class="headerlink" title="1、先序遍历"></a>1、先序遍历</h4><h4 id="2、中序遍历-1"><a href="#2、中序遍历-1" class="headerlink" title="2、中序遍历"></a>2、中序遍历</h4><h4 id="3、后序遍历-1"><a href="#3、后序遍历-1" class="headerlink" title="3、后序遍历"></a>3、后序遍历</h4><table>
+        <span class="token comment" spellcheck="true"># 2、定义队列保存遍历节点</span>
+        dequeue1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        dequeue2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+        dequeue1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>t1<span class="token punctuation">)</span>
+        dequeue2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>t2<span class="token punctuation">)</span>
+
+        <span class="token keyword">while</span> dequeue1 <span class="token operator">and</span> dequeue2<span class="token punctuation">:</span>
+            d1 <span class="token operator">=</span> dequeue1<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+            d2 <span class="token operator">=</span> dequeue2<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token comment" spellcheck="true"># 对根的值进行更新</span>
+            d1<span class="token punctuation">.</span>val <span class="token operator">=</span> d1<span class="token punctuation">.</span>val <span class="token operator">+</span> d2<span class="token punctuation">.</span>val
+
+            <span class="token comment" spellcheck="true"># 左右子树判断</span>
+            <span class="token keyword">if</span> d1<span class="token punctuation">.</span>left <span class="token operator">and</span> d2<span class="token punctuation">.</span>left<span class="token punctuation">:</span>
+                dequeue1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>d1<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+                dequeue2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>d2<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> d2<span class="token punctuation">.</span>left<span class="token punctuation">:</span>
+                d1<span class="token punctuation">.</span>left <span class="token operator">=</span> d2<span class="token punctuation">.</span>left
+
+            <span class="token keyword">if</span> d1<span class="token punctuation">.</span>right <span class="token operator">and</span> d2<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                dequeue1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>d1<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+                dequeue2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>d2<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+
+            <span class="token keyword">elif</span> d2<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                d1<span class="token punctuation">.</span>right <span class="token operator">=</span> d2<span class="token punctuation">.</span>right
+
+         <span class="token keyword">return</span> t1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="（3）表现"><a href="#（3）表现" class="headerlink" title="（3）表现"></a>（3）表现</h4><table>
 <thead>
 <tr>
-<th align="center"></th>
 <th align="center">运行时间</th>
-<th align="center"></th>
+<th align="center">表现</th>
 <th align="center">内存消耗</th>
-<th align="center"></th>
+<th align="center">表现</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">第一次</td>
-<td align="center">28ms</td>
-<td align="center">超过18%</td>
-<td align="center">12.7MB</td>
-<td align="center">超过93%</td>
-</tr>
-<tr>
-<td align="center">第二次</td>
-<td align="center">20ms</td>
-<td align="center">超过70%</td>
-<td align="center">12.8MB</td>
-<td align="center">超过80%</td>
+<td align="center">100ms</td>
+<td align="center">91.61%</td>
+<td align="center">14.3MB</td>
+<td align="center">88.39%</td>
 </tr>
 </tbody></table>
-<p>接下来，学习学习别人的思路，再接着优化吧。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -643,7 +670,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/404-sum-of-left-leaves.html">https://arvin-hehe.github.io/404-sum-of-left-leaves.html</a>
+                    <a href="https://arvin-hehe.github.io/617-merging-binary-trees.html">https://arvin-hehe.github.io/617-merging-binary-trees.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -691,6 +718,10 @@
                             
                                 <a href="/tags/leetcode/">
                                     <span class="chip bg-color">leetcode</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%A0%91/">
+                                    <span class="chip bg-color">树</span>
                                 </a>
                             
                         </div>
@@ -995,28 +1026,91 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/1-the-sum-of-two-numbers.html">
+                <a href="/617-merging-binary-trees.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/wallpaper7.jpg" class="responsive-img" alt="1. 两数之和">
+                        <img src="http://qiniuimg.heyulong.top/wallpaper11.png" class="responsive-img" alt="617. 合并二叉树">
                         
-                        <span class="card-title">1. 两数之和</span>
+                        <span class="card-title">617. 合并二叉树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一个整数数组nums和一个目标值target,请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+                            一、题目描述给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。
+你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A0%91/">
+                        <span class="chip bg-color">树</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/538-convert-binary-search-tree-to-accumulative.html">
+                    <div class="card-image">
+                        
+                        <img src="http://qiniuimg.heyulong.top/wallpaper9.jpg" class="responsive-img" alt="538. 把二叉搜索树转换为累加树">
+                        
+                        <span class="card-title">538. 把二叉搜索树转换为累加树</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            给定一个二叉搜索树（Binary Search Tree），把它转换成为累加树（Greater Tree），使得每个节点的值是原来的节点值加上所有大于它的节点值之和。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1040,72 +1134,12 @@
                         <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/%E6%A0%91/">
+                        <span class="chip bg-color">树</span>
                     </a>
                     
-                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                        <span class="chip bg-color">哈希表</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/write-python-scripts-to-automatically-update-code-cloud-pages.html">
-                    <div class="card-image">
-                        
-                        <img src="http://qiniuimg.heyulong.top/wallpaper4.png" class="responsive-img" alt="编写python脚本实现自动更新码云pages">
-                        
-                        <span class="card-title">编写python脚本实现自动更新码云pages</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            使用码云的pages部署hexo静态博客以后，每次写完都要去手动更新，实在是麻烦。当然只要开会员，这个问题根本不叫问题。但是，对于一个自身白嫖党而言，不可能的，这辈子也不可能的。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/selenium/">
-                        <span class="chip bg-color">selenium</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%A0%81%E4%BA%91/">
-                        <span class="chip bg-color">码云</span>
-                    </a>
-                    
-                    <a href="/tags/pages/">
-                        <span class="chip bg-color">pages</span>
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
+                        <span class="chip bg-color">二叉搜索树</span>
                     </a>
                     
                 </div>
