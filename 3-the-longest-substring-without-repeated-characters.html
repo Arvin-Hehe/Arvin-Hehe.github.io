@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="E5,Onedrive,扩充空间">
+    <meta name="keywords" content="python,leetcode,哈希表,双指针,字符串,Sliding Window">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>将Microsoft E5账号的1T Onedrive空间升级为5T | Arvin</title>
+    <title>3. 无重复字符的最长子串 | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniuimg.heyulong.top/onedrive.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniuimg.heyulong.top/wallpaper10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">将Microsoft E5账号的1T Onedrive空间升级为5T</h1>
+                    <h1 class="description center-align post-title">3. 无重复字符的最长子串</h1>
                 </div>
             </div>
         </div>
@@ -456,16 +456,28 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/E5/">
-                                <span class="chip bg-color">E5</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/%E6%89%A9%E5%AE%B9/">
-                                <span class="chip bg-color">扩容</span>
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
                             </a>
                         
-                            <a href="/tags/onedrive/">
-                                <span class="chip bg-color">onedrive</span>
+                            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                                <span class="chip bg-color">哈希表</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                                <span class="chip bg-color">双指针</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                <span class="chip bg-color">字符串</span>
+                            </a>
+                        
+                            <a href="/tags/Sliding-Window/">
+                                <span class="chip bg-color">Sliding Window</span>
                             </a>
                         
                     </div>
@@ -476,8 +488,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Onedrive/" class="post-category">
-                                Onedrive
+                            <a href="/categories/LeetCode/" class="post-category">
+                                LeetCode
                             </a>
                         
                     </div>
@@ -489,21 +501,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-29
+                    2020-09-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-22
+                    2020-09-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    564
+                    453
                 </div>
                 
 
@@ -520,37 +532,67 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、摘要："><a href="#一、摘要：" class="headerlink" title="一、摘要："></a>一、摘要：</h3><p>我们在注册了微软开发者账户以后，通常是会为我们的Onedrive分配5T的可用空间的。但是当我们打开Onedrive以后，看到的却只有1T。这时候，我们该怎么办呢，下边告诉你。</p>
-<h3 id="二、将Onedrive-1T空间恢复到5T"><a href="#二、将Onedrive-1T空间恢复到5T" class="headerlink" title="二、将Onedrive 1T空间恢复到5T"></a>二、将Onedrive 1T空间恢复到5T</h3><h4 id="第一步：在管理后台修改"><a href="#第一步：在管理后台修改" class="headerlink" title="第一步：在管理后台修改"></a>第一步：在管理后台修改</h4><ol>
-<li><p>登录我们的开发者账号（<a target="_blank" rel="noopener" href="https://www.office.com/?auth=2">点我登录</a>），进入到如下图所示界面，然后依次点击管理-&gt;所有管理中心，然后在右边界面找到Onedrive，点击。</p>
-<p><img src="http://qiniuimg.heyulong.top/office.png"></p>
-<p><img src="http://qiniuimg.heyulong.top/administrator.png"></p>
-</li>
-<li><p>进入到下图所示界面，点击<code>storage</code> 或者存储，然后修改默认大小保存即可。</p>
-<p><img src="http://qiniuimg.heyulong.top/storage.png"></p>
-</li>
-</ol>
-<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><ol>
-<li><p>下载<code>SharePoint Online Management Shell</code>（<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-CN/download/details.aspx?id=35588">点我进入下载页面</a>）,根据自己的系统选择需要下载的版本。下载下来以后安装。安装好以后，在开始菜单最近安装里边会显示这个软件，然后打开。</p>
-</li>
-<li><p>接下来输入下面的代码：</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell">Connect<span class="token operator">-</span>SPOService <span class="token operator">-</span>Url https:<span class="token operator">/</span><span class="token operator">/</span>&lt;orgnam e><span class="token operator">-</span>admin<span class="token punctuation">.</span>sharepoint<span class="token punctuation">.</span>com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>==注意==：（1）代码中的<code>&lt;orgnam e&gt;</code>是注册账号的组织名字。</p>
-<p>​                  （2）<code>&lt;orgnam e&gt;</code>可以从登录Onedrive以后的页面地址栏中获取。</p>
-<p>​                                例如：我登录后的地址是<code>https://arvinhe-my.sharepoint.com/personal/arvin_arvin_onmicrosoft_com/_layouts/15/onedrive.aspx</code>，其中<code>-my.sharepoint</code>前面的<code>arvinhe</code>便是。</p>
-</li>
-<li><p>执行命令以后，会跳出一个登录界面，输入自己的账户密码登录即可。</p>
-</li>
-<li><p>登录了以后，继续执行下边的命令。</p>
-<pre class="line-numbers language-powershell"><code class="language-powershell"><span class="token function">Set</span><span class="token operator">-</span>SPOSite <span class="token operator">-</span>Identity https:<span class="token operator">/</span><span class="token operator">/</span>arvinhe<span class="token operator">-</span>my<span class="token punctuation">.</span>sharepoint<span class="token punctuation">.</span>com<span class="token operator">/</span>personal<span class="token operator">/</span>arvin_arvin_onmicrosoft_com <span class="token operator">-</span>StorageQuota 5242880<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>==注意==：其中有两处地方需要改</p>
-<p>（1）<code>-my.sharepoint</code></p>
-<p>（2）<code>arvin_arvin_onmicrosoft_com</code>，其中的<code>@</code>和<code>.</code>都要用<code>_</code>替代的。</p>
-<p>​        这两个地方与你已登录Onedrive（也就是要修改容量的Onedrive）的页面地址栏中的地址的前边大半部分是一样的，照着那个填就行了，参考第2小步给出的我的个人登录后的地址，把自己的填上就好了。</p>
-</li>
-<li><p>执行命令。退出Onedrive客户端，然后重新登陆，可以看到容量已经变了。</p>
-</li>
-</ol>
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给定一个字符串，请你找出其中不含有重复字符的<code>最长子串</code>的长度。</strong></p>
+<p>示例1：</p>
+<pre><code>输入: "abcabcbb"
+输出: 3 
+解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。</code></pre>
+<p>示例2：</p>
+<pre><code>输入: "bbbbb"
+输出: 1
+解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。</code></pre>
+<p>示例3：</p>
+<pre><code>输入: "pwwkew"
+输出: 3
+解释: 因为无重复字符的最长子串是&nbsp;"wke"，所以其长度为 3。
+&nbsp;    请注意，你的答案必须是 子串 的长度，"pwke"&nbsp;是一个子序列，不是子串。</code></pre>
+<h3 id="二、思路-amp-代码实现"><a href="#二、思路-amp-代码实现" class="headerlink" title="二、思路 &amp; 代码实现"></a>二、思路 &amp; 代码实现</h3><h4 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h4><p>使用两个for循环，外层循环控制起始位置，内层循环从起始元素开始，将未重复元素添加到一个临时数组，遇到重复元素就退出循环。将临时数组的长度也就是子串的长度添加到一个数组。最后比较数组内所有元素的最大值便是最长子串的长度。</p>
+<h4 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2. 代码实现"></a>2. 代码实现</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">lengthOfLongestSubstring</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true"># 默认子串长度为0</span>
+        <span class="token comment" spellcheck="true"># 1 使用常数统计最长子串长度</span>
+        <span class="token comment" spellcheck="true"># result = 0</span>
+        <span class="token comment" spellcheck="true"># 2 使用数组统计所有子串长度</span>
+        result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            cur <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token punctuation">,</span> length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> s<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">not</span> <span class="token keyword">in</span> cur<span class="token punctuation">:</span>
+                    cur<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">break</span>
+            <span class="token comment" spellcheck="true">#if len(cur) > result:</span>
+            <span class="token comment" spellcheck="true">#    result = len(cur)</span>
+            <span class="token keyword">if</span> len<span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
+                result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>len<span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">#return result</span>
+        <span class="token keyword">return</span> max<span class="token punctuation">(</span>result<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3-表现"><a href="#3-表现" class="headerlink" title="3. 表现"></a>3. 表现</h4><table>
+<thead>
+<tr>
+<th align="center">记录方式</th>
+<th align="center">运行时间</th>
+<th align="center">表现</th>
+<th align="center">内存消耗</th>
+<th align="center">表现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">2168ms</td>
+<td align="center">4%</td>
+<td align="center">13.4MB</td>
+<td align="center">32%</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">2164ms</td>
+<td align="center">5.01%</td>
+<td align="center">13.3MB</td>
+<td align="center">84.95%</td>
+</tr>
+</tbody></table>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -594,7 +636,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/upgrade-1t-onedrive-space-of-microsoft-e5-account-to-5t.html">https://arvin-hehe.github.io/upgrade-1t-onedrive-space-of-microsoft-e5-account-to-5t.html</a>
+                    <a href="https://arvin-hehe.github.io/3-the-longest-substring-without-repeated-characters.html">https://arvin-hehe.github.io/3-the-longest-substring-without-repeated-characters.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -632,16 +674,28 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/E5/">
-                                    <span class="chip bg-color">E5</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/%E6%89%A9%E5%AE%B9/">
-                                    <span class="chip bg-color">扩容</span>
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
                                 </a>
                             
-                                <a href="/tags/onedrive/">
-                                    <span class="chip bg-color">onedrive</span>
+                                <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                                    <span class="chip bg-color">哈希表</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                                    <span class="chip bg-color">双指针</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                    <span class="chip bg-color">字符串</span>
+                                </a>
+                            
+                                <a href="/tags/Sliding-Window/">
+                                    <span class="chip bg-color">Sliding Window</span>
                                 </a>
                             
                         </div>
@@ -950,30 +1004,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/office-e5-automatic-subscription.html">
+                <a href="/501-mode-in-binary-search-tree.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/win10.jpg" class="responsive-img" alt="Office E5自动订阅">
+                        <img src="http://qiniuimg.heyulong.top/wallpaper8.jpg" class="responsive-img" alt="501. 二叉搜索树中的众数">
                         
-                        <span class="card-title">Office E5自动订阅</span>
+                        <span class="card-title">501. 二叉搜索树中的众数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            之前注册的office E5账号，试用期只有三个月，如果想要继续使用呢，那么就需要在账号到期前保持一定的开发活动，简言之就是经常调用微软这些软件的API。下边开始讲如何利用这种方法进行续订。
+                            给定一个有相同值的二叉搜索树（BST），找出BST中的所有众数（出现频率最高的元素）。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-30
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Office/" class="post-category">
-                                    Office
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
                                 </a>
                             
                             
@@ -983,16 +1037,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/E5/">
-                        <span class="chip bg-color">E5</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E7%BB%AD%E8%AE%A2/">
-                        <span class="chip bg-color">续订</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/office/">
-                        <span class="chip bg-color">office</span>
+                    <a href="/tags/%E6%A0%91/">
+                        <span class="chip bg-color">树</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
+                        <span class="chip bg-color">二叉搜索树</span>
                     </a>
                     
                 </div>
@@ -1006,43 +1064,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/submit-the-test-for-first-time.html">
+                <a href="/2-add-two-numbers.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/win10.jpg" class="responsive-img" alt="第一次提交测试">
+                        <img src="http://qiniuimg.heyulong.top/wallpaper6.jpg" class="responsive-img" alt="2. 两数相加">
                         
-                        <span class="card-title">第一次提交测试</span>
+                        <span class="card-title">2. 两数相加</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一次提交测试博客创建好了，总是要测一下管不管用的。
-试试小标题
-测试
-
-
-测试
-测试
-测试
-
-
-
-def test():
-    print('这是一个测试')
-一大段文字试试圣诞节的会计师房价快速的房价快速的健康恢复的健康和手机号链接哈
+                            给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方法存储的，并且它们的每个节点只能存储一位数字。如果，我们将这两个数相加起来，则返回一个新的链表来表示它们的和。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
                                 </a>
                             
                             
@@ -1052,12 +1097,20 @@ def test():
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%93%BE%E8%A1%A8/">
+                        <span class="chip bg-color">链表</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
