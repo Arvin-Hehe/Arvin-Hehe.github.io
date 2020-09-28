@@ -334,7 +334,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniuimg.heyulong.top/wallpaper5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://imgcdn.heyulong.top/wallpaper5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -496,7 +496,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-22
+                    2020-09-28
                 </div>
                 
 
@@ -507,6 +507,11 @@
                 </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
                 
 
                 
@@ -1002,7 +1007,7 @@
                 <a href="/1-the-sum-of-two-numbers.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/wallpaper7.jpg" class="responsive-img" alt="1. 两数之和">
+                        <img src="http://imgcdn.heyulong.top/wallpaper7.jpg" class="responsive-img" alt="1. 两数之和">
                         
                         <span class="card-title">1. 两数之和</span>
                     </div>
@@ -1062,7 +1067,7 @@
                 <a href="/write-python-scripts-to-automatically-update-code-cloud-pages.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/wallpaper4.png" class="responsive-img" alt="编写python脚本实现自动更新码云pages">
+                        <img src="http://imgcdn.heyulong.top/wallpaper4.png" class="responsive-img" alt="编写python脚本实现自动更新码云pages">
                         
                         <span class="card-title">编写python脚本实现自动更新码云pages</span>
                     </div>
@@ -1118,43 +1123,6 @@
 
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: Arvin<br />'
-            + '文章作者: Arvin He<br />'
-            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1349,7 +1317,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.5k</span>&nbsp;字
+                class="white-color">9.2k</span>&nbsp;字
             
             
             

@@ -334,7 +334,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniuimg.heyulong.top/wallpaper14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://imgcdn.heyulong.top/wallpaper14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -511,6 +511,11 @@
                 </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
                 
 
                 
@@ -981,61 +986,39 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/235-the-nearest-common-ancestor-of-binary-search-tree.html">
+                <a href="/resolve-errsslversionorciphermismatch-error.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/wallpaper14.jpg" class="responsive-img" alt="235. 二叉搜索树的最近公共祖先">
                         
-                        <span class="card-title">235. 二叉搜索树的最近公共祖先</span>
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="解决ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误">
+                        
+                        <span class="card-title">解决ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一个二叉搜索树，找到该树中两个指定节点的最近公共祖先。
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-28
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/LeetCode/" class="post-category">
-                                    LeetCode
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Arvin He
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A0%91/">
-                        <span class="chip bg-color">树</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
-                        <span class="chip bg-color">二叉搜索树</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1050,7 +1033,7 @@
                 <a href="/501-mode-in-binary-search-tree.html">
                     <div class="card-image">
                         
-                        <img src="http://qiniuimg.heyulong.top/wallpaper8.jpg" class="responsive-img" alt="501. 二叉搜索树中的众数">
+                        <img src="http://imgcdn.heyulong.top/wallpaper8.jpg" class="responsive-img" alt="501. 二叉搜索树中的众数">
                         
                         <span class="card-title">501. 二叉搜索树中的众数</span>
                     </div>
@@ -1106,43 +1089,6 @@
 
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: Arvin<br />'
-            + '文章作者: Arvin He<br />'
-            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1337,7 +1283,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.5k</span>&nbsp;字
+                class="white-color">9.2k</span>&nbsp;字
             
             
             
