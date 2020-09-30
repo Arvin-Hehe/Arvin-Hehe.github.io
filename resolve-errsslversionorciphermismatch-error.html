@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="解决ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误, Arvin">
+    <meta name="keywords" content="ssl,ERR_SSL_VERSION_OR_CIPHER_MISMATCH">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -334,7 +334,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -454,12 +454,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ssl/">
+                                <span class="chip bg-color">ssl</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/others/" class="post-category">
+                                others
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -475,21 +488,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-28
+                    2020-09-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    724
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -504,7 +517,31 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h3 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h3><p>平时写点东西都会配个图，使用的七牛云做图床。突然有一天，打开谷歌浏览器，打开博客页，发现图片全加载不出来了。开始还以为是网速不好，又刷新了两遍结果还是不行。然后使用edge等等其他浏览器却都没问题。F12以后，看到ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误，并且图片的HTTP协议全部自动变成了HTTPS的，然后就谷歌了一下，发现是谷歌的问题。只要域名为HTTPS的情况下，页面内的所有HTTP都会转换为HTTPS。</p>
+<p>好吧，目前来说已经知道问题所在了，那就该就决问题了。</p>
+<h3 id="二、解决问题"><a href="#二、解决问题" class="headerlink" title="二、解决问题"></a>二、解决问题</h3><p>实际上这个问题很好解决，只需要到<a target="_blank" rel="noopener" href="https://portal.qiniu.com/cdn/domain">七牛云</a>的CDN域名管理页面，配置相应域名，开启HTTPS即可。</p>
+<p>可是一旦开启HTTPS以后，通过HTTPS的流量将不计算入免费流量，那以后再使用的话就需要交流量费了，对于一个资深白嫖用户来说，真的太难受了。然后就开始了谷歌之路。</p>
+<p>在一通谷歌加测试以后，那些方法全没用。</p>
+<p>最后，在舍不得一点流量费的情况下，温柔地打开了gitee。<a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/#%E5%90%AC%E8%AF%B4%E4%BD%A0%E4%B9%9F%E6%83%B3%E7%94%A8picgo">PicGo</a> + gitee组合，将码云作为图床使用。</p>
+<p>注意：在创建图床仓库时，要选择<code>公开</code>模式，否则图片无法访问。</p>
+<h3 id="三、gitee-PicGo-创建自己的图床"><a href="#三、gitee-PicGo-创建自己的图床" class="headerlink" title="三、gitee + PicGo 创建自己的图床"></a>三、gitee + PicGo 创建自己的图床</h3><ol>
+<li>创建一个新的仓库，选择<code>公开</code>模式，其他的选项照常选择</li>
+<li>下载<a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/#%E5%90%AC%E8%AF%B4%E4%BD%A0%E4%B9%9F%E6%83%B3%E7%94%A8picgo">PicGo</a>，然后安装</li>
+<li>打开PicGo，选择插件设置，搜索 gitee，然后任选一个gitee插件下载。下载完以后，可以看到图床设置中已经有了gitee图床。</li>
+<li>选择gitee图床，然后在右边的gitee图床设置界面填写必要信息。<ul>
+<li>owner：填写自己的用户名</li>
+<li>repo：仓库名</li>
+<li>path：在仓库中图片保存的目录路径，可以不填，默认为根目录</li>
+<li>token：在gitee用户设置中，选择<code>Personal access tokens</code>，然后点击右边的<code>Generate new token</code>生成新的token。然后复制粘贴进来即可。</li>
+<li>message： commit 时的信息，保持默认即可。</li>
+</ul>
+</li>
+<li>点击确定即可。可以将其设置为默认图床，这样一来在上传图片的时候就不用再选择图床了</li>
+<li>回到上传区。右边上传区上边可以选择图床，中间为上传区域，下边可以选择生成的链接格式。</li>
+<li>选择一张图片上传，完成后，生成的链接已经保存在剪切板，直接在需要的地方粘贴即可。</li>
+<li>结束</li>
+</ol>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -584,7 +621,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/ssl/">
+                                    <span class="chip bg-color">ssl</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -895,8 +936,7 @@
                 <a href="/resolve-errsslversionorciphermismatch-error.html">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="解决ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper19.jpg" class="responsive-img" alt="解决ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误">
                         
                         <span class="card-title">解决ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误</span>
                     </div>
@@ -904,10 +944,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            平时写点东西都会配个图，使用的七牛云做图床。突然有一天，打开谷歌浏览器，打开博客页，发现图片全加载不出来了。开始还以为是网速不好，又刷新了两遍结果还是不行。然后使用edge等等其他浏览器却都没问题。F12以后，看到ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误，并且图片的HTTP协议全部自动变成了HTTPS的，然后就谷歌了一下，发现是谷歌的问题。只要域名为HTTPS的情况下，页面内的所有HTTP都会转换为HTTPS。
                         
                     </div>
                     <div class="publish-info">
@@ -916,13 +953,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Arvin He
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/others/" class="post-category">
+                                    others
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ssl/">
+                        <span class="chip bg-color">ssl</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1186,7 +1235,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.2k</span>&nbsp;字
+                class="white-color">9.9k</span>&nbsp;字
             
             
             

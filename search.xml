@@ -8,9 +8,21 @@
       <link href="/resolve-errsslversionorciphermismatch-error.html"/>
       <url>/resolve-errsslversionorciphermismatch-error.html</url>
       
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h3 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h3><p>平时写点东西都会配个图，使用的七牛云做图床。突然有一天，打开谷歌浏览器，打开博客页，发现图片全加载不出来了。开始还以为是网速不好，又刷新了两遍结果还是不行。然后使用edge等等其他浏览器却都没问题。F12以后，看到ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误，并且图片的HTTP协议全部自动变成了HTTPS的，然后就谷歌了一下，发现是谷歌的问题。只要域名为HTTPS的情况下，页面内的所有HTTP都会转换为HTTPS。</p><p>好吧，目前来说已经知道问题所在了，那就该就决问题了。</p><h3 id="二、解决问题"><a href="#二、解决问题" class="headerlink" title="二、解决问题"></a>二、解决问题</h3><p>实际上这个问题很好解决，只需要到<a href="https://portal.qiniu.com/cdn/domain">七牛云</a>的CDN域名管理页面，配置相应域名，开启HTTPS即可。</p><p>可是一旦开启HTTPS以后，通过HTTPS的流量将不计算入免费流量，那以后再使用的话就需要交流量费了，对于一个资深白嫖用户来说，真的太难受了。然后就开始了谷歌之路。</p><p>在一通谷歌加测试以后，那些方法全没用。</p><p>最后，在舍不得一点流量费的情况下，温柔地打开了gitee。<a href="https://picgo.github.io/PicGo-Doc/zh/guide/#%E5%90%AC%E8%AF%B4%E4%BD%A0%E4%B9%9F%E6%83%B3%E7%94%A8picgo">PicGo</a> + gitee组合，将码云作为图床使用。</p><p>注意：在创建图床仓库时，要选择<code>公开</code>模式，否则图片无法访问。</p><h3 id="三、gitee-PicGo-创建自己的图床"><a href="#三、gitee-PicGo-创建自己的图床" class="headerlink" title="三、gitee + PicGo 创建自己的图床"></a>三、gitee + PicGo 创建自己的图床</h3><ol><li>创建一个新的仓库，选择<code>公开</code>模式，其他的选项照常选择</li><li>下载<a href="https://picgo.github.io/PicGo-Doc/zh/guide/#%E5%90%AC%E8%AF%B4%E4%BD%A0%E4%B9%9F%E6%83%B3%E7%94%A8picgo">PicGo</a>，然后安装</li><li>打开PicGo，选择插件设置，搜索 gitee，然后任选一个gitee插件下载。下载完以后，可以看到图床设置中已经有了gitee图床。</li><li>选择gitee图床，然后在右边的gitee图床设置界面填写必要信息。<ul><li>owner：填写自己的用户名</li><li>repo：仓库名</li><li>path：在仓库中图片保存的目录路径，可以不填，默认为根目录</li><li>token：在gitee用户设置中，选择<code>Personal access tokens</code>，然后点击右边的<code>Generate new token</code>生成新的token。然后复制粘贴进来即可。</li><li>message： commit 时的信息，保持默认即可。</li></ul></li><li>点击确定即可。可以将其设置为默认图床，这样一来在上传图片的时候就不用再选择图床了</li><li>回到上传区。右边上传区上边可以选择图床，中间为上传区域，下边可以选择生成的链接格式。</li><li>选择一张图片上传，完成后，生成的链接已经保存在剪切板，直接在需要的地方粘贴即可。</li><li>结束</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> others </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ssl </tag>
+            
+        </tags>
       
     </entry>
     
