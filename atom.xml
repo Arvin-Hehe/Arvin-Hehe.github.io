@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-09-30T10:09:57.788Z</updated>
+  <updated>2020-10-02T06:59:56.926Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5. 最长回文子串</title>
+    <link href="https://arvin-hehe.github.io/5-the-longest-palindrome-substring.html"/>
+    <id>https://arvin-hehe.github.io/5-the-longest-palindrome-substring.html</id>
+    <published>2020-10-01T08:35:39.000Z</published>
+    <updated>2020-10-02T06:59:56.926Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="字符串" scheme="https://arvin-hehe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="双层循环" scheme="https://arvin-hehe.github.io/tags/%E5%8F%8C%E5%B1%82%E5%BE%AA%E7%8E%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>解决ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误</title>
