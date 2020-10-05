@@ -93,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/235-the-nearest-common-ancestor-of-binary-search-tree.html</loc>
+    <loc>https://arvin-hehe.github.io/235-nearest-common-ancestor-of-binary-search-tree.html</loc>
     
     <lastmod>2020-09-28</lastmod>
     
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/404.html</loc>
+    <loc>https://arvin-hehe.github.io/about/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/about/index.html</loc>
+    <loc>https://arvin-hehe.github.io/404.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
@@ -214,6 +214,13 @@
   </url>
   
   <url>
+    <loc>https://arvin-hehe.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2020-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://arvin-hehe.github.io/tags/%E9%93%BE%E8%A1%A8/</loc>
     <lastmod>2020-10-05</lastmod>
     <changefreq>daily</changefreq>
@@ -242,13 +249,6 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2020-10-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://arvin-hehe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
     <lastmod>2020-10-05</lastmod>
     <changefreq>daily</changefreq>
@@ -264,6 +264,20 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <lastmod>2020-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
+    <lastmod>2020-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/%E5%8F%8C%E5%B1%82%E5%BE%AA%E7%8E%AF/</loc>
     <lastmod>2020-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -397,20 +411,6 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/tags/ssl/</loc>
-    <lastmod>2020-10-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2020-10-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/tags/%E5%8F%8C%E5%B1%82%E5%BE%AA%E7%8E%AF/</loc>
     <lastmod>2020-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
