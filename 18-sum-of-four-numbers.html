@@ -334,7 +334,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -504,21 +504,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-05
+                    2020-10-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    74
+                    720
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -533,7 +533,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table>
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给定一个包含n个整数的数组<code>nums</code>和一个目标值<code>target</code>，判断<code>nums</code>中是否存在四个元素 a, b, c 和 d，使得 a+b+c+d 的值与<code>target</code>想等？找出所有满足条件且不重复的四元组。</strong></p>
+<p><strong>注意：</strong></p>
+<p><strong>答案中不可以包含重复的四元组。</strong></p>
+<p>示例：</p>
+<pre><code>给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。
+
+满足要求的四元组集合为：
+[
+  [-1,  0, 0, 1],
+  [-2, -1, 1, 2],
+  [-2,  0, 0, 2]
+]</code></pre>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-双指针"><a href="#1-双指针" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><p>参考LeetCode中<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/4sum/solution/shuang-zhi-zhen-gao-su-jie-fa-by-ml-zimingmeng/">腐烂的橘子</a>的题解</p>
+<ul>
+<li><p>因为结果中不能包含重复的四元组，所以可以先对数组进行递增排序，方便后边去重。</p>
+</li>
+<li><p>采用三层循环，依次创建四个指针<code>i、j、k、m</code></p>
+</li>
+<li><p>三层循环会大幅增加时间开销，所以可以在循环中进行条件判断，避免无用循环。</p>
+<ul>
+<li>比如最外层循环内可以加上判断条件：<code>nums[i] + 3 * nums[i+1] &gt; target</code>，因为<code>nums</code>为递增排序，所以再往后运算的数值也必定大于<code>target</code>，所以此处可以直接<code>break</code>。</li>
+<li>接下来对条件<code>nums[i] + 3 * num[-1] &lt; target</code>判断，此时<code>nums[i]</code>加上任意其他的三个数也一定小于<code>target</code>，所以此处可以直接进行下次循环了。<ul>
+<li>此处下一个数进行判断，如果<code>nums[i] == nums[i+1]</code>，执行<code>i += 1</code>，以此来达到去重的效果。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-双指针-1"><a href="#1-双指针-1" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">fourSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+        nums<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+        i <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">while</span> i <span class="token operator">&lt;</span> length <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">:</span>    <span class="token comment" spellcheck="true"># 第一层循环，选择第一个数，后边还有三个数，所以要减去3</span>
+            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">></span> target<span class="token punctuation">:</span> 
+                <span class="token keyword">break</span>
+            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> nums<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">:</span>
+                <span class="token keyword">while</span> i <span class="token operator">&lt;</span> length<span class="token number">-4</span> <span class="token operator">and</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>    <span class="token comment" spellcheck="true"># 去重</span>
+                    i <span class="token operator">+=</span> <span class="token number">1</span>
+                i <span class="token operator">+=</span> <span class="token number">1</span>    <span class="token comment" spellcheck="true"># 此处指针指向的数与下一个数不相同，但是与前一个数还是相同的，所以要加1</span>
+                <span class="token keyword">continue</span>
+            diff1 <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+
+            j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+            <span class="token keyword">while</span> j <span class="token operator">&lt;</span> length <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> nums<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">></span> diff1<span class="token punctuation">:</span> 
+                    <span class="token keyword">break</span>
+                <span class="token keyword">if</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> nums<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> diff1<span class="token punctuation">:</span>
+                    <span class="token keyword">while</span> j <span class="token operator">&lt;</span> length <span class="token operator">-</span> <span class="token number">3</span> <span class="token operator">and</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                        j <span class="token operator">+=</span> <span class="token number">1</span>
+                    j <span class="token operator">+=</span> <span class="token number">1</span>
+                    <span class="token keyword">continue</span>
+                diff2 <span class="token operator">=</span> diff1 <span class="token operator">-</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+
+                k <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span>
+                m <span class="token operator">=</span> length <span class="token operator">-</span> <span class="token number">1</span>     <span class="token comment" spellcheck="true"># 同时对后两个数判断</span>
+                <span class="token keyword">while</span> k <span class="token operator">&lt;</span> m<span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">&lt;</span> diff2<span class="token punctuation">:</span> 
+                        k <span class="token operator">+=</span> <span class="token number">1</span>
+                    <span class="token keyword">elif</span> nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">></span> diff2<span class="token punctuation">:</span> 
+                        m <span class="token operator">-=</span> <span class="token number">1</span>
+                    <span class="token keyword">else</span><span class="token punctuation">:</span>
+                        result<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                        k <span class="token operator">+=</span> <span class="token number">1</span>
+                        m <span class="token operator">-=</span> <span class="token number">1</span>
+
+                        <span class="token keyword">while</span> nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>k<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">and</span> k <span class="token operator">&lt;</span> m<span class="token punctuation">:</span>     <span class="token comment" spellcheck="true"># 去重</span>
+                            k <span class="token operator">+=</span> <span class="token number">1</span>
+                        <span class="token keyword">while</span> nums<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">and</span> k <span class="token operator">&lt;</span> m<span class="token punctuation">:</span> 
+                            m <span class="token operator">-=</span> <span class="token number">1</span>
+
+                <span class="token keyword">while</span> j <span class="token operator">&lt;</span> length <span class="token operator">-</span> <span class="token number">3</span> <span class="token operator">and</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                    j <span class="token operator">+=</span> <span class="token number">1</span>
+                j <span class="token operator">+=</span> <span class="token number">1</span>
+
+            <span class="token keyword">while</span> i <span class="token operator">&lt;</span> length <span class="token operator">-</span> <span class="token number">4</span> <span class="token operator">and</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                i <span class="token operator">+=</span> <span class="token number">1</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table>
 <thead>
 <tr>
 <th align="center">执行用时</th>
@@ -960,7 +1041,7 @@
                 <a href="/18-sum-of-four-numbers.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper21.jpg" class="responsive-img" alt="18. 四数之和">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper23.jpg" class="responsive-img" alt="18. 四数之和">
                         
                         <span class="card-title">18. 四数之和</span>
                     </div>
@@ -1279,7 +1360,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.3k</span>&nbsp;字
+                class="white-color">11k</span>&nbsp;字
             
             
             
