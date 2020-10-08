@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-10-06T10:06:20.962Z</updated>
+  <updated>2020-10-08T03:59:35.273Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>344. 反转字符串</title>
+    <link href="https://arvin-hehe.github.io/344-reverse-string.html"/>
+    <id>https://arvin-hehe.github.io/344-reverse-string.html</id>
+    <published>2020-10-08T03:09:48.000Z</published>
+    <updated>2020-10-08T03:59:35.273Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot; title=&quot;一、题目描述&quot;&gt;&lt;/a&gt;一、题目描述&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组</summary>
+        
+      
+    
+    
+    
+    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="双指针" scheme="https://arvin-hehe.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="字符串" scheme="https://arvin-hehe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python中reverse()和reversed()的用法</title>
+    <link href="https://arvin-hehe.github.io/usage-of-reverse-and-reversed-in-python.html"/>
+    <id>https://arvin-hehe.github.io/usage-of-reverse-and-reversed-in-python.html</id>
+    <published>2020-10-08T02:57:28.000Z</published>
+    <updated>2020-10-08T06:26:26.126Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、reverse&quot;&gt;&lt;a href=&quot;#一、reverse&quot; class=&quot;headerlink&quot; title=&quot;一、reverse()&quot;&gt;&lt;/a&gt;一、&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://arvin-hehe.github.io/categories/Python/"/>
+    
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="内置方法" scheme="https://arvin-hehe.github.io/tags/%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>18. 四数之和</title>
@@ -83,11 +143,11 @@
   </entry>
   
   <entry>
-    <title>解决ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误</title>
-    <link href="https://arvin-hehe.github.io/resolve-errsslversionorciphermismatch-error.html"/>
-    <id>https://arvin-hehe.github.io/resolve-errsslversionorciphermismatch-error.html</id>
+    <title>使用gitee创建自己的图床</title>
+    <link href="https://arvin-hehe.github.io/use-gitee-to-create-your-own-image-bed.html"/>
+    <id>https://arvin-hehe.github.io/use-gitee-to-create-your-own-image-bed.html</id>
     <published>2020-09-28T08:43:36.000Z</published>
-    <updated>2020-10-06T08:28:13.524Z</updated>
+    <updated>2020-10-08T04:04:57.778Z</updated>
     
     
       
@@ -100,17 +160,23 @@
     
     
     
-    <category term="others" scheme="https://arvin-hehe.github.io/categories/others/"/>
+    <category term="gitee" scheme="https://arvin-hehe.github.io/categories/gitee/"/>
     
+    
+    <category term="gitee" scheme="https://arvin-hehe.github.io/tags/gitee/"/>
+    
+    <category term="图床" scheme="https://arvin-hehe.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
     
     <category term="ssl" scheme="https://arvin-hehe.github.io/tags/ssl/"/>
+    
+    <category term="picgo" scheme="https://arvin-hehe.github.io/tags/picgo/"/>
     
   </entry>
   
   <entry>
     <title>235. 二叉搜索树的最近公共祖先</title>
-    <link href="https://arvin-hehe.github.io/235-nearest-common-ancestor-of-binary-search-tree.html"/>
-    <id>https://arvin-hehe.github.io/235-nearest-common-ancestor-of-binary-search-tree.html</id>
+    <link href="https://arvin-hehe.github.io/235-the-nearest-common-ancestor-of-binary-search-tree.html"/>
+    <id>https://arvin-hehe.github.io/235-the-nearest-common-ancestor-of-binary-search-tree.html</id>
     <published>2020-09-27T15:10:09.000Z</published>
     <updated>2020-10-05T16:00:14.583Z</updated>
     
@@ -392,8 +458,8 @@
   
   <entry>
     <title>编写python脚本实现自动更新码云pages</title>
-    <link href="https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html"/>
-    <id>https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html</id>
+    <link href="https://arvin-hehe.github.io/write-python-script-to-automatically-update-code-cloud-pages.html"/>
+    <id>https://arvin-hehe.github.io/write-python-script-to-automatically-update-code-cloud-pages.html</id>
     <published>2020-09-18T10:02:54.000Z</published>
     <updated>2020-09-28T12:36:54.086Z</updated>
     

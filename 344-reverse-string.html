@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python,selenium,码云,pages,自动更新">
+    <meta name="keywords" content="简单,python,leetcode,双指针,字符串,反转">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>编写python脚本实现自动更新码云pages | Arvin</title>
+    <title>344. 反转字符串 | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://imgcdn.heyulong.top/wallpaper4.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper24.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">编写python脚本实现自动更新码云pages</h1>
+                    <h1 class="description center-align post-title">344. 反转字符串</h1>
                 </div>
             </div>
         </div>
@@ -456,20 +456,24 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
+                            </a>
+                        
                             <a href="/tags/python/">
                                 <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/selenium/">
-                                <span class="chip bg-color">selenium</span>
+                            <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                                <span class="chip bg-color">双指针</span>
                             </a>
                         
-                            <a href="/tags/%E7%A0%81%E4%BA%91/">
-                                <span class="chip bg-color">码云</span>
+                            <a href="/tags/%E7%AE%80%E5%8D%95/">
+                                <span class="chip bg-color">简单</span>
                             </a>
                         
-                            <a href="/tags/pages/">
-                                <span class="chip bg-color">pages</span>
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                <span class="chip bg-color">字符串</span>
                             </a>
                         
                     </div>
@@ -480,8 +484,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category">
-                                Python
+                            <a href="/categories/LeetCode/" class="post-category">
+                                LeetCode
                             </a>
                         
                     </div>
@@ -493,28 +497,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-18
+                    2020-10-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-28
+                    2020-10-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    486
+                    374
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -529,60 +533,64 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>使用码云的pages部署hexo静态博客以后，每次写完都要去手动更新，实在是麻烦。当然只要开会员，这个问题根本不叫问题。但是，对于一个自身白嫖党而言，不可能的，这辈子也不可能的。</p>
-<p>所以，只能自力更生、艰苦奋斗了。</p>
-<h3 id="二、想法"><a href="#二、想法" class="headerlink" title="二、想法"></a>二、想法</h3><p>利用<strong>selenium</strong>编写python脚本，实现模拟登录更新，这样就不用了每次都自己登录码云，然后手动更新了。</p>
-<h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">import</span> ChromeOptions
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support<span class="token punctuation">.</span>ui <span class="token keyword">import</span> WebDriverWait
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support <span class="token keyword">import</span> expected_conditions <span class="token keyword">as</span> EC
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 <code>char[]</code> 的形式给出。</strong></p>
+<p><strong>不要给另外的数组分配额外的空间，你必须</strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a>修改输入数组<strong>、使用 O(1) 的额外空间解决这一问题。</strong></p>
+<p><strong>你可以假设数组中的所有字符都是 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ASCII">ASCII</a> 码表中的可打印字符。</strong></p>
+<p>示例1：</p>
+<pre><code>输入：["h","e","l","l","o"]
+输出：["o","l","l","e","h"]</code></pre>
+<p>示例2：</p>
+<pre><code>输入：["H","a","n","n","a","h"]
+输出：["h","a","n","n","a","H"]</code></pre>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-双指针"><a href="#1-双指针" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><ul>
+<li>创建两个指针<code>m、n</code>，起始位置<code>m</code>指向第一个元素，<code>n</code>指向最后一个元素。</li>
+<li>交换<code>m、n</code>指向的两个元素，然后<code>m+1</code>，<code>n-1</code>。</li>
+</ul>
+<h4 id="2-列表内置函数reverse"><a href="#2-列表内置函数reverse" class="headerlink" title="2. 列表内置函数reverse()"></a>2. 列表内置函数<code>reverse()</code></h4><h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-双指针-1"><a href="#1-双指针-1" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">reverseString</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> List<span class="token punctuation">[</span>str<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        Do not return anything, modify s in-place instead.
+        """</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+        m <span class="token operator">=</span> <span class="token number">0</span>
+        n <span class="token operator">=</span> length <span class="token operator">-</span> <span class="token number">1</span>
+        <span class="token keyword">while</span> m <span class="token operator">&lt;</span> n<span class="token punctuation">:</span>
+            s<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>m<span class="token punctuation">]</span>
+            m <span class="token operator">+=</span> <span class="token number">1</span>
+            n <span class="token operator">-=</span> <span class="token number">1</span>
 
-<span class="token comment" spellcheck="true"># 基本信息</span>
-username <span class="token operator">=</span> <span class="token string">'xxxx'</span>  <span class="token comment" spellcheck="true"># 账号</span>
-password <span class="token operator">=</span> <span class="token string">'xxxx'</span>     <span class="token comment" spellcheck="true"># 密码</span>
-pickname <span class="token operator">=</span> <span class="token string">'xxxx'</span>   <span class="token comment" spellcheck="true"># 用户名</span>
-repo <span class="token operator">=</span> <span class="token string">'xxxx'</span>       <span class="token comment" spellcheck="true"># 仓库名</span>
-driver <span class="token operator">=</span> r<span class="token string">'D:\Desktop\chromedriver.exe'</span>     <span class="token comment" spellcheck="true"># 谷歌驱动的路径</span>
-
-options <span class="token operator">=</span> ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>
-options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true"># 不显示界面</span>
-options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--start-maximized"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 窗口最大化</span>
-options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--disable-plugins"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 禁止扩展</span>
-chrome <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span>driver<span class="token punctuation">,</span> options<span class="token operator">=</span>options<span class="token punctuation">)</span>
-chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/login'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 输入用户名、密码，登录</span>
-username_input <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_login"</span><span class="token punctuation">)</span>
-password_input<span class="token operator">=</span>  chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_password"</span><span class="token punctuation">)</span>
-login_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_name<span class="token punctuation">(</span><span class="token string">"commit"</span><span class="token punctuation">)</span>
-
-username_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>username<span class="token punctuation">)</span>
-password_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
-login_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 等待页面加载完成</span>
-WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"ml-1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 跳转到page页面</span>
-chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/'</span> <span class="token operator">+</span> pickname <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> repo <span class="token operator">+</span> <span class="token string">'/pages'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 等待页面加载完成</span>
-WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"update_deploy"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 执行js代码，使页面向下滚动</span>
-chrome<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span><span class="token string">"window.scrollTo(100, document.body.scrollHeight);"</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true"># 点击更新按钮</span>
-update_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_class_name<span class="token punctuation">(</span><span class="token string">"update_deploy"</span><span class="token punctuation">)</span>
-update_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 点击确认框</span>
-alert <span class="token operator">=</span> chrome<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>alert
-alert<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'gitee pages 更新成功'</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-chrome<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="四、后续目标"><a href="#四、后续目标" class="headerlink" title="四、后续目标"></a>四、后续目标</h3><p>目前基本目标已经可以实现，不过每次还需要手动执行脚本，拉胯<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8">😢</span>。所以，接下来试着将脚本放到GitHub action上边去，实时监控码云仓库变化，实现实时更新。</p>
+        <span class="token keyword">return</span> s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-内置函数-reverse"><a href="#2-内置函数-reverse" class="headerlink" title="2. 内置函数 reverse()"></a>2. 内置函数 <code>reverse()</code></h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">reverseString</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> List<span class="token punctuation">[</span>str<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        Do not return anything, modify s in-place instead.
+        """</span>
+        <span class="token keyword">return</span> s<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">运行时间</th>
+<th align="center">表现</th>
+<th align="center">内存消耗</th>
+<th align="center">表现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1. 双指针</td>
+<td align="center">48ms</td>
+<td align="center">78.20%</td>
+<td align="center">14.3MB</td>
+<td align="center">56.69%</td>
+</tr>
+<tr>
+<td align="center">2. reverse（）</td>
+<td align="center">52ms</td>
+<td align="center">60.86%</td>
+<td align="center">14.3MB</td>
+<td align="center">67.78%</td>
+</tr>
+</tbody></table>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -626,7 +634,7 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html">https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html</a>
+                    <a href="https://arvin-hehe.github.io/344-reverse-string.html">https://arvin-hehe.github.io/344-reverse-string.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -664,20 +672,24 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
+                                </a>
+                            
                                 <a href="/tags/python/">
                                     <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/selenium/">
-                                    <span class="chip bg-color">selenium</span>
+                                <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                                    <span class="chip bg-color">双指针</span>
                                 </a>
                             
-                                <a href="/tags/%E7%A0%81%E4%BA%91/">
-                                    <span class="chip bg-color">码云</span>
+                                <a href="/tags/%E7%AE%80%E5%8D%95/">
+                                    <span class="chip bg-color">简单</span>
                                 </a>
                             
-                                <a href="/tags/pages/">
-                                    <span class="chip bg-color">pages</span>
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                    <span class="chip bg-color">字符串</span>
                                 </a>
                             
                         </div>
@@ -982,28 +994,29 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/404-sum-of-left-leaves.html">
+                <a href="/344-reverse-string.html">
                     <div class="card-image">
                         
-                        <img src="http://imgcdn.heyulong.top/wallpaper5.jpg" class="responsive-img" alt="404. 左叶子之和">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper24.jpg" class="responsive-img" alt="344. 反转字符串">
                         
-                        <span class="card-title">404. 左叶子之和</span>
+                        <span class="card-title">344. 反转字符串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Leetcode 第404题：计算给定二叉树的所有左叶子之和
+                            编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1016,6 +1029,7 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1027,8 +1041,16 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                        <span class="chip bg-color">二叉树</span>
+                    <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                        <span class="chip bg-color">双指针</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%80%E5%8D%95/">
+                        <span class="chip bg-color">简单</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <span class="chip bg-color">字符串</span>
                     </a>
                     
                 </div>
@@ -1042,30 +1064,30 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/configure-code-static-checking-tool-pylint-in-vscode.html">
+                <a href="/usage-of-reverse-and-reversed-in-python.html">
                     <div class="card-image">
                         
-                        <img src="http://imgcdn.heyulong.top/r2g7rm.jpg" class="responsive-img" alt="vscode中配置代码静态检查工具pylint">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper25.png" class="responsive-img" alt="Python中reverse()和reversed()的用法">
                         
-                        <span class="card-title">vscode中配置代码静态检查工具pylint</span>
+                        <span class="card-title">Python中reverse()和reversed()的用法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            刚开始使用VScode编写python代码时，总是会收到‘Linter pylint is not installed’的提示，下边记录关于VScode配置代码静态检查工具。
+                            python中内置方法reverse和reversed的区别和用法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/VScode/" class="post-category">
-                                    VScode
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
@@ -1079,12 +1101,8 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/vscode/">
-                        <span class="chip bg-color">vscode</span>
-                    </a>
-                    
-                    <a href="/tags/pylint/">
-                        <span class="chip bg-color">pylint</span>
+                    <a href="/tags/%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/">
+                        <span class="chip bg-color">内置方法</span>
                     </a>
                     
                 </div>
@@ -1291,7 +1309,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11k</span>&nbsp;字
+                class="white-color">11.6k</span>&nbsp;字
             
             
             
