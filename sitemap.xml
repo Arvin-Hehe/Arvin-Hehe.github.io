@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://arvin-hehe.github.io/6-zigzag-transformation.html</loc>
+    
+    <lastmod>2020-10-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://arvin-hehe.github.io/344-reverse-string.html</loc>
     
     <lastmod>2020-10-08</lastmod>
@@ -460,6 +467,13 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/tags/pages/</loc>
+    <lastmod>2020-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/</loc>
     <lastmod>2020-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
