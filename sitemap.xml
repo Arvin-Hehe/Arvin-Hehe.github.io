@@ -2,7 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://arvin-hehe.github.io/344-reverse-string.html</loc>
+    
+    <lastmod>2020-10-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://arvin-hehe.github.io/usage-of-reverse-and-reversed-in-python.html</loc>
+    
+    <lastmod>2020-10-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/write-python-script-to-automatically-update-code-cloud-pages.html</loc>
+    
+    <lastmod>2020-10-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/235-the-nearest-common-ancestor-of-binary-search-tree.html</loc>
     
     <lastmod>2020-10-08</lastmod>
     
@@ -16,23 +37,9 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/344-reverse-string.html</loc>
-    
-    <lastmod>2020-10-08</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://arvin-hehe.github.io/18-sum-of-four-numbers.html</loc>
     
     <lastmod>2020-10-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/235-the-nearest-common-ancestor-of-binary-search-tree.html</loc>
-    
-    <lastmod>2020-10-05</lastmod>
     
   </url>
   
@@ -59,13 +66,6 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/preorder-traversal-middleorder-and-postorder-of-binary-tree.html</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/write-python-script-to-automatically-update-code-cloud-pages.html</loc>
     
     <lastmod>2020-09-28</lastmod>
     

@@ -511,7 +511,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    374
+                    413
                 </div>
                 
 
@@ -546,7 +546,7 @@
 <li>创建两个指针<code>m、n</code>，起始位置<code>m</code>指向第一个元素，<code>n</code>指向最后一个元素。</li>
 <li>交换<code>m、n</code>指向的两个元素，然后<code>m+1</code>，<code>n-1</code>。</li>
 </ul>
-<h4 id="2-列表内置函数reverse"><a href="#2-列表内置函数reverse" class="headerlink" title="2. 列表内置函数reverse()"></a>2. 列表内置函数<code>reverse()</code></h4><h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-双指针-1"><a href="#1-双指针-1" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+<h4 id="2-列表内置函数reverse"><a href="#2-列表内置函数reverse" class="headerlink" title="2. 列表内置函数reverse()"></a>2. 列表内置函数<code>reverse()</code></h4><h4 id="3-切片"><a href="#3-切片" class="headerlink" title="3. 切片"></a>3. 切片</h4><h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-双指针-1"><a href="#1-双指针-1" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">reverseString</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> List<span class="token punctuation">[</span>str<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">"""
         Do not return anything, modify s in-place instead.
@@ -566,6 +566,13 @@
         Do not return anything, modify s in-place instead.
         """</span>
         <span class="token keyword">return</span> s<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3-切片-1"><a href="#3-切片-1" class="headerlink" title="3. 切片"></a>3. 切片</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">reverseString</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> List<span class="token punctuation">[</span>str<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        Do not return anything, modify s in-place instead.
+        """</span>
+        s<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table>
 <thead>
 <tr>
@@ -589,6 +596,13 @@
 <td align="center">60.86%</td>
 <td align="center">14.3MB</td>
 <td align="center">67.78%</td>
+</tr>
+<tr>
+<td align="center">3. 切片</td>
+<td align="center">52ms</td>
+<td align="center">60.86%</td>
+<td align="center">14.6MB</td>
+<td align="center">7.87%</td>
 </tr>
 </tbody></table>
 <script>
@@ -1309,7 +1323,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.6k</span>&nbsp;字
+                class="white-color">11.7k</span>&nbsp;字
             
             
             
