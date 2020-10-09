@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="图床,PicGo,gitee,码云,ssl,ERR_SSL_VERSION_OR_CIPHER_MISMATCH">
+    <meta name="keywords" content="python,selenium,码云,pages,自动更新">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>使用gitee创建自己的图床 | Arvin</title>
+    <title>编写python脚本实现自动更新码云pages | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://imgcdn.heyulong.top/wallpaper4.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">使用gitee创建自己的图床</h1>
+                    <h1 class="description center-align post-title">编写python脚本实现自动更新码云pages</h1>
                 </div>
             </div>
         </div>
@@ -456,20 +456,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/gitee/">
-                                <span class="chip bg-color">gitee</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/%E5%9B%BE%E5%BA%8A/">
-                                <span class="chip bg-color">图床</span>
+                            <a href="/tags/selenium/">
+                                <span class="chip bg-color">selenium</span>
                             </a>
                         
-                            <a href="/tags/ssl/">
-                                <span class="chip bg-color">ssl</span>
+                            <a href="/tags/%E7%A0%81%E4%BA%91/">
+                                <span class="chip bg-color">码云</span>
                             </a>
                         
-                            <a href="/tags/picgo/">
-                                <span class="chip bg-color">picgo</span>
+                            <a href="/tags/pages/">
+                                <span class="chip bg-color">pages</span>
                             </a>
                         
                     </div>
@@ -480,8 +480,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/gitee/" class="post-category">
-                                gitee
+                            <a href="/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -493,7 +493,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-28
+                    2020-09-18
                 </div>
                 
 
@@ -507,7 +507,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    765
+                    486
                 </div>
                 
 
@@ -529,31 +529,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h3><p>平时写点东西都会配个图，使用的七牛云做图床。突然有一天，打开谷歌浏览器，打开博客页，发现图片全加载不出来了。开始还以为是网速不好，又刷新了两遍结果还是不行。然后使用edge等等其他浏览器却都没问题。F12以后，看到ERR_SSL_VERSION_OR_CIPHER_MISMATCH错误，并且图片的HTTP协议全部自动变成了HTTPS的，然后就谷歌了一下，发现是谷歌的问题。只要域名为HTTPS的情况下，页面内的所有HTTP都会转换为HTTPS。</p>
-<p>好吧，目前来说已经知道问题所在了，那就该就决问题了。</p>
-<h3 id="二、解决问题"><a href="#二、解决问题" class="headerlink" title="二、解决问题"></a>二、解决问题</h3><p>实际上这个问题很好解决，只需要到<a target="_blank" rel="noopener" href="https://portal.qiniu.com/cdn/domain">七牛云</a>的CDN域名管理页面，配置相应域名，开启HTTPS即可。</p>
-<p>可是一旦开启HTTPS以后，通过HTTPS的流量将不计算入免费流量，那以后再使用的话就需要交流量费了，对于一个资深白嫖用户来说，真的太难受了。然后就开始了谷歌之路。</p>
-<p>在一通谷歌加测试以后，那些方法全没用。</p>
-<p>最后，在舍不得一点流量费的情况下，温柔地打开了gitee。<a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/#%E5%90%AC%E8%AF%B4%E4%BD%A0%E4%B9%9F%E6%83%B3%E7%94%A8picgo">PicGo</a> + gitee组合，将码云作为图床使用。</p>
-<p>注意：在创建图床仓库时，要选择<code>公开</code>模式，否则图片无法访问。</p>
-<h3 id="三、gitee-PicGo-创建自己的图床"><a href="#三、gitee-PicGo-创建自己的图床" class="headerlink" title="三、gitee + PicGo 创建自己的图床"></a>三、gitee + PicGo 创建自己的图床</h3><ol>
-<li>创建一个新的仓库，选择<code>公开</code>模式，其他的选项照常选择</li>
-<li>下载<a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/#%E5%90%AC%E8%AF%B4%E4%BD%A0%E4%B9%9F%E6%83%B3%E7%94%A8picgo">PicGo</a>，然后安装</li>
-<li>打开PicGo，选择插件设置，搜索 gitee，然后任选一个gitee插件下载。下载完以后，可以看到图床设置中已经有了gitee图床。</li>
-<li>选择gitee图床，然后在右边的gitee图床设置界面填写必要信息。<ul>
-<li>owner：填写自己的用户名</li>
-<li>repo：仓库名</li>
-<li>path：在仓库中图片保存的目录路径，可以不填，默认为根目录</li>
-<li>token：在gitee用户设置中，选择<code>Personal access tokens</code>，然后点击右边的<code>Generate new token</code>生成新的token。然后复制粘贴进来即可。</li>
-<li>message： commit 时的信息，保持默认即可。</li>
-</ul>
-</li>
-<li>点击确定即可。可以将其设置为默认图床，这样一来在上传图片的时候就不用再选择图床了</li>
-<li>回到上传区。右边上传区上边可以选择图床，中间为上传区域，下边可以选择生成的链接格式。</li>
-<li>选择一张图片上传，完成后，生成的链接已经保存在剪切板，直接在需要的地方粘贴即可。</li>
-<li>结束</li>
-</ol>
-<p><strong>注意：图片过大的话会导致无法加载出来，推荐使用<code>小于1MB</code>的图片。再大就会出现加载不出来的情况。</strong></p>
+                <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>使用码云的pages部署hexo静态博客以后，每次写完都要去手动更新，实在是麻烦。当然只要开会员，这个问题根本不叫问题。但是，对于一个自身白嫖党而言，不可能的，这辈子也不可能的。</p>
+<p>所以，只能自力更生、艰苦奋斗了。</p>
+<h3 id="二、想法"><a href="#二、想法" class="headerlink" title="二、想法"></a>二、想法</h3><p>利用<strong>selenium</strong>编写python脚本，实现模拟登录更新，这样就不用了每次都自己登录码云，然后手动更新了。</p>
+<h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">import</span> ChromeOptions
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support<span class="token punctuation">.</span>ui <span class="token keyword">import</span> WebDriverWait
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support <span class="token keyword">import</span> expected_conditions <span class="token keyword">as</span> EC
+
+<span class="token comment" spellcheck="true"># 基本信息</span>
+username <span class="token operator">=</span> <span class="token string">'xxxx'</span>  <span class="token comment" spellcheck="true"># 账号</span>
+password <span class="token operator">=</span> <span class="token string">'xxxx'</span>     <span class="token comment" spellcheck="true"># 密码</span>
+pickname <span class="token operator">=</span> <span class="token string">'xxxx'</span>   <span class="token comment" spellcheck="true"># 用户名</span>
+repo <span class="token operator">=</span> <span class="token string">'xxxx'</span>       <span class="token comment" spellcheck="true"># 仓库名</span>
+driver <span class="token operator">=</span> r<span class="token string">'D:\Desktop\chromedriver.exe'</span>     <span class="token comment" spellcheck="true"># 谷歌驱动的路径</span>
+
+options <span class="token operator">=</span> ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true"># 不显示界面</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--start-maximized"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 窗口最大化</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--disable-plugins"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 禁止扩展</span>
+chrome <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span>driver<span class="token punctuation">,</span> options<span class="token operator">=</span>options<span class="token punctuation">)</span>
+chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/login'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 输入用户名、密码，登录</span>
+username_input <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_login"</span><span class="token punctuation">)</span>
+password_input<span class="token operator">=</span>  chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_password"</span><span class="token punctuation">)</span>
+login_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_name<span class="token punctuation">(</span><span class="token string">"commit"</span><span class="token punctuation">)</span>
+
+username_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>username<span class="token punctuation">)</span>
+password_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
+login_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 等待页面加载完成</span>
+WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"ml-1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 跳转到page页面</span>
+chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/'</span> <span class="token operator">+</span> pickname <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> repo <span class="token operator">+</span> <span class="token string">'/pages'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 等待页面加载完成</span>
+WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"update_deploy"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 执行js代码，使页面向下滚动</span>
+chrome<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span><span class="token string">"window.scrollTo(100, document.body.scrollHeight);"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 点击更新按钮</span>
+update_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_class_name<span class="token punctuation">(</span><span class="token string">"update_deploy"</span><span class="token punctuation">)</span>
+update_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 点击确认框</span>
+alert <span class="token operator">=</span> chrome<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>alert
+alert<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'gitee pages 更新成功'</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+chrome<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、后续目标"><a href="#四、后续目标" class="headerlink" title="四、后续目标"></a>四、后续目标</h3><p>目前基本目标已经可以实现，不过每次还需要手动执行脚本，拉胯<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8">😢</span>。所以，接下来试着将脚本放到GitHub action上边去，实时监控码云仓库变化，实现实时更新。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -597,7 +626,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/use-gitee-to-create-your-own-image-bed.html">https://arvin-hehe.github.io/use-gitee-to-create-your-own-image-bed.html</a>
+                    <a href="https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html">https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -635,20 +664,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/gitee/">
-                                    <span class="chip bg-color">gitee</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/%E5%9B%BE%E5%BA%8A/">
-                                    <span class="chip bg-color">图床</span>
+                                <a href="/tags/selenium/">
+                                    <span class="chip bg-color">selenium</span>
                                 </a>
                             
-                                <a href="/tags/ssl/">
-                                    <span class="chip bg-color">ssl</span>
+                                <a href="/tags/%E7%A0%81%E4%BA%91/">
+                                    <span class="chip bg-color">码云</span>
                                 </a>
                             
-                                <a href="/tags/picgo/">
-                                    <span class="chip bg-color">picgo</span>
+                                <a href="/tags/pages/">
+                                    <span class="chip bg-color">pages</span>
                                 </a>
                             
                         </div>
@@ -957,23 +986,23 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/5-the-longest-palindrome-substring.html">
+                <a href="/404-sum-of-left-leaves.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper20.jpg" class="responsive-img" alt="5. 最长回文子串">
+                        <img src="http://imgcdn.heyulong.top/wallpaper5.jpg" class="responsive-img" alt="404. 左叶子之和">
                         
-                        <span class="card-title">5. 最长回文子串</span>
+                        <span class="card-title">404. 左叶子之和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一个字符串 s ，找到 s 中最长的回文子串。你可以假设 s 的最大长度为1000.
+                            Leetcode 第404题：计算给定二叉树的所有左叶子之和
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
                         </span>
                         <span class="publish-author">
                             
@@ -998,16 +1027,8 @@
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                        <span class="chip bg-color">动态规划</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8F%8C%E5%B1%82%E5%BE%AA%E7%8E%AF/">
-                        <span class="chip bg-color">双层循环</span>
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
                     </a>
                     
                 </div>
@@ -1021,30 +1042,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/235-the-nearest-common-ancestor-of-binary-search-tree.html">
+                <a href="/configure-code-static-checking-tool-pylint-in-vscode.html">
                     <div class="card-image">
                         
-                        <img src="http://imgcdn.heyulong.top/wallpaper14.jpg" class="responsive-img" alt="235. 二叉搜索树的最近公共祖先">
+                        <img src="http://imgcdn.heyulong.top/r2g7rm.jpg" class="responsive-img" alt="vscode中配置代码静态检查工具pylint">
                         
-                        <span class="card-title">235. 二叉搜索树的最近公共祖先</span>
+                        <span class="card-title">vscode中配置代码静态检查工具pylint</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一个二叉搜索树，找到该树中两个指定节点的最近公共祖先。
+                            刚开始使用VScode编写python代码时，总是会收到‘Linter pylint is not installed’的提示，下边记录关于VScode配置代码静态检查工具。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/LeetCode/" class="post-category">
-                                    LeetCode
+                            <a href="/categories/VScode/" class="post-category">
+                                    VScode
                                 </a>
                             
                             
@@ -1054,20 +1075,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
-                    </a>
-                    
                     <a href="/tags/python/">
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E6%A0%91/">
-                        <span class="chip bg-color">树</span>
+                    <a href="/tags/vscode/">
+                        <span class="chip bg-color">vscode</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
-                        <span class="chip bg-color">二叉搜索树</span>
+                    <a href="/tags/pylint/">
+                        <span class="chip bg-color">pylint</span>
                     </a>
                     
                 </div>

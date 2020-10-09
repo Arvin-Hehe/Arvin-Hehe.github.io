@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python,selenium,码云,pages,自动更新">
+    <meta name="keywords" content="python,leetcode,链表,双指针,环形链表">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>编写python脚本实现自动更新码云pages | Arvin</title>
+    <title>141. 环形链表 | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://imgcdn.heyulong.top/wallpaper4.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper33.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">编写python脚本实现自动更新码云pages</h1>
+                    <h1 class="description center-align post-title">141. 环形链表</h1>
                 </div>
             </div>
         </div>
@@ -456,20 +456,20 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
+                            </a>
+                        
                             <a href="/tags/python/">
                                 <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/selenium/">
-                                <span class="chip bg-color">selenium</span>
+                            <a href="/tags/%E9%93%BE%E8%A1%A8/">
+                                <span class="chip bg-color">链表</span>
                             </a>
                         
-                            <a href="/tags/%E7%A0%81%E4%BA%91/">
-                                <span class="chip bg-color">码云</span>
-                            </a>
-                        
-                            <a href="/tags/pages/">
-                                <span class="chip bg-color">pages</span>
+                            <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                                <span class="chip bg-color">双指针</span>
                             </a>
                         
                     </div>
@@ -480,8 +480,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category">
-                                Python
+                            <a href="/categories/LeetCode/" class="post-category">
+                                LeetCode
                             </a>
                         
                     </div>
@@ -493,21 +493,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-18
+                    2020-10-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-08
+                    2020-10-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    486
+                    475
                 </div>
                 
 
@@ -529,60 +529,74 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>使用码云的pages部署hexo静态博客以后，每次写完都要去手动更新，实在是麻烦。当然只要开会员，这个问题根本不叫问题。但是，对于一个自身白嫖党而言，不可能的，这辈子也不可能的。</p>
-<p>所以，只能自力更生、艰苦奋斗了。</p>
-<h3 id="二、想法"><a href="#二、想法" class="headerlink" title="二、想法"></a>二、想法</h3><p>利用<strong>selenium</strong>编写python脚本，实现模拟登录更新，这样就不用了每次都自己登录码云，然后手动更新了。</p>
-<h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">import</span> ChromeOptions
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support<span class="token punctuation">.</span>ui <span class="token keyword">import</span> WebDriverWait
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support <span class="token keyword">import</span> expected_conditions <span class="token keyword">as</span> EC
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给定一个链表，判断链表中是否有环。</strong></p>
+<p><strong>如果链表中有某个节点，可以通过连续跟踪<code>next</code>指针再次到达，则链表中存在环。为了表示给定链表中的环，我们使用整数<code>pos</code>来表示链表尾连接到链表中的位置（索引从0开始）。如果<code>pos</code>是<code>-1</code>，则表示该链表中没有环。<code>注意：pos不作为参数进行传递，</code>仅仅是为了标识链表的实际情况。</strong></p>
+<p><strong>如果链表中存在环，则返回<code>true</code>。否则，返回<code>false</code>。</strong></p>
+<p><strong>进阶：</strong></p>
+<p><strong>你能用O(1)（即，常量）内存解决此问题吗？</strong></p>
+<p>示例1：</p>
+<img src="https://gitee.com/Arvin-He/blog-img/raw/master/post-img/141-circular_linked_list/circularlinkedlist.png" width="50%" div="" align="left">
 
-<span class="token comment" spellcheck="true"># 基本信息</span>
-username <span class="token operator">=</span> <span class="token string">'xxxx'</span>  <span class="token comment" spellcheck="true"># 账号</span>
-password <span class="token operator">=</span> <span class="token string">'xxxx'</span>     <span class="token comment" spellcheck="true"># 密码</span>
-pickname <span class="token operator">=</span> <span class="token string">'xxxx'</span>   <span class="token comment" spellcheck="true"># 用户名</span>
-repo <span class="token operator">=</span> <span class="token string">'xxxx'</span>       <span class="token comment" spellcheck="true"># 仓库名</span>
-driver <span class="token operator">=</span> r<span class="token string">'D:\Desktop\chromedriver.exe'</span>     <span class="token comment" spellcheck="true"># 谷歌驱动的路径</span>
+<pre><code>输入：head = [3,2,0,-4], pos = 1
+输出：true
+解释：链表中有一个环，其尾部连接到第二个节点。</code></pre>
+<p>示例2：</p>
+<img src="https://gitee.com/Arvin-He/blog-img/raw/master/post-img/141-circular_linked_list/circularlinkedlist_test2.png" width="25%" div="" align="left">
 
-options <span class="token operator">=</span> ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>
-options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true"># 不显示界面</span>
-options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--start-maximized"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 窗口最大化</span>
-options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--disable-plugins"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 禁止扩展</span>
-chrome <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span>driver<span class="token punctuation">,</span> options<span class="token operator">=</span>options<span class="token punctuation">)</span>
-chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/login'</span><span class="token punctuation">)</span>
+<pre><code>输入：head = [1,2], pos = 0
+输出：true
+解释：链表中有一个环，其尾部连接到第一个节点。</code></pre>
+<p>示例3：</p>
+<img src="https://gitee.com/Arvin-He/blog-img/raw/master/post-img/141-circular_linked_list/circularlinkedlist_test3.png" div="" align="left">
 
-<span class="token comment" spellcheck="true"># 输入用户名、密码，登录</span>
-username_input <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_login"</span><span class="token punctuation">)</span>
-password_input<span class="token operator">=</span>  chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_password"</span><span class="token punctuation">)</span>
-login_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_name<span class="token punctuation">(</span><span class="token string">"commit"</span><span class="token punctuation">)</span>
+<pre><code>输入：head = [1], pos = -1
+输出：false
+解释：链表中没有环。</code></pre>
+<p>提示：</p>
+<ul>
+<li>链表中节点的数目范围是<code>[0, 10</code><sup>4</sup><code>]</code></li>
+<li>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></li>
+<li><code>pos</code>为 -1 或者链表中的一个有效索引。</li>
+</ul>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-遍历"><a href="#1-遍历" class="headerlink" title="1. 遍历"></a>1. 遍历</h4><ul>
+<li>对链表中的节点一个一个进行遍历</li>
+<li>将遍历过的节点添加到数组中</li>
+<li>每次遍历一个节点都判断其是否已添加到数组中</li>
+</ul>
+<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-遍历-1"><a href="#1-遍历-1" class="headerlink" title="1. 遍历"></a>1. 遍历</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for singly-linked list.</span>
+<span class="token comment" spellcheck="true"># class ListNode:</span>
+<span class="token comment" spellcheck="true">#     def __init__(self, x):</span>
+<span class="token comment" spellcheck="true">#         self.val = x</span>
+<span class="token comment" spellcheck="true">#         self.next = None</span>
 
-username_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>username<span class="token punctuation">)</span>
-password_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
-login_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 等待页面加载完成</span>
-WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"ml-1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 跳转到page页面</span>
-chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/'</span> <span class="token operator">+</span> pickname <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> repo <span class="token operator">+</span> <span class="token string">'/pages'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 等待页面加载完成</span>
-WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"update_deploy"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 执行js代码，使页面向下滚动</span>
-chrome<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span><span class="token string">"window.scrollTo(100, document.body.scrollHeight);"</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true"># 点击更新按钮</span>
-update_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_class_name<span class="token punctuation">(</span><span class="token string">"update_deploy"</span><span class="token punctuation">)</span>
-update_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># 点击确认框</span>
-alert <span class="token operator">=</span> chrome<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>alert
-alert<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'gitee pages 更新成功'</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-chrome<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="四、后续目标"><a href="#四、后续目标" class="headerlink" title="四、后续目标"></a>四、后续目标</h3><p>目前基本目标已经可以实现，不过每次还需要手动执行脚本，拉胯<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8">😢</span>。所以，接下来试着将脚本放到GitHub action上边去，实时监控码云仓库变化，实现实时更新。</p>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">hasCycle</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+        ls <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">while</span> head<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> head <span class="token keyword">in</span> ls<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                ls<span class="token punctuation">.</span>append<span class="token punctuation">(</span>head<span class="token punctuation">)</span>
+                head <span class="token operator">=</span> head<span class="token punctuation">.</span>next
+        <span class="token keyword">return</span> <span class="token boolean">False</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table>
+<thead>
+<tr>
+<th align="center">method</th>
+<th align="center">运行时间</th>
+<th align="center">表现</th>
+<th align="center">内存消耗</th>
+<th align="center">表现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1. 遍历</td>
+<td align="center">1184ms</td>
+<td align="center">5.12%</td>
+<td align="center">16.2MB</td>
+<td align="center">86.39%</td>
+</tr>
+</tbody></table>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -626,7 +640,7 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/write-python-script-to-automatically-update-code-cloud-pages.html">https://arvin-hehe.github.io/write-python-script-to-automatically-update-code-cloud-pages.html</a>
+                    <a href="https://arvin-hehe.github.io/141-circular-linked-list.html">https://arvin-hehe.github.io/141-circular-linked-list.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -664,20 +678,20 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
+                                </a>
+                            
                                 <a href="/tags/python/">
                                     <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/selenium/">
-                                    <span class="chip bg-color">selenium</span>
+                                <a href="/tags/%E9%93%BE%E8%A1%A8/">
+                                    <span class="chip bg-color">链表</span>
                                 </a>
                             
-                                <a href="/tags/%E7%A0%81%E4%BA%91/">
-                                    <span class="chip bg-color">码云</span>
-                                </a>
-                            
-                                <a href="/tags/pages/">
-                                    <span class="chip bg-color">pages</span>
+                                <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                                    <span class="chip bg-color">双指针</span>
                                 </a>
                             
                         </div>
@@ -982,28 +996,90 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/404-sum-of-left-leaves.html">
+                <a href="/141-circular-linked-list.html">
                     <div class="card-image">
                         
-                        <img src="http://imgcdn.heyulong.top/wallpaper5.jpg" class="responsive-img" alt="404. 左叶子之和">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper33.png" class="responsive-img" alt="141. 环形链表">
                         
-                        <span class="card-title">404. 左叶子之和</span>
+                        <span class="card-title">141. 环形链表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Leetcode 第404题：计算给定二叉树的所有左叶子之和
+                            给定一个链表，判断链表中是否有环。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%93%BE%E8%A1%A8/">
+                        <span class="chip bg-color">链表</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                        <span class="chip bg-color">双指针</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/6-zigzag-transformation.html">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper26.png" class="responsive-img" alt="6. Z字形变换">
+                        
+                        <span class="card-title">6. Z字形变换</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            将一个给定字符串根据给定的行数，以从上往下、从左往右进行Z字形排列。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1027,64 +1103,12 @@ chrome<span class="token punctuation">.</span>quit<span class="token punctuation
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                        <span class="chip bg-color">二叉树</span>
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <span class="chip bg-color">字符串</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/configure-code-static-checking-tool-pylint-in-vscode.html">
-                    <div class="card-image">
-                        
-                        <img src="http://imgcdn.heyulong.top/r2g7rm.jpg" class="responsive-img" alt="vscode中配置代码静态检查工具pylint">
-                        
-                        <span class="card-title">vscode中配置代码静态检查工具pylint</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            刚开始使用VScode编写python代码时，总是会收到‘Linter pylint is not installed’的提示，下边记录关于VScode配置代码静态检查工具。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/VScode/" class="post-category">
-                                    VScode
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/vscode/">
-                        <span class="chip bg-color">vscode</span>
-                    </a>
-                    
-                    <a href="/tags/pylint/">
-                        <span class="chip bg-color">pylint</span>
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
                 </div>
@@ -1291,7 +1315,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.4k</span>&nbsp;字
+                class="white-color">12.8k</span>&nbsp;字
             
             
             
