@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://arvin-hehe.github.io/markdown-notes.html</loc>
+    
+    <lastmod>2020-10-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html</loc>
+    
+    <lastmod>2020-10-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://arvin-hehe.github.io/141-circular-linked-list.html</loc>
     
     <lastmod>2020-10-09</lastmod>
@@ -24,13 +38,6 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/usage-of-reverse-and-reversed-in-python.html</loc>
-    
-    <lastmod>2020-10-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html</loc>
     
     <lastmod>2020-10-08</lastmod>
     
@@ -486,6 +493,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/markdown/</loc>
+    <lastmod>2020-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -525,6 +539,13 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/categories/gitee/</loc>
+    <lastmod>2020-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/categories/Markdown/</loc>
     <lastmod>2020-10-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
