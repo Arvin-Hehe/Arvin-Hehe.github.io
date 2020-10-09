@@ -163,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/404.html</loc>
+    <loc>https://arvin-hehe.github.io/about/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/about/index.html</loc>
+    <loc>https://arvin-hehe.github.io/404.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
@@ -347,6 +347,13 @@
   </url>
   
   <url>
+    <loc>https://arvin-hehe.github.io/tags/markdown/</loc>
+    <lastmod>2020-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://arvin-hehe.github.io/tags/office/</loc>
     <lastmod>2020-10-09</lastmod>
     <changefreq>daily</changefreq>
@@ -493,17 +500,17 @@
     <priority>0.6</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://arvin-hehe.github.io/tags/markdown/</loc>
+    <loc>https://arvin-hehe.github.io/categories/LeetCode/</loc>
     <lastmod>2020-10-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://arvin-hehe.github.io/categories/LeetCode/</loc>
+    <loc>https://arvin-hehe.github.io/categories/Markdown/</loc>
     <lastmod>2020-10-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -539,13 +546,6 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/categories/gitee/</loc>
-    <lastmod>2020-10-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/categories/Markdown/</loc>
     <lastmod>2020-10-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

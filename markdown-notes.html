@@ -488,14 +488,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-09
+                    2020-10-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    383
+                    399
                 </div>
                 
 
@@ -518,17 +518,20 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="一、图片操作"><a href="#一、图片操作" class="headerlink" title="一、图片操作"></a>一、图片操作</h3><h4 id="1-调整插入的图片的位置"><a href="#1-调整插入的图片的位置" class="headerlink" title="1. 调整插入的图片的位置"></a>1. 调整插入的图片的位置</h4><p>在Markdown语法中，插入图片默认位置是居中的，可是有时候还是需要居左或者居右一下滴，既然遇到了就记一下吧。</p>
-<h5 id="（1）方法一"><a href="#（1）方法一" class="headerlink" title="（1）方法一"></a>（1）方法一</h5><p>在<code>img</code>标签中插入</p>
+<h5 id="（1）方法一"><a href="#（1）方法一" class="headerlink" title="（1）方法一"></a>（1）方法一</h5><p>在<code>img</code>标签中插入<code>div</code>标签中</p>
 <ul>
-<li><code>div align=left</code>(居左)</li>
-<li><code>div align=right</code>(居右)</li>
-<li><code>div align=center</code>(居中)</li>
+<li><code>&lt;div align=left&gt;</code>(居左)</li>
+<li><code>&lt;div align=right&gt;</code>(居右)</li>
+<li><code>&lt;div align=center&gt;</code>(居中)</li>
 </ul>
 <p>示例：</p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper36.jpg
-<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span>50%</span> <span class="token attr-name">div</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span>left</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span>left</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper36.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span>50%</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>效果：</p>
-<img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper36.jpg" width="50%" align="left" style="display: block">
+<div align="left">
+    <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper36.jpg" width="50%">
+</div>    
 
 <h5 id="（2）方法二"><a href="#（2）方法二" class="headerlink" title="（2）方法二"></a>（2）方法二</h5><p>在<code>img</code>标签中插入<code>style</code>属性，例如：<code>style="margin-left:45px"</code>。以右侧为基准可以插入<code>style=“margin-right:45px”</code>。</p>
 <p>示例：</p>
@@ -554,7 +557,7 @@
 " width="100px" height="100px"></p>
 <p><strong>总结：</strong></p>
 <ul>
-<li>可以使用<code>%</code>百分比的形式，也可以使用<code>px</code></li>
+<li>可以使用<code>%</code>百分比的形式，也可以使用像素单位<code>px</code></li>
 <li>使用百分比的形式时，只需要写<code>width</code>属性即可</li>
 <li>使用<code>px</code>时，<code>width</code>和<code>height</code>都需要写，更精准的控制图片大小</li>
 </ul>
