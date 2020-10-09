@@ -495,14 +495,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    428
+                    476
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -518,6 +518,9 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="一、图片操作"><a href="#一、图片操作" class="headerlink" title="一、图片操作"></a>一、图片操作</h3><h4 id="1-调整插入的图片的位置"><a href="#1-调整插入的图片的位置" class="headerlink" title="1. 调整插入的图片的位置"></a>1. 调整插入的图片的位置</h4><p>在Markdown语法中，插入图片默认位置是居中的，可是有时候还是需要居左或者居右一下滴，既然遇到了就记一下吧。</p>
+<h5 id="先记录一下下面页面中图片依然全部居中的问题"><a href="#先记录一下下面页面中图片依然全部居中的问题" class="headerlink" title="先记录一下下面页面中图片依然全部居中的问题"></a>先记录一下下面页面中图片依然全部居中的问题</h5><p><strong>问题：在Typora中写好都显示没问题，提交上来以后都居中了</strong></p>
+<p><strong>原因：hexo 的Metary主题在进行渲染的时候，对图片进行了居中操作。</strong></p>
+<p>下边的方法没问题。</p>
 <h5 id="（1）方法一"><a href="#（1）方法一" class="headerlink" title="（1）方法一"></a>（1）方法一</h5><p>在<code>img</code>标签中插入<code>div</code>标签中</p>
 <ul>
 <li><code>&lt;div align=left&gt;</code>(居左)</li>
@@ -529,7 +532,12 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper36.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span>50%</span> <span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>效果：</p>
-<p><strong>问题：在Typora中写好都显示没问题，提交上来以后都居中了，还没找出原因</strong></p>
+<div align="left">
+    <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper36.jpg" width="50%">
+</div>    
+
+
+
 <h5 id="（2）方法二"><a href="#（2）方法二" class="headerlink" title="（2）方法二"></a>（2）方法二</h5><p>在<code>img</code>标签中插入<code>style</code>属性，例如：<code>style="margin-left:45px"</code>。以右侧为基准可以插入<code>style=“margin-right:45px”</code>。</p>
 <p>示例：</p>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://gitee.com/arvin-he/blog-img/raw/master/tag-img/wallpaper36.jpg
