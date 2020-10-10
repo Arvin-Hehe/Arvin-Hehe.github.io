@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>142. 环形链表II</title>
+      <link href="/142-circular-linked-list-ii.html"/>
+      <url>/142-circular-linked-list-ii.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 <code>null</code>。</p><p>为了表示给定链表中的环，我们使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 <code>pos</code> 是 <code>-1</code>，则在该链表中没有环。</p><p><strong>说明：</strong>不允许修改给定的链表。</p><p><strong>示例1：</strong></p><pre><code>输入：head = [3,2,0,-4], pos = 1输出：tail connects to node index 1解释：链表中有一个环，其尾部连接到第二个节点。</code></pre><div align="left">    <img src="https://gitee.com/Arvin-He/blog-img/raw/master/post-img/141-circular_linked_list/circularlinkedlist.png" width="40%"></div><p><strong>示例2：</strong></p><pre><code>输入：head = [1,2], pos = 0输出：tail connects to node index 0解释：链表中有一个环，其尾部连接到第一个节点。</code></pre><div align="left">    <img src="https://gitee.com/Arvin-He/blog-img/raw/master/post-img/141-circular_linked_list/circularlinkedlist_test2.png" width="25%"></div><p><strong>示例3：</strong></p><pre><code>输入：head = [1], pos = -1输出：no cycle解释：链表中没有环。</code></pre><div>    <img src="https://gitee.com/Arvin-He/blog-img/raw/master/post-img/141-circular_linked_list/circularlinkedlist_test3.png" width="10%"></div><p><strong>进阶：</strong></p><p>你是否可以不用额外空间解决此题？</p><h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-快慢指针leetcode官网题解"><a href="#1-快慢指针leetcode官网题解" class="headerlink" title="1. 快慢指针leetcode官网题解"></a>1. 快慢指针<a href="https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode-solution/">leetcode官网题解</a></h4><p>使用两个指针，<code>p1</code>和<code>p2</code>。它们都起始于链表头部，当<code>p1</code>指针每次向后移动一个位置，<code>p2</code>指针则向后移动两个位置。如果链表中存在环，那么<code>p1</code>、<code>p2</code>肯定会在环中相遇。</p><p>如下图所示，假设链表中存在环，且环外部分的链表长度为<code>a</code>，<code>b+c</code>为整个环的长度。假设<code>p1</code>指针在环内走了距离<code>b</code>，然后与<code>p2</code>指针相遇，这时<code>p2</code>指针已经在环内走了<code>n</code>圈因此可以得出<code>p2</code>走过的距离公式：<code>a + n(b+c) + b</code>。</p><img src="https://gitee.com/arvin-he/blog-img/raw/master/post-img/141-circular_linked_list/142_fig1.png" width="70%"><p>因为<code>p2</code>指针每次走的距离都是<code>p1</code>指针走过距离的2倍，所以<code>p2</code>走过的总距离也是<code>p1</code>的2倍。因此：<code>a + n(b+c) + b = 2(a+b)</code> ==&gt;  <code>a = (n-1)b + nc</code>。</p><p>上边的等式又可以变化成<code>a = (n-1)(b+c) + c</code>，从这个等式我们可以发现，从相遇点到入环点的距离再加上<code>n-1</code>圈的环长，正好等于链表从头部到入环点的距离<code>a</code>。</p><p>所有在指针<code>p1</code>和<code>p2</code>相遇的的时候，我们可以创建一个新的指针<code>p3</code>，并将其指向链表的头。然后让<code>p3</code>和<code>p1</code>同时向后每次移动一个位置，最后，它们将会在入环点相遇。</p><h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-快慢指针"><a href="#1-快慢指针" class="headerlink" title="1. 快慢指针"></a>1. 快慢指针</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for singly-linked list.</span><span class="token comment" spellcheck="true"># class ListNode:</span><span class="token comment" spellcheck="true">#     def __init__(self, x):</span><span class="token comment" spellcheck="true">#         self.val = x</span><span class="token comment" spellcheck="true">#         self.next = None</span><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">detectCycle</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>        p1 <span class="token operator">=</span> head        p2 <span class="token operator">=</span> head        <span class="token keyword">while</span> p2 <span class="token operator">and</span> p2<span class="token punctuation">.</span>next<span class="token punctuation">:</span>            p1 <span class="token operator">=</span> p1<span class="token punctuation">.</span>next            p2 <span class="token operator">=</span> p2<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next            <span class="token keyword">if</span> p1 <span class="token operator">==</span> p2<span class="token punctuation">:</span>                p3 <span class="token operator">=</span> head                <span class="token keyword">while</span> p3 <span class="token operator">!=</span> p1<span class="token punctuation">:</span>                    p3 <span class="token operator">=</span> p3<span class="token punctuation">.</span>next                    p1 <span class="token operator">=</span> p1<span class="token punctuation">.</span>next                <span class="token keyword">return</span> p1        <span class="token keyword">return</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table><thead><tr><th align="center">method</th><th align="center">运行时间</th><th align="center">表现</th><th align="center">内存消耗</th><th align="center">表现</th></tr></thead><tbody><tr><td align="center">1. 快慢指针</td><td align="center">56ms</td><td align="center">94.70%</td><td align="center">16.1MB</td><td align="center">95.81%</td></tr></tbody></table><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> python </tag>
+            
+            <tag> 链表 </tag>
+            
+            <tag> 双指针 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown小记</title>
       <link href="/markdown-notes.html"/>
       <url>/markdown-notes.html</url>
