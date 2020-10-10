@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-10-10T10:56:27.808Z</updated>
+  <updated>2020-10-10T12:05:21.264Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>7. 整数反转</title>
+    <link href="https://arvin-hehe.github.io/7-integer-inversion.html"/>
+    <id>https://arvin-hehe.github.io/7-integer-inversion.html</id>
+    <published>2020-10-10T11:22:15.000Z</published>
+    <updated>2020-10-10T12:05:21.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot; title=&quot;一、题目描述&quot;&gt;&lt;/a&gt;一、题目描述&lt;/h3&gt;&lt;p&gt;给出一个 32</summary>
+        
+      
+    
+    
+    
+    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="数学" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>142. 环形链表II</title>
     <link href="https://arvin-hehe.github.io/142-circular-linked-list-ii.html"/>
     <id>https://arvin-hehe.github.io/142-circular-linked-list-ii.html</id>
     <published>2020-10-10T04:45:45.000Z</published>
-    <updated>2020-10-10T10:56:27.808Z</updated>
+    <updated>2020-10-10T10:56:57.511Z</updated>
     
     
       
@@ -602,35 +631,6 @@
     <category term="码云" scheme="https://arvin-hehe.github.io/tags/%E7%A0%81%E4%BA%91/"/>
     
     <category term="pages" scheme="https://arvin-hehe.github.io/tags/pages/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vscode中配置代码静态检查工具pylint</title>
-    <link href="https://arvin-hehe.github.io/configure-code-static-checking-tool-pylint-in-vscode.html"/>
-    <id>https://arvin-hehe.github.io/configure-code-static-checking-tool-pylint-in-vscode.html</id>
-    <published>2020-09-12T03:57:55.000Z</published>
-    <updated>2020-10-09T17:10:37.718Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;刚开始使用VScode编写python代码时，总是会收到&lt;code&gt;Linter pylint is not</summary>
-        
-      
-    
-    
-    
-    <category term="VScode" scheme="https://arvin-hehe.github.io/categories/VScode/"/>
-    
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="vscode" scheme="https://arvin-hehe.github.io/tags/vscode/"/>
-    
-    <category term="pylint" scheme="https://arvin-hehe.github.io/tags/pylint/"/>
     
   </entry>
   
