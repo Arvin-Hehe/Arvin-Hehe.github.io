@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-10-10T12:11:02.724Z</updated>
+  <updated>2020-10-11T06:58:21.901Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>8. 字符串转换整数（atoi）</title>
+    <link href="https://arvin-hehe.github.io/8-string-conversion-integer-atoi.html"/>
+    <id>https://arvin-hehe.github.io/8-string-conversion-integer-atoi.html</id>
+    <published>2020-10-11T01:26:14.000Z</published>
+    <updated>2020-10-11T06:58:21.901Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot; title=&quot;一、题目描述&quot;&gt;&lt;/a&gt;一、题目描述&lt;/h3&gt;&lt;p&gt;请你来实现一个 &lt;code&gt;atoi&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="数学" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="字符串" scheme="https://arvin-hehe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="中等" scheme="https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+  </entry>
   
   <entry>
     <title>7. 整数反转</title>
@@ -600,37 +633,6 @@
     <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
     
     <category term="二叉树" scheme="https://arvin-hehe.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编写python脚本实现自动更新码云pages</title>
-    <link href="https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html"/>
-    <id>https://arvin-hehe.github.io/write-python-scripts-to-automatically-update-code-cloud-pages.html</id>
-    <published>2020-09-18T10:02:54.000Z</published>
-    <updated>2020-10-09T17:07:50.522Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="https://arvin-hehe.github.io/categories/Python/"/>
-    
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="selenium" scheme="https://arvin-hehe.github.io/tags/selenium/"/>
-    
-    <category term="码云" scheme="https://arvin-hehe.github.io/tags/%E7%A0%81%E4%BA%91/"/>
-    
-    <category term="pages" scheme="https://arvin-hehe.github.io/tags/pages/"/>
     
   </entry>
   

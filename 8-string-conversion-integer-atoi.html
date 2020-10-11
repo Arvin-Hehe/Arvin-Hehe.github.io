@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="E5,office,续订">
+    <meta name="keywords" content="python,leetcode,数学,字符串,字符串转换为整数">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>Office E5自动订阅 | Arvin</title>
+    <title>8. 字符串转换整数（atoi） | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/Arvin-He/blog-img/raw/master/tag-img/win10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper38.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Office E5自动订阅</h1>
+                    <h1 class="description center-align post-title">8. 字符串转换整数（atoi）</h1>
                 </div>
             </div>
         </div>
@@ -456,16 +456,24 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/office/">
-                                <span class="chip bg-color">office</span>
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
                             </a>
                         
-                            <a href="/tags/E5/">
-                                <span class="chip bg-color">E5</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/%E7%BB%AD%E8%AE%A2/">
-                                <span class="chip bg-color">续订</span>
+                            <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                <span class="chip bg-color">数学</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                <span class="chip bg-color">字符串</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                <span class="chip bg-color">中等</span>
                             </a>
                         
                     </div>
@@ -476,8 +484,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Office/" class="post-category">
-                                Office
+                            <a href="/categories/LeetCode/" class="post-category">
+                                LeetCode
                             </a>
                         
                     </div>
@@ -489,28 +497,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-30
+                    2020-10-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-10
+                    2020-10-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    831
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -525,89 +533,92 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、-摘要"><a href="#一、-摘要" class="headerlink" title="一、 摘要"></a>一、 摘要</h3><p>之前注册的office E5账号，试用期只有三个月，如果想要继续使用呢，那么就需要在账号到期前保持一定的开发活动，简言之就是经常调用微软这些软件的API。下边开始讲如何利用这种方法进行续订。</p>
-<p><strong>重要的事情要多讲几遍：这种方法不保证一定可以续订成功，不保证一定可以续订成功，不保证一定可以续订成功</strong></p>
-<h3 id="二、参考原文"><a href="#二、参考原文" class="headerlink" title="二、参考原文"></a>二、参考原文</h3><ol>
-<li><a target="_blank" rel="noopener" href="https://blog.432100.xyz/index.php/archives/50/">黑幕</a> ，这种方式需要用到服务器，成本较大，但是可以学习和借鉴。</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/wangziyingwen/AutoApiSecret">https://github.com/wangziyingwen/AutoApiSecret</a>  这个里边的方法也是参考了上边黑幕大佬的内容，然后修改成了采用GitHub Action实现。这样一来，就不在需要服务器这一项了，也降低我这个穷**的生活负担<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f61e.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f61e.png?v8">😞</span></li>
-<li>如果不想看文字步骤的，可以直接跳到最后，<a href="#video">观看视频</a>，本视频由第二个大佬制作。</li>
-</ol>
-<h3 id="三、具体步骤（自己也记录一下，免得用得着的时候来回翻）"><a href="#三、具体步骤（自己也记录一下，免得用得着的时候来回翻）" class="headerlink" title="三、具体步骤（自己也记录一下，免得用得着的时候来回翻）"></a>三、具体步骤（自己也记录一下，免得用得着的时候来回翻）</h3><p><strong>在往下操作之前，假设你已经有了office E5订阅。</strong></p>
-<h4 id="1-首先前往注册Microsoft-Azure（前往注册）一个应用"><a href="#1-首先前往注册Microsoft-Azure（前往注册）一个应用" class="headerlink" title="1. 首先前往注册Microsoft Azure（前往注册）一个应用"></a>1. 首先前往注册Microsoft Azure（<a target="_blank" rel="noopener" href="https://portal.azure.com/#home">前往注册</a>）一个应用</h4><p>这里简述下流程，首先使用E5管理员账号（我自己用的也是管理员，在其他地方又看到不是管理员账号的话可能会失败），登录来到主页以后，按步骤走。</p>
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p>请你来实现一个 <code>atoi</code> 函数，使其能将字符串转换成整数。</p>
+<p>首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：</p>
 <ul>
-<li><p>点击主页中的<code>管理Azure Active Directory</code>跳转</p>
+<li><p>如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。</p>
 </li>
-<li><p>在左侧目录中找到<code>应用注册</code>，点击</p>
+<li><p>假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。</p>
 </li>
-<li><p>点击上方的<code>新注册</code>，这时会跳出一个新建应用的界面。</p>
+<li><p>该字符串在有效的整数部分之后也可能会存在多余的字符，那么这些字符可以被忽略，它们对函数不应该造成影响。</p>
 </li>
-<li><p>在界面填写信息，名称可以随意写，建议写一个可以标识用途的名字。然后下边选择<code>任何组织目录（任何Azure AD目录-多租户）中的账户</code>。接下来重定向URI选择<code>Web</code>，后边填入<code>http://localhost:53682/</code>，注册。</p>
-</li>
-<li><p>注册以后会跳转到应用概述界面，将界面中的<strong>应用程序（客户端）ID</strong>找个地方复制保存一下，后边要用。然后点击左侧的<strong>API权限</strong>，依次点击<code>添加权限-&gt;Microsoft Graph-&gt;委托的权限</code>,然后将下边的权限勾选： </p>
+</ul>
+<p><strong>注意</strong>：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换，即无法进行有效转换。</p>
+<p>在任何情况下，若函数不能进行有效的转换时，请返回 0 。</p>
+<p><strong>提示：</strong></p>
 <ul>
-<li><code>Files.Read.All</code>、<code>Files.ReadWrite.All</code></li>
-<li><code>Sites.Read.All</code>、<code>Sites.ReadWrite.All</code></li>
-<li><code>User.Read.All</code>、<code> User.ReadWrite.All</code></li>
-<li><code>Directory.Read.Al</code> 、<code>Directory.ReadWrite.All</code></li>
-<li><code>Mail.Read</code> 、<code>Mail.ReadWrite</code></li>
-<li><code>MailboxSettings.Read</code> 、<code>MailboxSettings.ReadWrite</code></li>
-</ul>
-<p>这些权限全部勾选好以后，点击底部的添加权限，这时候会返回到<strong>API权限</strong>界面，然后一定要点<code>代表XXX授予管理员同意</code>。</p>
+<li><p>本题中的空白字符只包括空格字符 ‘ ‘ 。</p>
 </li>
-<li><p>点击左侧目录中的<strong>证书和密码</strong>， 点击<strong>新客户端密码</strong>。说明随意填，年限随意选，然后点击添加。添加好了以后，客户端密码那一行会有一串值，这个值依然需要复制保存，这个是应用秘钥，后边要用。到这里注册就完成了。</p>
+<li><p>假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−231,  231 − 1]。如果数值超过这个范围，请返回  INT_MAX (231 − 1) 或 INT_MIN (−231) 。</p>
 </li>
 </ul>
-<h4 id="2-获取refresh-token"><a href="#2-获取refresh-token" class="headerlink" title="2. 获取refresh token"></a>2. 获取<code>refresh token</code></h4><ul>
-<li><p>下载<strong>rclone</strong>(<a target="_blank" rel="noopener" href="https://downloads.rclone.org/v1.52.3/rclone-v1.52.3-windows-amd64.zip">点我下载</a>)，建议复制链接用迅雷下载会更快。下载好了以后解压，<strong>千万不要双击安装</strong>。</p>
-</li>
-<li><p>在解压以后的目录内，<code>shift+鼠标右键</code>， 打开power shell窗口，然后可以执行<code>start cmd</code>命令打开cmd，当然也可以一开始就使用cmd。</p>
-</li>
-<li><p>执行下边的代码：</p>
-<ul>
-<li><pre class="line-numbers language-powershell"><code class="language-powershell">rclone authorize <span class="token string">"onedrive"</span> <span class="token string">"之前保存的应用id"</span> <span class="token string">"之前保存的应用秘钥"</span>
-<span class="token comment" spellcheck="true"># 将双引号内的内容用自己保存的ID和秘钥替换掉</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
+<p><strong>示例1：</strong></p>
+<pre><code>输入："42"
+输出： 42</code></pre>
+<p><strong>示例2：</strong></p>
+<pre><code>输入: "   -42"
+输出: -42
+解释: 第一个非空白字符为 '-', 它是一个负号。
+&nbsp;    我们尽可能将负号与后面所有连续出现的数字组合起来，最后得到 -42 。</code></pre>
+<p><strong>示例3：</strong></p>
+<pre><code>输入: "4193 with words"
+输出: 4193
+解释: 转换截止于数字 '3' ，因为它的下一个字符不为数字。</code></pre>
+<p><strong>示例4：</strong></p>
+<pre><code>输入: "words and 987"
+输出: 0
+解释: 第一个非空字符是 'w', 但它不是数字或正、负号。
+     因此无法执行有效的转换。</code></pre>
+<p><strong>示例5：</strong></p>
+<pre><code>输入: "-91283472332"
+输出: -2147483648
+解释: 数字 "-91283472332" 超过 32 位有符号整数范围。 
+&nbsp;    因此返回 INT_MIN (−231) 。</code></pre>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-遍历"><a href="#1-遍历" class="headerlink" title="1. 遍历"></a>1. 遍历</h4><ul>
+<li>从头开始遍历，如果元素为空格<code>" "</code>，则跳过去，继续遍历下一个元素。</li>
+<li>如果遍历到的元素不为空格，则判断是否为加号<code>+</code>、减号<code>-</code>或者数字，不过不是则退出，如果是数字则保存。然后判断下一个元素是否为数字，如果为<code>true</code>，则继续下一步循环，否则退出。</li>
 </ul>
-</li>
-<li><p>执行以后，浏览器会弹出登录界面，登录自己的E5账号，然后浏览器显示Success，那就说明refresh token生成成功。</p>
-</li>
-<li><p>回到cmd或powershell界面，复制<code>refresh_token</code>的值（可以使用json格式化工具格式化一下，这样比较好找。），<strong>引号不要复制</strong>。</p>
-</li>
-</ul>
-<h4 id="3-GitHub-Action设置"><a href="#3-GitHub-Action设置" class="headerlink" title="3. GitHub Action设置"></a>3. GitHub Action设置</h4><ul>
-<li><p>首先<a target="_blank" rel="noopener" href="https://github.com/wangziyingwen/AutoApiSecret">点我</a>，将项目代码fork到自己的GitHub中。接下来都要自己的账号下操作</p>
-</li>
-<li><p>编辑自己项目中的1.txt，删除其中的内容，然后将自己的refresh token粘贴进去。<strong>结尾千万不要留空格或者空行。</strong></p>
-</li>
-<li><p>点击本仓库的<strong>Settings -&gt; Secrets -&gt; new secret</strong>，新建两个secret：CONFIG_ID、CONFIG_KEY：</p>
-<ul>
-<li><p>CONFIG_ID</p>
-<pre><code>id=r'你的应用id'</code></pre>
-</li>
-<li><p>CONFIG_KEY</p>
-<pre><code>secret=r'你的应用秘钥'</code></pre>
-</li>
-</ul>
-</li>
-<li><p>点击右上角头像里边的设置，也就是个人设置，选择<strong>Developer settings -&gt;Personal access tokens -&gt; Generate new token</strong>，设置名字为<code>GITHUB_TOKEN</code>，然后勾选<code>repo</code>、<code>admin:repo_hook</code>、<code>workflow</code>，最后点击Generate token即可。</p>
-</li>
-<li><p>点击<strong>Actions</strong>，同意一下协议，等页面刷新以后，点击一下star，然后观察是否正在启动。如下图所示：</p>
-<p><img src="http://qiniuimg.heyulong.top/GitHub_actions.png"></p>
-</li>
-<li><p>如果是正在转圈的黄色，那代表正在启动。如果是绿色对勾，那就表示已经启动。</p>
-</li>
-<li><p>启动起来以后，点击此action。进入此action页面，然后点击左侧目录中的<code>build</code>，然后在右侧将<code>Test Api</code>展开，便可以看到执行情况。</p>
-</li>
-<li><p>到了第二天，也可以来看一下执行记录。</p>
-</li>
-<li><p>结束</p>
-</li>
-</ul>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a><span id="video">最后</span></h3><p>这里是此开源Auto API作者录得一个视频，也可以看着视频来操作。</p>
-<iframe src="//player.bilibili.com/player.html?aid=95688306&amp;bvid=BV1mE411V74B&amp;cid=163358877&amp;page=1&amp;high_quality=1&amp;danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="400px," width="100%"> </iframe>
+<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-遍历-1"><a href="#1-遍历-1" class="headerlink" title="1. 遍历"></a>1. 遍历</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">myAtoi</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> <span class="token string">""</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
 
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">" "</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"-"</span> <span class="token operator">or</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"+"</span> <span class="token operator">or</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    res <span class="token operator">+=</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                    <span class="token comment" spellcheck="true"># 下一位元素如果是数字就继续循环，否则就退出</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> length <span class="token operator">and</span> <span class="token operator">not</span> s<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        <span class="token keyword">break</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">break</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>len<span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">and</span> <span class="token punctuation">(</span>res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"-"</span> <span class="token operator">or</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"+"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">or</span> len<span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">0</span>
+        res <span class="token operator">=</span> int<span class="token punctuation">(</span>res<span class="token punctuation">)</span>
 
-
+        <span class="token keyword">if</span> res <span class="token operator">></span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">**</span><span class="token number">31</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">2</span><span class="token operator">**</span><span class="token number">31</span> <span class="token operator">-</span><span class="token number">1</span>
+        <span class="token keyword">elif</span> res <span class="token operator">&lt;</span> <span class="token operator">-</span><span class="token number">2</span><span class="token operator">**</span><span class="token number">31</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">2</span><span class="token operator">**</span><span class="token number">31</span>
+        <span class="token keyword">return</span> res <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table>
+<thead>
+<tr>
+<th align="center">method</th>
+<th align="center">运行时间</th>
+<th align="center">表现</th>
+<th align="center">内存消耗</th>
+<th align="center">表现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1. 遍历</td>
+<td align="center">48ms</td>
+<td align="center">59.54%</td>
+<td align="center">13.3MB</td>
+<td align="center">56.84%</td>
+</tr>
+</tbody></table>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -651,7 +662,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/office-e5-automatic-subscription.html">https://arvin-hehe.github.io/office-e5-automatic-subscription.html</a>
+                    <a href="https://arvin-hehe.github.io/8-string-conversion-integer-atoi.html">https://arvin-hehe.github.io/8-string-conversion-integer-atoi.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -689,16 +700,24 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/office/">
-                                    <span class="chip bg-color">office</span>
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
                                 </a>
                             
-                                <a href="/tags/E5/">
-                                    <span class="chip bg-color">E5</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BB%AD%E8%AE%A2/">
-                                    <span class="chip bg-color">续订</span>
+                                <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                    <span class="chip bg-color">数学</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                    <span class="chip bg-color">字符串</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                    <span class="chip bg-color">中等</span>
                                 </a>
                             
                         </div>
@@ -1003,49 +1022,63 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/use-onedrive-to-back-up-any-directory-on-your-computer.html">
+                <a href="/8-string-conversion-integer-atoi.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/Arvin-He/blog-img/raw/master/tag-img/wallpaper3.jpg" class="responsive-img" alt="使用OneDrive备份电脑上的任意目录">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper38.jpg" class="responsive-img" alt="8. 字符串转换整数（atoi）">
                         
-                        <span class="card-title">使用OneDrive备份电脑上的任意目录</span>
+                        <span class="card-title">8. 字符串转换整数（atoi）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            当我们使用Onedrive进行电脑文件备份的时候，会发现Onedrive默认在C盘，并且只有桌面、文档和图片三个目录。那么当我们想要对其他盘里的一些目录进行备份，该怎么做呢？接下来便以Windows平台为例记录一下。
+                            请你来实现一个 atoi 函数，使其能将字符串转换成整数。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Onedrive/" class="post-category">
-                                    Onedrive
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Onedrive/">
-                        <span class="chip bg-color">Onedrive</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/%E5%A4%87%E4%BB%BD/">
-                        <span class="chip bg-color">备份</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="chip bg-color">数学</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <span class="chip bg-color">字符串</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
                 </div>
@@ -1059,30 +1092,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/upgrade-1t-onedrive-space-of-microsoft-e5-account-to-5t.html">
+                <a href="/7-integer-inversion.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/arvin-he/blog-img/raw/master/tag-img/onedrive.jpg" class="responsive-img" alt="将Microsoft E5账号的1T Onedrive空间升级为5T">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper35.jpg" class="responsive-img" alt="7. 整数反转">
                         
-                        <span class="card-title">将Microsoft E5账号的1T Onedrive空间升级为5T</span>
+                        <span class="card-title">7. 整数反转</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我们在注册了微软开发者账户以后，通常是会为我们的Onedrive分配5T的可用空间的。但是当我们打开Onedrive以后，看到的却只有1T。这时候，我们该怎么办呢，下边告诉你。
+                            给出一个32位的有符号整数，你需要将这个整数中每位上的数字进行反转。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Onedrive/" class="post-category">
-                                    Onedrive
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
                                 </a>
                             
                             
@@ -1092,16 +1125,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/E5/">
-                        <span class="chip bg-color">E5</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/onedrive/">
-                        <span class="chip bg-color">onedrive</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E6%89%A9%E5%AE%B9/">
-                        <span class="chip bg-color">扩容</span>
+                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
