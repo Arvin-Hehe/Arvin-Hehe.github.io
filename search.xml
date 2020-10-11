@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>11. 盛最多水的容器</title>
+      <link href="/11-the-container-with-most-water.html"/>
+      <url>/11-the-container-with-most-water.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p>给你 n 个<strong>非负整数</strong> a1，a2，…，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</p><p><strong>说明：</strong>你不能倾斜容器，且<em>n</em>的值至少为2。</p><img src="https://gitee.com/Arvin-He/blog-img/raw/master/post-img/11-leetcode/question_11.jpg" width="70%"><p>图中垂直线代表输入数组[1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为49。</p><p><strong>示例：</strong></p><pre><code>输入：[1,8,6,2,5,4,8,3,7]输出：49</code></pre><h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><p>详见 <a href="https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-by-leetcode-solution/">LeetCode官方题解</a></p><h4 id="1-双指针"><a href="#1-双指针" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><p>采用双指针写法，创建两个指针<code>left</code>和<code>right</code>。分别从数组头部和尾部开始移动，对<code>left</code>和<code>right</code>指向的元素进行比较，如果<code>left</code>只想的元素小于<code>right</code>指向的元素，则<code>left += 1</code>,反之则<code>right -= 1</code>，意思就是谁小谁动。</p><h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-双指针-1"><a href="#1-双指针-1" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">maxArea</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> height<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>        res <span class="token operator">=</span> <span class="token number">0</span>        left <span class="token operator">=</span> <span class="token number">0</span>        right <span class="token operator">=</span> len<span class="token punctuation">(</span>height<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>            <span class="token keyword">if</span> height<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">>=</span> height<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">:</span>                res <span class="token operator">=</span> max<span class="token punctuation">(</span>res<span class="token punctuation">,</span> height<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span><span class="token punctuation">)</span>                right <span class="token operator">-=</span> <span class="token number">1</span>            <span class="token keyword">else</span><span class="token punctuation">:</span>                res <span class="token operator">=</span> max<span class="token punctuation">(</span>res<span class="token punctuation">,</span> height<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span><span class="token punctuation">)</span>                left <span class="token operator">+=</span> <span class="token number">1</span>        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table><thead><tr><th align="center">method</th><th align="center">运行时间</th><th align="center">表现</th><th align="center">内存消耗</th><th align="center">表现</th></tr></thead><tbody><tr><td align="center">1. 双指针</td><td align="center">76ms</td><td align="center">48.11%</td><td align="center">14.8MB</td><td align="center">26.71%</td></tr></tbody></table><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> python </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 中等 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>8. 字符串转换整数（atoi）</title>
       <link href="/8-string-conversion-integer-atoi.html"/>
       <url>/8-string-conversion-integer-atoi.html</url>

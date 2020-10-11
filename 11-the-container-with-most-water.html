@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python,leetcode,哈希表,双指针,字符串,Sliding Window">
+    <meta name="keywords" content="leetcode,python,数组,双指针,中等,盛最多的水">
     <meta name="description" content="技术学习过程中的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
 </script>
 
 
-    <title>3. 无重复字符的最长子串 | Arvin</title>
+    <title>11. 盛最多水的容器 | Arvin</title>
     <link rel="icon" type="image/png" href="/favicon_new.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/Arvin-He/blog-img/raw/master/tag-img/wallpaper10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper39.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">3. 无重复字符的最长子串</h1>
+                    <h1 class="description center-align post-title">11. 盛最多水的容器</h1>
                 </div>
             </div>
         </div>
@@ -464,20 +464,16 @@
                                 <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                                <span class="chip bg-color">哈希表</span>
+                            <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
                             <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
                                 <span class="chip bg-color">双指针</span>
                             </a>
                         
-                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                                <span class="chip bg-color">字符串</span>
-                            </a>
-                        
-                            <a href="/tags/Sliding-Window/">
-                                <span class="chip bg-color">Sliding Window</span>
+                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                <span class="chip bg-color">中等</span>
                             </a>
                         
                     </div>
@@ -501,21 +497,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-23
+                    2020-10-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-10
+                    2020-10-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    453
+                    385
                 </div>
                 
 
@@ -537,46 +533,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p><strong>给定一个字符串，请你找出其中不含有重复字符的<code>最长子串</code>的长度。</strong></p>
-<p>示例1：</p>
-<pre><code>输入: "abcabcbb"
-输出: 3 
-解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。</code></pre>
-<p>示例2：</p>
-<pre><code>输入: "bbbbb"
-输出: 1
-解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。</code></pre>
-<p>示例3：</p>
-<pre><code>输入: "pwwkew"
-输出: 3
-解释: 因为无重复字符的最长子串是&nbsp;"wke"，所以其长度为 3。
-&nbsp;    请注意，你的答案必须是 子串 的长度，"pwke"&nbsp;是一个子序列，不是子串。</code></pre>
-<h3 id="二、思路-amp-代码实现"><a href="#二、思路-amp-代码实现" class="headerlink" title="二、思路 &amp; 代码实现"></a>二、思路 &amp; 代码实现</h3><h4 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h4><p>使用两个for循环，外层循环控制起始位置，内层循环从起始元素开始，将未重复元素添加到一个临时数组，遇到重复元素就退出循环。将临时数组的长度也就是子串的长度添加到一个数组。最后比较数组内所有元素的最大值便是最长子串的长度。</p>
-<h4 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2. 代码实现"></a>2. 代码实现</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">lengthOfLongestSubstring</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        <span class="token comment" spellcheck="true"># 默认子串长度为0</span>
-        <span class="token comment" spellcheck="true"># 1 使用常数统计最长子串长度</span>
-        <span class="token comment" spellcheck="true"># result = 0</span>
-        <span class="token comment" spellcheck="true"># 2 使用数组统计所有子串长度</span>
-        result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-        length <span class="token operator">=</span> len<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            cur <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token punctuation">,</span> length<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> s<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">not</span> <span class="token keyword">in</span> cur<span class="token punctuation">:</span>
-                    cur<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                <span class="token keyword">else</span><span class="token punctuation">:</span>
-                    <span class="token keyword">break</span>
-            <span class="token comment" spellcheck="true">#if len(cur) > result:</span>
-            <span class="token comment" spellcheck="true">#    result = len(cur)</span>
-            <span class="token keyword">if</span> len<span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
-                result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>len<span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token comment" spellcheck="true">#return result</span>
-        <span class="token keyword">return</span> max<span class="token punctuation">(</span>result<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="3-表现"><a href="#3-表现" class="headerlink" title="3. 表现"></a>3. 表现</h4><table>
+                <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p>给你 n 个<strong>非负整数</strong> a1，a2，…，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</p>
+<p><strong>说明：</strong>你不能倾斜容器，且<em>n</em>的值至少为2。</p>
+<img src="https://gitee.com/Arvin-He/blog-img/raw/master/post-img/11-leetcode/question_11.jpg" width="70%">
+
+<p>图中垂直线代表输入数组[1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为49。</p>
+<p><strong>示例：</strong></p>
+<pre><code>输入：[1,8,6,2,5,4,8,3,7]
+输出：49</code></pre>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><p>详见 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/container-with-most-water/solution/sheng-zui-duo-shui-de-rong-qi-by-leetcode-solution/">LeetCode官方题解</a></p>
+<h4 id="1-双指针"><a href="#1-双指针" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><p>采用双指针写法，创建两个指针<code>left</code>和<code>right</code>。分别从数组头部和尾部开始移动，对<code>left</code>和<code>right</code>指向的元素进行比较，如果<code>left</code>只想的元素小于<code>right</code>指向的元素，则<code>left += 1</code>,反之则<code>right -= 1</code>，意思就是谁小谁动。</p>
+<h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-双指针-1"><a href="#1-双指针-1" class="headerlink" title="1. 双指针"></a>1. 双指针</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">maxArea</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> height<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        res <span class="token operator">=</span> <span class="token number">0</span>
+        left <span class="token operator">=</span> <span class="token number">0</span>
+        right <span class="token operator">=</span> len<span class="token punctuation">(</span>height<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
+        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> height<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">>=</span> height<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                res <span class="token operator">=</span> max<span class="token punctuation">(</span>res<span class="token punctuation">,</span> height<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                right <span class="token operator">-=</span> <span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                res <span class="token operator">=</span> max<span class="token punctuation">(</span>res<span class="token punctuation">,</span> height<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                left <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table>
 <thead>
 <tr>
-<th align="center">记录方式</th>
+<th align="center">method</th>
 <th align="center">运行时间</th>
 <th align="center">表现</th>
 <th align="center">内存消耗</th>
@@ -584,18 +567,11 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">1</td>
-<td align="center">2168ms</td>
-<td align="center">4%</td>
-<td align="center">13.4MB</td>
-<td align="center">32%</td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center">2164ms</td>
-<td align="center">5.01%</td>
-<td align="center">13.3MB</td>
-<td align="center">84.95%</td>
+<td align="center">1. 双指针</td>
+<td align="center">76ms</td>
+<td align="center">48.11%</td>
+<td align="center">14.8MB</td>
+<td align="center">26.71%</td>
 </tr>
 </tbody></table>
 <script>
@@ -641,7 +617,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://arvin-hehe.github.io/3-the-longest-substring-without-repeated-characters.html">https://arvin-hehe.github.io/3-the-longest-substring-without-repeated-characters.html</a>
+                    <a href="https://arvin-hehe.github.io/11-the-container-with-most-water.html">https://arvin-hehe.github.io/11-the-container-with-most-water.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -687,20 +663,16 @@
                                     <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                                    <span class="chip bg-color">哈希表</span>
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">数组</span>
                                 </a>
                             
                                 <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
                                     <span class="chip bg-color">双指针</span>
                                 </a>
                             
-                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                                    <span class="chip bg-color">字符串</span>
-                                </a>
-                            
-                                <a href="/tags/Sliding-Window/">
-                                    <span class="chip bg-color">Sliding Window</span>
+                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                    <span class="chip bg-color">中等</span>
                                 </a>
                             
                         </div>
@@ -1005,28 +977,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/501-mode-in-binary-search-tree.html">
+                <a href="/11-the-container-with-most-water.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/Arvin-He/blog-img/raw/master/tag-img/wallpaper8.jpg" class="responsive-img" alt="501. 二叉搜索树中的众数">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper39.jpg" class="responsive-img" alt="11. 盛最多水的容器">
                         
-                        <span class="card-title">501. 二叉搜索树中的众数</span>
+                        <span class="card-title">11. 盛最多水的容器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一个有相同值的二叉搜索树（BST），找出BST中的所有众数（出现频率最高的元素）。
+                            给你n个非负整数a1, a2,..., an，每个数代表坐标中的一个点（i，ai）。在坐标内画n条垂直线，垂直线i的每个端点分别为（i，ai）和（i，0）。找出其中的两条线，使得它们与x轴共同构成的容器可以容纳最多的水。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1039,6 +1012,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1050,12 +1024,16 @@
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E6%A0%91/">
-                        <span class="chip bg-color">树</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
-                        <span class="chip bg-color">二叉搜索树</span>
+                    <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                        <span class="chip bg-color">双指针</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
                 </div>
@@ -1069,23 +1047,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2-add-two-numbers.html">
+                <a href="/8-string-conversion-integer-atoi.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/Arvin-He/blog-img/raw/master/tag-img/wallpaper6.jpg" class="responsive-img" alt="2. 两数相加">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper38.jpg" class="responsive-img" alt="8. 字符串转换整数（atoi）">
                         
-                        <span class="card-title">2. 两数相加</span>
+                        <span class="card-title">8. 字符串转换整数（atoi）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方法存储的，并且它们的每个节点只能存储一位数字。如果，我们将这两个数相加起来，则返回一个新的链表来表示它们的和。
+                            请你来实现一个 atoi 函数，使其能将字符串转换成整数。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-11
                             </span>
                         <span class="publish-author">
                             
@@ -1110,12 +1088,16 @@
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E9%93%BE%E8%A1%A8/">
-                        <span class="chip bg-color">链表</span>
-                    </a>
-                    
                     <a href="/tags/%E6%95%B0%E5%AD%A6/">
                         <span class="chip bg-color">数学</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <span class="chip bg-color">字符串</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
                 </div>
