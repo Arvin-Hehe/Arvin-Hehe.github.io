@@ -488,21 +488,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-10
+                    2020-10-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    476
+                    744
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -567,10 +567,44 @@
 <li>使用<code>px</code>时，<code>width</code>和<code>height</code>都需要写，更精准的控制图片大小</li>
 </ul>
 <h3 id="二、数学表达式"><a href="#二、数学表达式" class="headerlink" title="二、数学表达式"></a>二、数学表达式</h3><p>遇到数学表达式，该怎么写出来呢？</p>
-<h4 id="1-幂运算"><a href="#1-幂运算" class="headerlink" title="1. 幂运算"></a>1. 幂运算</h4><p>例如：10的5次方</p>
+<h4 id="1-幂运算"><a href="#1-幂运算" class="headerlink" title="1. 幂运算"></a>1. 幂运算</h4><h5 id="（1）HTML标签"><a href="#（1）HTML标签" class="headerlink" title="（1）HTML标签"></a>（1）HTML标签</h5><p>例如：10的5次方</p>
 <p>实现：</p>
 <pre class="line-numbers language-html"><code class="language-html">10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">></span></span>5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sup</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>效果： 10<sup>5</sup></p>
+<h5 id="（2）Markdown语法"><a href="#（2）Markdown语法" class="headerlink" title="（2）Markdown语法"></a>（2）Markdown语法</h5><p>例如：10的5次方</p>
+<p>实现：</p>
+<pre><code>10^5^</code></pre>
+<p>效果：10^5^</p>
+<h4 id="2-Markdown中插入多行大括号公式"><a href="#2-Markdown中插入多行大括号公式" class="headerlink" title="2. Markdown中插入多行大括号公式"></a>2. Markdown中插入多行大括号公式</h4><h5 id="（1）方法1"><a href="#（1）方法1" class="headerlink" title="（1）方法1"></a>（1）方法1</h5><pre><code>$$ f(x)=\left\&amp;#123;
+\begin&amp;#123;aligned&amp;#125;
+x &amp; = &amp; \cos(t) \\
+y &amp; = &amp; \sin(t) \\
+z &amp; = &amp; \frac xy
+\end&amp;#123;aligned&amp;#125;
+\right.
+$$</code></pre>
+<p>效果：<br>$$<br>f(x)=\left{ </p>
+<p>\begin{aligned}</p>
+<p> x &amp; = &amp; \cos(t) \</p>
+<p> y &amp; = &amp; \sin(t) \ </p>
+<p>z &amp; = &amp; \frac xy </p>
+<p>\end{aligned} </p>
+<p>\right.<br>$$</p>
+<h5 id="（2）方法2"><a href="#（2）方法2" class="headerlink" title="（2）方法2"></a>（2）方法2</h5><pre><code>$$ F^&amp;#123;HLLC&amp;#125;=\left\&amp;#123;
+\begin&amp;#123;array&amp;#125;&amp;#123;rcl&amp;#125;
+F_L       &amp;      &amp; &amp;#123;0      &lt;      S_L&amp;#125;\\
+F^*_L     &amp;      &amp; &amp;#123;S_L \leq 0 &lt; S_M&amp;#125;\\
+F^*_R     &amp;      &amp; &amp;#123;S_M \leq 0 &lt; S_R&amp;#125;\\
+F_R       &amp;      &amp; &amp;#123;S_R \leq 0&amp;#125;
+\end&amp;#123;array&amp;#125; \right. $$
+</code></pre>
+<p>效果：<br>$$<br>F^{HLLC}=\left{<br>\begin{array}{rcl}<br>F_L       &amp;      &amp; {0      &lt;      S_L}\<br>F^<em>_L     &amp;      &amp; {S_L \leq 0 &lt; S_M}\<br>F^</em>_R     &amp;      &amp; {S_M \leq 0 &lt; S_R}\<br>F_R       &amp;      &amp; {S_R \leq 0}<br>\end{array} \right.<br>$$</p>
+<h5 id="（3）方法3"><a href="#（3）方法3" class="headerlink" title="（3）方法3"></a>（3）方法3</h5><pre><code>$$f(x)=
+\begin&amp;#123;cases&amp;#125;
+0&amp; \text&amp;#123;x=0&amp;#125;\\
+1&amp; \text&amp;#123;x!=0&amp;#125;
+\end&amp;#123;cases&amp;#125;$$</code></pre>
+<p>效果：<br>$$<br>f(x)=<br>\begin{cases}<br>0&amp; \text{x=0}\<br>1&amp; \text{x!=0}<br>\end{cases}<br>$$</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1275,7 +1309,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.5k</span>&nbsp;字
+                class="white-color">20.5k</span>&nbsp;字
             
             
             

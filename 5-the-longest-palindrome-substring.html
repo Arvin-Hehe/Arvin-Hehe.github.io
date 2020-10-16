@@ -472,10 +472,6 @@
                                 <span class="chip bg-color">动态规划</span>
                             </a>
                         
-                            <a href="/tags/%E5%8F%8C%E5%B1%82%E5%BE%AA%E7%8E%AF/">
-                                <span class="chip bg-color">双层循环</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -504,21 +500,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-02
+                    2020-10-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    759
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -546,6 +542,13 @@
 <li>第二层循环控制遍历后边的元素</li>
 <li>把内层循环的元素累加到一个变量 cur 上，每累加一个就判断当前子串cur是否为回文串，并且长度是否大于前边保存的回文子串，条件成立，则对结果更新。</li>
 </ul>
+<h4 id="2-动态规划"><a href="#2-动态规划" class="headerlink" title="2. 动态规划"></a>2. 动态规划</h4><p>首先上<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution/">LeetCode官方题解</a></p>
+<p>再来一个写的比较好的题解<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zhong-xin-kuo-san-dong-tai-gui-hua-by-liweiwei1419/">liweiwei1419</a></p>
+<hr>
+<p>对于一个子串，并且长度大于2，如果它是回文串，那么去掉两头的元素以后，它依然是回文串。</p>
+<p>我们设<code>i</code>、<code>j</code>分别为子串的起始位置和结束位置，用<code>P(i,j)</code>来表示这个子串，那么对于子串<code>P(i,j)</code>是否为回文串就有两种可能：<br>$$<br>P(i,j)=\left{<br>\begin{array}{rcl}<br>true, &amp; &amp; {如果子串S_i……S_j是回文串}\<br>false,&amp;      &amp; {其他情况}\<br>\end{array} \right.<br>$$<br>可以写出动态规划的状态转移方程为：<br>$$<br>P(i,j)=P(i+1,j-1) \and (S_i == S_j)<br>$$<br>也就是说，只有<code>s[i+1:j-1]</code>是回文串，并且 s 的第 i 个元素与第 j 个元素相同时，<code>P[i:j]</code>是回文串。</p>
+<p>以上为子串长度大于2的情况，下边讨论子串长度小于等于2的情况。</p>
+<p>子串长度为1时，子串必是回文串；子串长度为2时，只要这两个元素相同，那么就是回文串。因此我们可以得出动态规划的边界条件：<br>$$<br>\left{<br>\begin{array}<br> P(i,i)=true\<br>P(i,i+1)=(S_i==S_j)<br>\end{array} \right.<br>$$<br>根据这个思路，我们就可以完成动态规划了。</p>
 <h3 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h3><h4 id="1-双层循环-1"><a href="#1-双层循环-1" class="headerlink" title="1. 双层循环"></a>1. 双层循环</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">longestPalindrome</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> str<span class="token punctuation">:</span>
         length <span class="token operator">=</span> len<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
@@ -561,9 +564,35 @@
                 <span class="token keyword">if</span> cur <span class="token operator">==</span> cur<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">and</span> len<span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">></span> len<span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">:</span>
                     ans <span class="token operator">=</span> cur
         <span class="token keyword">return</span> ans<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-动态规划-1"><a href="#2-动态规划-1" class="headerlink" title="2. 动态规划"></a>2. 动态规划</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">longestPalindrome</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> str<span class="token punctuation">:</span>
+        length <span class="token operator">=</span> len<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+        dp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token boolean">False</span><span class="token punctuation">]</span> <span class="token operator">*</span> length <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+        res <span class="token operator">=</span> <span class="token string">""</span>
+
+        <span class="token comment" spellcheck="true"># 子串长度实际为n+1</span>
+        <span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment" spellcheck="true"># 子串开始位置</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token comment" spellcheck="true"># 子串结束位置</span>
+                j <span class="token operator">=</span> i <span class="token operator">+</span> n
+
+                <span class="token keyword">if</span> j <span class="token operator">>=</span> length<span class="token punctuation">:</span>
+                    <span class="token keyword">break</span>
+                <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">True</span>
+                <span class="token keyword">elif</span> n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">and</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">and</span> n <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">></span> len<span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    res <span class="token operator">=</span> s<span class="token punctuation">[</span>i<span class="token punctuation">:</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><h4 id="1-双层循环-2"><a href="#1-双层循环-2" class="headerlink" title="1. 双层循环"></a>1. 双层循环</h4><table>
 <thead>
 <tr>
+<th align="center">method</th>
 <th align="center">运行时间</th>
 <th align="center">表现</th>
 <th align="center">内存消耗</th>
@@ -571,10 +600,18 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="center">1. 双循环</td>
 <td align="center">8176ms</td>
 <td align="center">5.01%</td>
 <td align="center">13.1MB</td>
 <td align="center">97.83%</td>
+</tr>
+<tr>
+<td align="center">2. 动态规划</td>
+<td align="center">9948ms</td>
+<td align="center">5.01%</td>
+<td align="center">20.9MB</td>
+<td align="center">28.50%</td>
 </tr>
 </tbody></table>
 <script>
@@ -672,10 +709,6 @@
                             
                                 <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
                                     <span class="chip bg-color">动态规划</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%8F%8C%E5%B1%82%E5%BE%AA%E7%8E%AF/">
-                                    <span class="chip bg-color">双层循环</span>
                                 </a>
                             
                         </div>
@@ -1301,7 +1334,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.5k</span>&nbsp;字
+                class="white-color">20.5k</span>&nbsp;字
             
             
             

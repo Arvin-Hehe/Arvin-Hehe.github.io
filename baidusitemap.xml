@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://arvin-hehe.github.io/11-the-container-with-most-water.html</loc>
+    <loc>https://arvin-hehe.github.io/977-squaring-an-ordered-array.html</loc>
+    <lastmod>2020-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/53-maximum-suborder-sum.html</loc>
+    <lastmod>2020-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/116-fill-the-next-right-node-pointer-of-each.html</loc>
+    <lastmod>2020-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/32-longest-valid-parenthesis.html</loc>
+    <lastmod>2020-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/1002-find-common-characters.html</loc>
+    <lastmod>2020-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/the-largest-integer-value-and-floating-point-in-python3.html</loc>
+    <lastmod>2020-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/5-the-longest-palindrome-substring.html</loc>
+    <lastmod>2020-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/markdown-notes.html</loc>
+    <lastmod>2020-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/12-integer-to-roman-numeral.html</loc>
+    <lastmod>2020-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/530-minimum-absolute-value-of-binary-search-tree.html</loc>
+    <lastmod>2020-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/9-number-of-palindrome.html</loc>
+    <lastmod>2020-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/11-container-with-the-most-water.html</loc>
     <lastmod>2020-10-11</lastmod>
   </url>
   <url>
@@ -81,10 +125,6 @@
     <lastmod>2020-10-09</lastmod>
   </url>
   <url>
-    <loc>https://arvin-hehe.github.io/markdown-notes.html</loc>
-    <lastmod>2020-10-09</lastmod>
-  </url>
-  <url>
     <loc>https://arvin-hehe.github.io/6-zigzag-transformation.html</loc>
     <lastmod>2020-10-08</lastmod>
   </url>
@@ -103,9 +143,5 @@
   <url>
     <loc>https://arvin-hehe.github.io/18-sum-of-four-numbers.html</loc>
     <lastmod>2020-10-06</lastmod>
-  </url>
-  <url>
-    <loc>https://arvin-hehe.github.io/5-the-longest-palindrome-substring.html</loc>
-    <lastmod>2020-10-02</lastmod>
   </url>
 </urlset> 
