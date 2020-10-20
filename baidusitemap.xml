@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://arvin-hehe.github.io/65-significant-figures.html</loc>
+    <lastmod>2020-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/64-minimum-path-sum.html</loc>
+    <lastmod>2020-10-19</lastmod>
+  </url>
+  <url>
     <loc>https://arvin-hehe.github.io/63-different-path-ii.html</loc>
     <lastmod>2020-10-19</lastmod>
   </url>
   <url>
+    <loc>https://arvin-hehe.github.io/the-largest-integer-value-and-floating-point-in-python3.html</loc>
+    <lastmod>2020-10-19</lastmod>
+  </url>
+  <url>
     <loc>https://arvin-hehe.github.io/62-different-paths.html</loc>
-    <lastmod>2020-10-18</lastmod>
+    <lastmod>2020-10-19</lastmod>
   </url>
   <url>
     <loc>https://arvin-hehe.github.io/116-fill-the-next-right-node-pointer-of-each.html</loc>
@@ -18,10 +30,6 @@
   </url>
   <url>
     <loc>https://arvin-hehe.github.io/11-container-with-the-most-water.html</loc>
-    <lastmod>2020-10-16</lastmod>
-  </url>
-  <url>
-    <loc>https://arvin-hehe.github.io/maximum-integer-value-and-floating-point-in-python3.html</loc>
     <lastmod>2020-10-16</lastmod>
   </url>
   <url>
