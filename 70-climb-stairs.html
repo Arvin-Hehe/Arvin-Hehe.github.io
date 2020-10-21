@@ -334,7 +334,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper54.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -507,14 +507,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    554
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -529,7 +529,82 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h3 id="一、题目"><a href="#一、题目" class="headerlink" title="一、题目"></a>一、题目</h3><p>假设你正在爬楼梯。需要 <em>n</em> 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p><strong>注意：</strong>给定 <em>n</em> 是一个正整数。</p>
+<p><strong>示例1：</strong></p>
+<pre><code>输入： 2
+输出： 2
+解释： 有两种方法可以爬到楼顶。
+1.  1 阶 + 1 阶
+2.  2 阶</code></pre>
+<p><strong>示例2：</strong></p>
+<pre><code>输入： 3
+输出： 3
+解释： 有三种方法可以爬到楼顶。
+1.  1 阶 + 1 阶 + 1 阶
+2.  1 阶 + 2 阶
+3.  2 阶 + 1 阶</code></pre>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><p>这一题实际上就是一个斐波那契数列。</p>
+<h4 id="1-动态规划"><a href="#1-动态规划" class="headerlink" title="1. 动态规划"></a>1. 动态规划</h4><p>这里呢，用动态规划来走一遍流程</p>
+<p>首先列个表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">台阶数</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">方法数</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">5</td>
+<td align="center">8</td>
+<td align="center">13</td>
+</tr>
+</tbody></table>
+<p>通过上边的表格可以发现，从3阶台阶开始，爬上n阶的方法数就等于<code>n-1</code>阶加上<code>n-2</code>阶的。</p>
+<p>这里呢我们可以定义一个一维数组<code>dp</code>来保存n阶台阶所对应的m中方法，用<code>i</code>表示台阶数。然后可以得出状态转移方程：<br>$$<br>dp[i] = dp[i-1] + dp[i-2]<br>$$<br>接下来就应该考虑特殊情况了，</p>
+<ul>
+<li><code>i == 1</code>：<code>dp[i] = 1</code></li>
+<li><code>i == 2</code>：<code>dp[i] = 2</code></li>
+</ul>
+<p>最后将<code>dp</code>数组中的最后一个元素返回即可。</p>
+<p>接下来优化，在这道题中，我们是没有必要单独创建一个数组的，只需要定义两个变量<code>a</code>和<code>b</code>分别来保存<code>i-1</code>与<code>i-2</code>位置的值即可。</p>
+<p>首先赋初值，<code>a, b = 0, 1</code>。然后在每次循环时将<code>b</code>的值重新赋值给<code>a</code>，<code>i-1</code>与<code>i-2</code>位置的值也就是<code>a+b</code>重新赋值给<code>b</code>，即<code>a, b = b, a+b</code>。这样我们便实现了<code>a、b</code>对应值的自动迭代。</p>
+<p>最后将<code>b</code>的值返回即可。</p>
+<h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">climbStairs</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a<span class="token operator">+</span>b
+        <span class="token keyword">return</span> b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="四、表现"><a href="#四、表现" class="headerlink" title="四、表现"></a>四、表现</h3><table>
+<thead>
+<tr>
+<th align="center">method</th>
+<th align="center">运行时间</th>
+<th align="center">表现</th>
+<th align="center">内存消耗</th>
+<th align="center">表现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center">12ms</td>
+<td align="center">95.89%</td>
+<td align="center">12.5MB</td>
+<td align="center">33%</td>
+</tr>
+</tbody></table>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -936,8 +1011,7 @@
                 <a href="/70-climb-stairs.html">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="70. 爬楼梯">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper54.jpg" class="responsive-img" alt="70. 爬楼梯">
                         
                         <span class="card-title">70. 爬楼梯</span>
                     </div>
@@ -1252,7 +1326,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">23.4k</span>&nbsp;字
+                class="white-color">23.9k</span>&nbsp;字
             
             
             
