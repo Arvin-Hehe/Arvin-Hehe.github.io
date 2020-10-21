@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://arvin-hehe.github.io/53-maximum-suborder-sum.html</loc>
+    <lastmod>2020-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/70-climb-stairs.html</loc>
+    <lastmod>2020-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/64-minimum-path-sum.html</loc>
+    <lastmod>2020-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://arvin-hehe.github.io/the-largest-integer-value-and-floating-point-in-python3.html</loc>
+    <lastmod>2020-10-20</lastmod>
+  </url>
+  <url>
     <loc>https://arvin-hehe.github.io/65-significant-figures.html</loc>
     <lastmod>2020-10-20</lastmod>
   </url>
   <url>
-    <loc>https://arvin-hehe.github.io/64-minimum-path-sum.html</loc>
-    <lastmod>2020-10-19</lastmod>
-  </url>
-  <url>
     <loc>https://arvin-hehe.github.io/63-different-path-ii.html</loc>
-    <lastmod>2020-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://arvin-hehe.github.io/the-largest-integer-value-and-floating-point-in-python3.html</loc>
     <lastmod>2020-10-19</lastmod>
   </url>
   <url>
@@ -46,10 +54,6 @@
   </url>
   <url>
     <loc>https://arvin-hehe.github.io/9-number-of-palindrome.html</loc>
-    <lastmod>2020-10-16</lastmod>
-  </url>
-  <url>
-    <loc>https://arvin-hehe.github.io/53-maximum-suborder-sum.html</loc>
     <lastmod>2020-10-16</lastmod>
   </url>
   <url>
