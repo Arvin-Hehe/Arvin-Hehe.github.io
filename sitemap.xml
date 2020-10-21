@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://arvin-hehe.github.io/72-edit-distance.html</loc>
+    
+    <lastmod>2020-10-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://arvin-hehe.github.io/70-climb-stairs.html</loc>
     
     <lastmod>2020-10-21</lastmod>
@@ -289,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/404.html</loc>
+    <loc>https://arvin-hehe.github.io/about/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/about/index.html</loc>
+    <loc>https://arvin-hehe.github.io/404.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
@@ -317,14 +324,14 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/friends/index.html</loc>
+    <loc>https://arvin-hehe.github.io/tags/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/tags/index.html</loc>
+    <loc>https://arvin-hehe.github.io/friends/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
@@ -606,27 +613,6 @@
   </url>
   
   <url>
-    <loc>https://arvin-hehe.github.io/tags/selenium/</loc>
-    <lastmod>2020-10-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/tags/%E7%A0%81%E4%BA%91/</loc>
-    <lastmod>2020-10-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://arvin-hehe.github.io/tags/pages/</loc>
-    <lastmod>2020-10-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://arvin-hehe.github.io/tags/gitee/</loc>
     <lastmod>2020-10-21</lastmod>
     <changefreq>daily</changefreq>
@@ -649,6 +635,27 @@
   
   <url>
     <loc>https://arvin-hehe.github.io/tags/picgo/</loc>
+    <lastmod>2020-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/selenium/</loc>
+    <lastmod>2020-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/%E7%A0%81%E4%BA%91/</loc>
+    <lastmod>2020-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://arvin-hehe.github.io/tags/pages/</loc>
     <lastmod>2020-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
