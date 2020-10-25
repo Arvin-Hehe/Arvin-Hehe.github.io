@@ -511,14 +511,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    358
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -556,7 +556,88 @@ inention -&gt; enention (将 'i' 替换为 'e')
 enention -&gt; exention (将 'n' 替换为 'x')
 exention -&gt; exection (将 'n' 替换为 'c')
 exection -&gt; execution (插入 'u')</code></pre>
-<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-动态规划"><a href="#1-动态规划" class="headerlink" title="1. 动态规划"></a>1. <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/edit-distance/solution/bian-ji-ju-chi-by-leetcode-solution/">动态规划</a></h4><h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><h4 id="1-动态规划-1"><a href="#1-动态规划-1" class="headerlink" title="1. 动态规划"></a>1. 动态规划</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-动态规划"><a href="#1-动态规划" class="headerlink" title="1. 动态规划"></a>1. <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/edit-distance/solution/bian-ji-ju-chi-by-leetcode-solution/">动态规划</a></h4><p>题目中告诉我们对一个单词可以进行<code>增、删、改</code>三种操作。那接下来就先上个表吧，依然采用题目中的例子<code>word1 = "horse"</code>、<code>word2 = "ros"</code>。表格如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">#</th>
+<th align="center">r</th>
+<th align="center">o</th>
+<th align="center">s</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">#</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">h</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">o</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">r</td>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">s</td>
+<td align="center">4</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">e</td>
+<td align="center">5</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<p>接下来，就是结合表格来进行详解：</p>
+<p>表格中的<code>#</code>所对应的行和列分别对应着<code>word1</code>和<code>word2</code>为空串的情况。</p>
+<p>首先我们定义一个二维数组<code>dp</code>，这里的<code>dp</code>数组便与上述表格相对应。数组中的每一个位置的意思便是<code>word1[:i]</code>子串转换为<code>word2[:j]</code>子串需要的编辑距离。</p>
+<p>实际上，通过上述表格的数据，我们便可以发现将原问题转化为子问题以后的结果之间的关系。</p>
+<p>我们用两个子串<code>A = hors</code>，<code>B = ro</code>来举列子:</p>
+<ul>
+<li>我们选择子串<code>hor</code>和<code>r</code>，将<code>hor</code>转换为<code>r</code>编辑距离为<code>2</code>。因为最后一个单词相同，所以只需要将删除<code>h</code>和<code>o</code>两步操作即可。</li>
+<li>将<code>hors</code>转为为<code>r</code>，只需要<code>h</code>、<code>o</code>、<code>s</code>三步删除操作即可。</li>
+<li>当目标单词为<code>ro</code>，将<code>hor</code>转换为<code>ro</code>，需要将<code>h</code>转换为<code>r</code>，并且将<code>r</code>删除两步操作即可。</li>
+<li>最后，我们可以对比这几种情况与<code>A</code>转换为<code>B</code>进行比对：<ul>
+<li><code>A</code> 、<code>B</code>与第一种情况相比，<code>hor</code>增加了<code>s</code>，<code>r</code>增加了<code>o</code>。两个单词都增加了一个字母，所以只需要将<code>s</code>更改为<code>o</code>一步操作即可实现<code>A</code>转换为<code>B</code>。编辑距离不会大于<code>2+1</code>。</li>
+<li><code>A</code> 、<code>B</code>与第二种情况相比，<code>r</code>增加了<code>o</code>。所以需要实现<code>A</code>转换为<code>B</code>，编辑距离不会大于<code>3+1</code>。</li>
+<li><code>A</code> 、<code>B</code>与第三种情况相比，单词<code>hor</code>增加一个<code>s</code>，所以只需删除<code>s</code>一步操作即可实现<code>A</code>转换为<code>B</code>。编辑距离不会大于<code>2+1</code>。</li>
+</ul>
+</li>
+</ul>
+<p>所以可以得出<code>dp[i][j]</code>与<code>dp[i-1][j]</code>、<code>dp[i-1][j-1]</code>、<code>dp[i][j-1]</code>这三个位置都有关系，并且<code>dp[i][j]</code>位置的编辑距离都不大于这三个位置编辑距离加<code>1</code>。所以我们只需要取其中的最小值即可。</p>
+<p>对于结尾字幕相同的单词，这时转换的编辑距离实际上只需要考虑相同字母之前的子串的转换编辑距离即可。</p>
+<p>最后，我们可以得出状态转移方程：</p>
+<ul>
+<li><p>最后一个字母不同的情况下：<br>$$<br>dp[i][j] = min(dp[i-1][], dp[i][j-1], dp[i-1][j-1]) + 1<br>$$</p>
+</li>
+<li><p>最后一个字母相同的情况下：<br>$$<br>dp[i][j] = dp[i-1][j-1]<br>$$</p>
+</li>
+</ul>
+<p>对于边界条件，当<code>word1</code>为空串、<code>word2</code>不为空串时，编辑距离就等于<code>word2</code>的长度<code>n</code>，相当于对<code>word1</code>执行了<code>n</code>次插入操作；当<code>word2</code>为空串、<code>word1</code>不为空串时，编辑距离等于<code>word1</code>的长度<code>m</code>，相当于对<code>word1</code>执行了<code>m</code>次删除操作；当<code>word1</code>与<code>word2</code>同时为空，则不需要任何编辑操作，编辑距离为<code>0</code>。</p>
+<p>最后将<code>dp[m][n]</code>返回即可。</p>
+<h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><h4 id="1-动态规划-1"><a href="#1-动态规划-1" class="headerlink" title="1. 动态规划"></a>1. 动态规划</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">minDistance</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word1<span class="token punctuation">:</span> str<span class="token punctuation">,</span> word2<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
         m  <span class="token operator">=</span> len<span class="token punctuation">(</span>word1<span class="token punctuation">)</span>
         n <span class="token operator">=</span> len<span class="token punctuation">(</span>word2<span class="token punctuation">)</span>
@@ -994,29 +1075,28 @@ exection -&gt; execution (插入 'u')</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/72-edit-distance.html">
+                <a href="/10-regular-expression-matching.html">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper56.jpg" class="responsive-img" alt="72. 编辑距离">
+                        <img src="https://gitee.com/arvin-he/blog-img/raw/master//tag-img/wallpaper60.jpg" class="responsive-img" alt="10. 正则表达式匹配">
                         
-                        <span class="card-title">72. 编辑距离</span>
+                        <span class="card-title">10. 正则表达式匹配</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给你两个单词 word1 和 word2 ，请你计算出将 word1 转换成 word2 所使用的最少操作数。
+                            给你一个字符串 s 和一个字符规律 p ，请你来实现一个支持'.'和'*'的正则表达式匹配。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1029,7 +1109,6 @@ exection -&gt; execution (插入 'u')</code></pre>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1051,6 +1130,10 @@ exection -&gt; execution (插入 'u')</code></pre>
                     
                     <a href="/tags/%E5%9B%B0%E9%9A%BE/">
                         <span class="chip bg-color">困难</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">回溯算法</span>
                     </a>
                     
                 </div>
@@ -1268,7 +1351,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">24.3k</span>&nbsp;字
+                class="white-color">26.7k</span>&nbsp;字
             
             
             

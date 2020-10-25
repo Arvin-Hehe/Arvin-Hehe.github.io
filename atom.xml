@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-10-21T17:03:11.829Z</updated>
+  <updated>2020-10-25T08:37:09.501Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -17,11 +17,109 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python 交换列表内两位置的元素遇到的问题</title>
+    <link href="https://arvin-hehe.github.io/problems-encountered-in-python-swapping-elements-two-positions-a-list.html"/>
+    <id>https://arvin-hehe.github.io/problems-encountered-in-python-swapping-elements-two-positions-a-list.html</id>
+    <published>2020-10-25T07:25:13.000Z</published>
+    <updated>2020-10-25T08:37:09.501Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、Python连续赋值&quot;&gt;&lt;a href=&quot;#一、Python连续赋值&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://arvin-hehe.github.io/categories/Python/"/>
+    
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="列表" scheme="https://arvin-hehe.github.io/tags/%E5%88%97%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 03. 数组中重复的数字</title>
+    <link href="https://arvin-hehe.github.io/sword-refers-to-offer-03-repeated-numbers-in-the-array.html"/>
+    <id>https://arvin-hehe.github.io/sword-refers-to-offer-03-repeated-numbers-in-the-array.html</id>
+    <published>2020-10-23T12:26:21.000Z</published>
+    <updated>2020-10-25T08:58:23.210Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;找出数组中重复的数字。&lt;/p&gt;
+&lt;p&gt;在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="数组" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="哈希表" scheme="https://arvin-hehe.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10. 正则表达式匹配</title>
+    <link href="https://arvin-hehe.github.io/10-regular-expression-matching.html"/>
+    <id>https://arvin-hehe.github.io/10-regular-expression-matching.html</id>
+    <published>2020-10-22T09:34:06.000Z</published>
+    <updated>2020-10-22T13:08:29.545Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、-题目&quot;&gt;&lt;a href=&quot;#一、-题目&quot; class=&quot;headerlink&quot; title=&quot;一、 题目&quot;&gt;&lt;/a&gt;一、 题目&lt;/h3&gt;&lt;p&gt;给你一个字符串 &lt;code&gt;s&lt;/code&gt; 和一个字符规律 &lt;code&gt;p&lt;/code&gt;，请你来实现一个支持</summary>
+        
+      
+    
+    
+    
+    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
+    
+    <category term="字符串" scheme="https://arvin-hehe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="困难" scheme="https://arvin-hehe.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
+    
+    <category term="回溯算法" scheme="https://arvin-hehe.github.io/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>72. 编辑距离</title>
     <link href="https://arvin-hehe.github.io/72-edit-distance.html"/>
     <id>https://arvin-hehe.github.io/72-edit-distance.html</id>
     <published>2020-10-21T12:47:53.000Z</published>
-    <updated>2020-10-21T17:03:11.829Z</updated>
+    <updated>2020-10-22T09:04:53.613Z</updated>
     
     
       
@@ -558,91 +656,6 @@
     <category term="数学" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="字符串" scheme="https://arvin-hehe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>7. 整数反转</title>
-    <link href="https://arvin-hehe.github.io/7-integer-inversion.html"/>
-    <id>https://arvin-hehe.github.io/7-integer-inversion.html</id>
-    <published>2020-10-10T11:22:15.000Z</published>
-    <updated>2020-10-10T12:11:02.724Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot; title=&quot;一、题目描述&quot;&gt;&lt;/a&gt;一、题目描述&lt;/h3&gt;&lt;p&gt;给出一个 32</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="数学" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>142. 环形链表II</title>
-    <link href="https://arvin-hehe.github.io/142-circular-linked-list-ii.html"/>
-    <id>https://arvin-hehe.github.io/142-circular-linked-list-ii.html</id>
-    <published>2020-10-10T04:45:45.000Z</published>
-    <updated>2020-10-10T10:56:57.511Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot; title=&quot;一、题目描述&quot;&gt;&lt;/a&gt;一、题目描述&lt;/h3&gt;&lt;p&gt;给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="双指针" scheme="https://arvin-hehe.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-    <category term="链表" scheme="https://arvin-hehe.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown小记</title>
-    <link href="https://arvin-hehe.github.io/markdown-notes.html"/>
-    <id>https://arvin-hehe.github.io/markdown-notes.html</id>
-    <published>2020-10-09T14:26:41.000Z</published>
-    <updated>2020-10-14T06:32:12.951Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、图片操作&quot;&gt;&lt;a href=&quot;#一、图片操作&quot; class=&quot;headerlink&quot; title=&quot;一、图片操作&quot;&gt;&lt;/a&gt;一、图片操作&lt;/h3&gt;&lt;h4 id=&quot;1-调整插入的图片的位置&quot;&gt;&lt;a href=&quot;#1-调整插入的图片的位置&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Markdown" scheme="https://arvin-hehe.github.io/categories/Markdown/"/>
-    
-    
-    <category term="markdown" scheme="https://arvin-hehe.github.io/tags/markdown/"/>
     
   </entry>
   
