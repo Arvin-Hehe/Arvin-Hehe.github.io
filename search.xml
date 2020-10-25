@@ -90,9 +90,9 @@
             
             <tag> 动态规划 </tag>
             
-            <tag> 困难 </tag>
-            
             <tag> 回溯算法 </tag>
+            
+            <tag> 困难 </tag>
             
         </tags>
       
@@ -154,9 +154,9 @@
             
             <tag> python </tag>
             
-            <tag> 简单 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> 简单 </tag>
             
         </tags>
       
@@ -220,9 +220,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 中等 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> 中等 </tag>
             
         </tags>
       
@@ -253,9 +253,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 中等 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> 中等 </tag>
             
         </tags>
       
@@ -286,9 +286,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 中等 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> 中等 </tag>
             
         </tags>
       
@@ -352,9 +352,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 简单 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> 简单 </tag>
             
             <tag> 分治算法 </tag>
             
@@ -617,11 +617,11 @@
             
             <tag> python </tag>
             
+            <tag> 字符串 </tag>
+            
             <tag> 中等 </tag>
             
             <tag> 数学 </tag>
-            
-            <tag> 字符串 </tag>
             
         </tags>
       
@@ -766,9 +766,9 @@
             
             <tag> python </tag>
             
-            <tag> 中等 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 中等 </tag>
             
         </tags>
       
@@ -797,11 +797,11 @@
             
             <tag> python </tag>
             
+            <tag> 字符串 </tag>
+            
             <tag> 简单 </tag>
             
             <tag> 双指针 </tag>
-            
-            <tag> 字符串 </tag>
             
         </tags>
       
@@ -1016,9 +1016,9 @@
             
             <tag> 哈希表 </tag>
             
-            <tag> 双指针 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 双指针 </tag>
             
             <tag> Sliding Window </tag>
             
@@ -1144,9 +1144,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 位运算 </tag>
-            
             <tag> 回溯算法 </tag>
+            
+            <tag> 位运算 </tag>
             
         </tags>
       
@@ -1216,8 +1216,8 @@
     
     <entry>
       <title>编写python脚本实现自动更新码云pages</title>
-      <link href="/write-python-script-to-automatically-update-code-cloud-pages.html"/>
-      <url>/write-python-script-to-automatically-update-code-cloud-pages.html</url>
+      <link href="/write-python-scripts-to-automatically-update-code-cloud-pages.html"/>
+      <url>/write-python-scripts-to-automatically-update-code-cloud-pages.html</url>
       
         <content type="html"><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>使用码云的pages部署hexo静态博客以后，每次写完都要去手动更新，实在是麻烦。当然只要开会员，这个问题根本不叫问题。但是，对于一个自身白嫖党而言，不可能的，这辈子也不可能的。</p><p>所以，只能自力更生、艰苦奋斗了。</p><h3 id="二、想法"><a href="#二、想法" class="headerlink" title="二、想法"></a>二、想法</h3><p>利用<strong>selenium</strong>编写python脚本，实现模拟登录更新，这样就不用了每次都自己登录码云，然后手动更新了。</p><h3 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">import</span> ChromeOptions<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support<span class="token punctuation">.</span>ui <span class="token keyword">import</span> WebDriverWait<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>support <span class="token keyword">import</span> expected_conditions <span class="token keyword">as</span> EC<span class="token comment" spellcheck="true"># 基本信息</span>username <span class="token operator">=</span> <span class="token string">'xxxx'</span>  <span class="token comment" spellcheck="true"># 账号</span>password <span class="token operator">=</span> <span class="token string">'xxxx'</span>     <span class="token comment" spellcheck="true"># 密码</span>pickname <span class="token operator">=</span> <span class="token string">'xxxx'</span>   <span class="token comment" spellcheck="true"># 用户名</span>repo <span class="token operator">=</span> <span class="token string">'xxxx'</span>       <span class="token comment" spellcheck="true"># 仓库名</span>driver <span class="token operator">=</span> r<span class="token string">'D:\Desktop\chromedriver.exe'</span>     <span class="token comment" spellcheck="true"># 谷歌驱动的路径</span>options <span class="token operator">=</span> ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true"># 不显示界面</span>options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--start-maximized"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 窗口最大化</span>options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--disable-plugins"</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 禁止扩展</span>chrome <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span>driver<span class="token punctuation">,</span> options<span class="token operator">=</span>options<span class="token punctuation">)</span>chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/login'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 输入用户名、密码，登录</span>username_input <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_login"</span><span class="token punctuation">)</span>password_input<span class="token operator">=</span>  chrome<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"user_password"</span><span class="token punctuation">)</span>login_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_name<span class="token punctuation">(</span><span class="token string">"commit"</span><span class="token punctuation">)</span>username_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>username<span class="token punctuation">)</span>password_input<span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span>password<span class="token punctuation">)</span>login_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 等待页面加载完成</span>WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"ml-1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 跳转到page页面</span>chrome<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://gitee.com/'</span> <span class="token operator">+</span> pickname <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> repo <span class="token operator">+</span> <span class="token string">'/pages'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 等待页面加载完成</span>WebDriverWait<span class="token punctuation">(</span>chrome<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_all_elements_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>CLASS_NAME<span class="token punctuation">,</span> <span class="token string">"update_deploy"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 执行js代码，使页面向下滚动</span>chrome<span class="token punctuation">.</span>execute_script<span class="token punctuation">(</span><span class="token string">"window.scrollTo(100, document.body.scrollHeight);"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 点击更新按钮</span>update_btn <span class="token operator">=</span> chrome<span class="token punctuation">.</span>find_element_by_class_name<span class="token punctuation">(</span><span class="token string">"update_deploy"</span><span class="token punctuation">)</span>update_btn<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 点击确认框</span>alert <span class="token operator">=</span> chrome<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>alertalert<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'gitee pages 更新成功'</span><span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>chrome<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="四、后续目标"><a href="#四、后续目标" class="headerlink" title="四、后续目标"></a>四、后续目标</h3><p>目前基本目标已经可以实现，不过每次还需要手动执行脚本，拉胯<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8">😢</span>。所以，接下来试着将脚本放到GitHub action上边去，实时监控码云仓库变化，实现实时更新。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
