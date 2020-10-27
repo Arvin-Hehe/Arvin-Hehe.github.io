@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-10-25T15:50:36.940Z</updated>
+  <updated>2020-10-27T03:21:07.310Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -17,11 +17,161 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>剑指Offer 10-II. 青蛙跳台阶问题</title>
+    <link href="https://arvin-hehe.github.io/sword-finger-offer-10ii-the-problem-of-frog-jumping.html"/>
+    <id>https://arvin-hehe.github.io/sword-finger-offer-10ii-the-problem-of-frog-jumping.html</id>
+    <published>2020-10-27T03:10:54.000Z</published>
+    <updated>2020-10-27T03:21:07.310Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="递归" scheme="https://arvin-hehe.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 10-I. 斐波那契数列</title>
+    <link href="https://arvin-hehe.github.io/sword-finger-offer-10i-fibonacci-sequence.html"/>
+    <id>https://arvin-hehe.github.io/sword-finger-offer-10i-fibonacci-sequence.html</id>
+    <published>2020-10-27T01:53:38.000Z</published>
+    <updated>2020-10-27T03:05:15.174Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;写一个函数，输入 &lt;code&gt;n&lt;/code&gt; ，求斐波那契（Fibonacci）数列的第 &lt;code&gt;n&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="递归" scheme="https://arvin-hehe.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 09. 用两个栈实现队列</title>
+    <link href="https://arvin-hehe.github.io/jian-zhi-offer-09-use-two-stacks-to-implement-queues.html"/>
+    <id>https://arvin-hehe.github.io/jian-zhi-offer-09-use-two-stacks-to-implement-queues.html</id>
+    <published>2020-10-26T15:19:29.000Z</published>
+    <updated>2020-10-27T01:51:26.125Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;用两个栈实现一个队列。队列的声明如下，请实现它的两个函数 &lt;code&gt;appendTail&lt;/code&gt; 和</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="栈" scheme="https://arvin-hehe.github.io/tags/%E6%A0%88/"/>
+    
+    <category term="设计" scheme="https://arvin-hehe.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 07. 重建二叉树</title>
+    <link href="https://arvin-hehe.github.io/sword-finger-offer-07-rebuild-binary-tree.html"/>
+    <id>https://arvin-hehe.github.io/sword-finger-offer-07-rebuild-binary-tree.html</id>
+    <published>2020-10-26T10:52:48.000Z</published>
+    <updated>2020-10-26T15:18:10.542Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="中等" scheme="https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="树" scheme="https://arvin-hehe.github.io/tags/%E6%A0%91/"/>
+    
+    <category term="递归" scheme="https://arvin-hehe.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 06. 从头到尾打印链表</title>
+    <link href="https://arvin-hehe.github.io/sword-refers-to-offer-06-print-the-linked-list-from-beginning-end.html"/>
+    <id>https://arvin-hehe.github.io/sword-refers-to-offer-06-print-the-linked-list-from-beginning-end.html</id>
+    <published>2020-10-26T03:57:53.000Z</published>
+    <updated>2020-10-26T07:33:38.855Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="链表" scheme="https://arvin-hehe.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>剑指Offer 05. 替换空格</title>
     <link href="https://arvin-hehe.github.io/jian-zhi-offer-05-replace-spaces.html"/>
     <id>https://arvin-hehe.github.io/jian-zhi-offer-05-replace-spaces.html</id>
     <published>2020-10-25T14:43:05.000Z</published>
-    <updated>2020-10-25T15:50:36.940Z</updated>
+    <updated>2020-10-26T04:03:54.784Z</updated>
     
     
       
@@ -50,7 +200,7 @@
     <link href="https://arvin-hehe.github.io/jianzhi-offer-04-search-in-a-twodimensional-array.html"/>
     <id>https://arvin-hehe.github.io/jianzhi-offer-04-search-in-a-twodimensional-array.html</id>
     <published>2020-10-25T13:45:35.000Z</published>
-    <updated>2020-10-25T14:42:12.141Z</updated>
+    <updated>2020-10-25T15:51:06.007Z</updated>
     
     
       
@@ -508,152 +658,6 @@
     <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="困难" scheme="https://arvin-hehe.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python3 中最大整数值和浮点数值</title>
-    <link href="https://arvin-hehe.github.io/the-largest-integer-value-and-floating-point-in-python3.html"/>
-    <id>https://arvin-hehe.github.io/the-largest-integer-value-and-floating-point-in-python3.html</id>
-    <published>2020-10-14T09:37:55.000Z</published>
-    <updated>2020-10-20T17:18:43.431Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot; title=&quot;一、前言&quot;&gt;&lt;/a&gt;一、前言&lt;/h3&gt;&lt;p&gt;在LeetCode刷题的时候，在解一道题的时候遇到了这个问题，然后就查了一下，下边记录一下。&lt;/p&gt;
-&lt;h3</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="https://arvin-hehe.github.io/categories/Python/"/>
-    
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="python小知识" scheme="https://arvin-hehe.github.io/tags/python%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1002. 查找常用字符</title>
-    <link href="https://arvin-hehe.github.io/1002-find-common-characters.html"/>
-    <id>https://arvin-hehe.github.io/1002-find-common-characters.html</id>
-    <published>2020-10-14T09:19:31.000Z</published>
-    <updated>2020-10-16T15:35:38.106Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;给定仅有小写字母组成的字符串数组&lt;code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="数组" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="哈希表" scheme="https://arvin-hehe.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>12. 整数转罗马数字</title>
-    <link href="https://arvin-hehe.github.io/12-integer-to-roman-numeral.html"/>
-    <id>https://arvin-hehe.github.io/12-integer-to-roman-numeral.html</id>
-    <published>2020-10-12T14:32:13.000Z</published>
-    <updated>2020-10-16T15:35:38.105Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>530. 二叉搜索树的最小绝对值</title>
-    <link href="https://arvin-hehe.github.io/530-minimum-absolute-value-of-binary-search-tree.html"/>
-    <id>https://arvin-hehe.github.io/530-minimum-absolute-value-of-binary-search-tree.html</id>
-    <published>2020-10-12T13:39:01.000Z</published>
-    <updated>2020-10-16T15:35:38.612Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="树" scheme="https://arvin-hehe.github.io/tags/%E6%A0%91/"/>
-    
-    <category term="二叉搜索树" scheme="https://arvin-hehe.github.io/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>9. 回文数</title>
-    <link href="https://arvin-hehe.github.io/9-number-of-palindrome.html"/>
-    <id>https://arvin-hehe.github.io/9-number-of-palindrome.html</id>
-    <published>2020-10-11T14:39:17.000Z</published>
-    <updated>2020-10-16T15:35:38.103Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="数学" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
