@@ -6,7 +6,7 @@
   <link href="https://arvin-hehe.github.io/atom.xml" rel="self"/>
   
   <link href="https://arvin-hehe.github.io/"/>
-  <updated>2020-10-27T03:23:08.631Z</updated>
+  <updated>2020-10-30T15:18:15.426Z</updated>
   <id>https://arvin-hehe.github.io/</id>
   
   <author>
@@ -17,11 +17,148 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>剑指Offer 14-II. 剪绳子II</title>
+    <link href="https://arvin-hehe.github.io/sword-finger-offer-14ii-cut-the-rope-ii.html"/>
+    <id>https://arvin-hehe.github.io/sword-finger-offer-14ii-cut-the-rope-ii.html</id>
+    <published>2020-10-28T16:48:17.000Z</published>
+    <updated>2020-10-30T15:18:15.426Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;给你一根长度为&lt;code&gt;n&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="中等" scheme="https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="数学" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 14-I.剪绳子</title>
+    <link href="https://arvin-hehe.github.io/sword-refers-to-offer-14i-cut-the-rope.html"/>
+    <id>https://arvin-hehe.github.io/sword-refers-to-offer-14i-cut-the-rope.html</id>
+    <published>2020-10-28T16:13:13.000Z</published>
+    <updated>2020-10-30T15:00:42.888Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;给你一根长度为&lt;code&gt;n&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="中等" scheme="https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="数学" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 13. 机器人的运动范围</title>
+    <link href="https://arvin-hehe.github.io/sword-finger-offer-13-robots-range-of-motion.html"/>
+    <id>https://arvin-hehe.github.io/sword-finger-offer-13-robots-range-of-motion.html</id>
+    <published>2020-10-27T15:43:44.000Z</published>
+    <updated>2020-10-28T09:25:41.513Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 12. 矩阵中的路径</title>
+    <link href="https://arvin-hehe.github.io/the-sword-refers-to-offer-12-path-in-matrix.html"/>
+    <id>https://arvin-hehe.github.io/the-sword-refers-to-offer-12-path-in-matrix.html</id>
+    <published>2020-10-27T10:08:03.000Z</published>
+    <updated>2020-10-27T13:53:35.325Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="中等" scheme="https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="深度优先搜索" scheme="https://arvin-hehe.github.io/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer 11. 旋转数组的最小数字</title>
+    <link href="https://arvin-hehe.github.io/sword-finger-offer-11-rotate-the-smallest-number-of-array.html"/>
+    <id>https://arvin-hehe.github.io/sword-finger-offer-11-rotate-the-smallest-number-of-array.html</id>
+    <published>2020-10-27T03:37:28.000Z</published>
+    <updated>2020-10-27T06:05:56.623Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="剑指Offer" scheme="https://arvin-hehe.github.io/categories/%E5%89%91%E6%8C%87Offer/"/>
+    
+    
+    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
+    
+    <category term="数组" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="二分查找" scheme="https://arvin-hehe.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>剑指Offer 10-II. 青蛙跳台阶问题</title>
     <link href="https://arvin-hehe.github.io/sword-finger-offer-10ii-the-problem-of-frog-jumping.html"/>
     <id>https://arvin-hehe.github.io/sword-finger-offer-10ii-the-problem-of-frog-jumping.html</id>
     <published>2020-10-27T03:10:54.000Z</published>
-    <updated>2020-10-27T03:23:08.631Z</updated>
+    <updated>2020-10-27T03:34:35.223Z</updated>
     
     
       
@@ -491,173 +628,6 @@
     <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="中等" scheme="https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>62. 不同路径</title>
-    <link href="https://arvin-hehe.github.io/62-different-paths.html"/>
-    <id>https://arvin-hehe.github.io/62-different-paths.html</id>
-    <published>2020-10-17T10:41:15.000Z</published>
-    <updated>2020-10-19T16:03:54.211Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start”</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="数组" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    <category term="中等" scheme="https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>977. 有序数组的平方</title>
-    <link href="https://arvin-hehe.github.io/977-squaring-an-ordered-array.html"/>
-    <id>https://arvin-hehe.github.io/977-squaring-an-ordered-array.html</id>
-    <published>2020-10-16T14:52:32.000Z</published>
-    <updated>2020-10-16T15:35:37.964Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;给定一个按非递减顺序排序的整数数组</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="数组" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
-    <category term="双指针" scheme="https://arvin-hehe.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>53. 最大子序和</title>
-    <link href="https://arvin-hehe.github.io/53-maximum-suborder-sum.html"/>
-    <id>https://arvin-hehe.github.io/53-maximum-suborder-sum.html</id>
-    <published>2020-10-16T10:05:08.000Z</published>
-    <updated>2020-10-21T06:09:27.739Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="数组" scheme="https://arvin-hehe.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    <category term="简单" scheme="https://arvin-hehe.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
-    <category term="分治算法" scheme="https://arvin-hehe.github.io/tags/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>116. 填充每个节点的下一个右侧节点指针</title>
-    <link href="https://arvin-hehe.github.io/116-fill-the-next-right-node-pointer-of-each.html"/>
-    <id>https://arvin-hehe.github.io/116-fill-the-next-right-node-pointer-of-each.html</id>
-    <published>2020-10-15T15:12:07.000Z</published>
-    <updated>2020-10-16T15:35:38.614Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目描述&quot;&gt;&lt;a href=&quot;#一、题目描述&quot; class=&quot;headerlink&quot; title=&quot;一、题目描述&quot;&gt;&lt;/a&gt;一、&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="中等" scheme="https://arvin-hehe.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
-    
-    <category term="树" scheme="https://arvin-hehe.github.io/tags/%E6%A0%91/"/>
-    
-    <category term="深度优先搜索" scheme="https://arvin-hehe.github.io/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>32. 最长有效括号</title>
-    <link href="https://arvin-hehe.github.io/32-longest-valid-parenthesis.html"/>
-    <id>https://arvin-hehe.github.io/32-longest-valid-parenthesis.html</id>
-    <published>2020-10-14T15:17:35.000Z</published>
-    <updated>2020-10-21T08:24:52.295Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一、题目&quot;&gt;&lt;a href=&quot;#一、题目&quot; class=&quot;headerlink&quot; title=&quot;一、题目&quot;&gt;&lt;/a&gt;一、题目&lt;/h3&gt;&lt;p&gt;给定一个只包含&lt;code&gt; &#39;(&#39;&lt;/code&gt; 和 &lt;code&gt;&#39;)&#39;&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="LeetCode" scheme="https://arvin-hehe.github.io/categories/LeetCode/"/>
-    
-    
-    <category term="leetcode" scheme="https://arvin-hehe.github.io/tags/leetcode/"/>
-    
-    <category term="python" scheme="https://arvin-hehe.github.io/tags/python/"/>
-    
-    <category term="字符串" scheme="https://arvin-hehe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-    <category term="动态规划" scheme="https://arvin-hehe.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    <category term="困难" scheme="https://arvin-hehe.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
     
   </entry>
   
